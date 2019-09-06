@@ -1,0 +1,158 @@
+header.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  z-index: 5;
+  font-size: $fz1;
+  background-color: $midBlue;
+  height: 76px;
+  box-shadow: 0px 5px 7px rgba(40, 60, 128, 0.15);
+  border-bottom-left-radius: 100% 30px;
+  border-bottom-right-radius: 100% 30px;   
+
+  a{
+    text-transform: uppercase;
+    border-radius: 20px;
+    background-color: transparent;
+    font-weight: $extraBold;
+    color: $white;
+    line-height: 1;
+    padding: 10px;
+
+    &.active,
+    &:hover{
+      background-color: $red;
+    }
+  }
+
+  a.logo {
+    cursor: pointer;
+    flex: auto;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+
+    &:hover{
+      background-color: transparent;
+    }
+
+    & img{
+      display: block;
+      margin-bottom: 3px;
+      max-width: 100px;
+    }
+
+    & p{
+      display: block;
+      font-weight: $bold;
+      font-style: italic;
+      color: $white;
+      font-size: $fz3;
+      text-transform: lowercase;
+    }
+  }
+}
+
+@media (min-width: 768px){
+  header.header{
+    font-size: $fz5;
+    a.logo{
+      & img{
+        max-width: 180px;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+
+  header.header {
+    bottom: 0;
+    width: 100%;
+    height: 90px;
+  
+    a.logo {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      &.hidden__md{
+        display: none;
+      }
+      & span{
+        display: inline-block;
+        margin-right: 10px;
+      }
+  
+      &:hover{
+        color: $white;
+      }
+    }
+  }
+
+  .hotline{
+    z-index: 10;
+    height: 100px;
+    display: block;
+    position: fixed;
+    left: 100px;
+    top: 0;
+    right: 0;
+    border-bottom: 1px solid $borderColor;
+    line-height: 100px;
+    justify-content: flex-end;
+    font-size: $fz10;
+
+    &.visible__md{
+      display: flex;
+    }
+
+    & .hotline__number{
+      border-left: 1px solid #deddde;
+      display: inline-block;
+      padding: 0 90px 0 130px;
+      color: $headerColor;
+      position: relative;
+
+      &::before{
+        display: block;
+        position: absolute;
+        content: '';
+        left: 95px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        width: 20px;
+        height: 20px;
+        background-image: url('/assets/img/icons/phone.svg');
+        background-size: contain;
+        background-position: 50%;
+        background-repeat: no-repeat;
+      }
+    }
+
+    & .hotline__prefix {
+      color: $gray2;
+    }
+
+    & .hotline__home{
+      width: 100px;
+      height: 100px;
+      background-image: url('/assets/img/icons/home.svg');
+      background-size: 25%;
+      background-position: 50%;
+      background-repeat: no-repeat;
+    }
+  }
+
+  .wrapper__floor .hotline,
+  .wrapper__page .hotline{
+    background-color: $white;
+    justify-content: space-between;
+  }
+
+}

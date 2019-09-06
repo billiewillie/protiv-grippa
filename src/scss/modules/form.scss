@@ -1,0 +1,134 @@
+form.form {
+  display: flex;
+  flex-direction: column;
+  background-color: $borderColor;
+  padding: 20px 0;
+  margin-bottom: 10px;
+
+  & .form__field {
+    margin-bottom: 25px;
+
+    input.input {
+      padding: 15px;
+      font-size: $fz3;
+      width: 100%;
+      line-height: $lineHeight3;
+      
+      color: $headerColor;
+
+      &::placeholder {
+        font-size: $fz3;
+        
+        color: $borderColor;
+      }
+    }
+
+    textarea.textarea{
+      padding: 15px;
+      font-size: $fz3;
+      width: 100%;
+      line-height: $lineHeight3;
+      
+      color: $headerColor;
+      min-height: 129px;
+      &::placeholder {
+        font-size: $fz3;
+        
+        color: $borderColor;
+      }
+    }
+  }
+
+  & button.button {
+    font-size: $fz2;
+    padding: 15px;
+    min-height: 52px;
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  & .part{
+    &:last-child{
+      & .form__field{
+        &:last-child{
+          text-align: right;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  form.form {
+    & .part{
+      &:last-child{
+        & button.button {
+          max-width: 217px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  form.form {
+    padding: 84px 0;
+    background-color: $white;
+    overflow: hidden;
+    margin-bottom: 0;
+
+    & .container{
+      display: flex;
+      justify-content: space-between;
+      padding: 0;
+      width: 60%;
+      max-width: 800px;
+      position: relative;
+      z-index: 1;
+
+      &::before{
+        display: block;
+        position: absolute;
+        content: '';
+        top: 0;
+        right: -30%;
+        bottom: 0;
+        margin: auto;
+        width: 175%;
+        height: 200%;
+        background-color: $borderColor;
+        z-index: -1;
+      }
+    }
+    
+    & .part{
+      &:first-of-type{
+        width: 40%;
+      }
+      &:last-of-type{
+        width: 55%;
+      }
+    }
+
+    & .form__field {
+      margin-bottom: 25px;
+  
+      input.input {
+        font-size: $fz4;
+  
+        &::placeholder {
+          font-size: $fz4;
+        }
+      }
+  
+      textarea.textarea{
+        padding: 15px;
+        font-size: $fz4;
+        &::placeholder {
+          font-size: $fz4;
+        }
+      }
+    }
+  }
+}

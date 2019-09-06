@@ -1,0 +1,63 @@
+.menu {
+  display: flex;
+  flex-direction: column;
+  padding: 0 30px;
+
+  li {
+
+    a {
+      font-size: $fz1;
+      padding: 20px 0px;
+      transition: .2s;
+      letter-spacing: $ls1;
+      display: block;
+
+    }
+
+    &:last-child a{
+      border-bottom: none;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+
+  .menu {
+
+    li {
+
+      a {
+        font-size: $fz6;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+
+  .menu {
+    flex-direction: row;
+
+    li {
+
+      a {
+        font-size: $fz4;
+        padding: 10px 15px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+
+  .menu {
+
+    li {
+
+      a {
+        font-size: $fz7;
+        padding: 10px 25px;
+      }
+    }
+  }
+}

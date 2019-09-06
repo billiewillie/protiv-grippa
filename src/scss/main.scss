@@ -1,0 +1,133 @@
+@import "utils/reset";
+@import "utils/vars";
+@import "utils/fonts";
+
+html {
+  font-family: $mainFont;
+  background-color: $white;
+  font-size: $fz8;
+  font-weight: $regular;
+  color: $textColor;
+  line-height: $mainLineHeight;
+}
+
+// Links
+a {
+  text-decoration: none;
+  color: $textColor;
+
+  &:active,
+  &:hover {
+    outline: 0;
+    color: $textColor;
+  }
+}
+
+.wrapper {
+  min-height: 100vh;
+  padding-top: 60px;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+
+  &.wrapper__page{
+    background-color: $white;
+    padding-top: 140px;
+    justify-content: space-between;
+  }
+}
+
+.wrapper.no-scroll {
+  height: 100vh;
+}
+
+.container {
+  padding: 0 10px;
+  width: 100%;
+  max-width: $desktopWidth;
+  margin: 0 auto;
+}
+
+.content{
+  background-color: $white;
+}
+
+main.main{
+  margin-bottom: 50px;
+  & P{
+    color: $textColor;
+  }
+}
+
+h1.title {
+  font-size: $fz11;
+  text-transform: uppercase;
+  color: $headerColor;
+  max-width: 330px;
+  margin-bottom: 40px;
+  font-weight: $regular;
+}
+
+.button {
+  padding: 14px 34px;
+  font-size: $fz1;
+  font-weight: $semiBold;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  transition: .2s;
+  background-color: $white;
+  cursor: pointer;
+  color: $stage;
+
+  &:hover{
+    color: $white;
+    background-color: $stage;
+  }
+}
+
+.visible__sm {
+  display: none;
+}
+
+.visible__md {
+  display: none;
+}
+
+@import "modules/header.scss";
+
+@import "modules/menu.scss";
+
+@import "modules/burger.scss";
+
+@import "modules/form.scss";
+
+@import "modules/index.scss";
+
+@import "modules/socials.scss";
+
+@import "modules/footer.scss";
+
+@import "modules/slick.scss";
+
+@import "modules/slick-theme.scss";
+
+@media (min-width: 768px) {
+  .visible__sm {
+    display: block;
+  }
+
+  .hidden__sm {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) {
+  .hidden__md {
+    display: none;
+  }
+
+  .visible__md {
+    display: block;
+  }
+}

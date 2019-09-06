@@ -1,0 +1,17 @@
+form.form
+  .container
+    input(type="hidden" name="project_name" value="Бизнес-центр")
+    input(type="hidden" name="admin_email" value="office-centre@mail.ru")
+    input(type="hidden" name="form_subject" value="Заявка с формы")
+    .part
+      .form__field
+        input.input(type="text" placeholder="Введите ваше имя" name='имя' required)
+      .form__field
+        input.input(type="text" placeholder="Введите номер телефона" name='телефон' required)
+      .form__field
+        input.input(type="text" placeholder="Введите e-mail" name='email' required)
+    .part
+      .form__field
+        textarea.textarea(type="text" placeholder="Введите вопрос" name='вопрос' required)
+      .form__field
+        button.button связаться

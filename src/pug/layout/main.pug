@@ -1,0 +1,52 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    link(
+      rel="icon" 
+      href="./assets/img/icons/favicon.png",
+      type="image/x-icon")
+    link(
+      href="https://fonts.googleapis.com/css?family=Alegreya+Sans:300,300i,400,400i,500,500i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,latin-ext", 
+      rel="stylesheet")
+    meta(
+      name="viewport", 
+      content="width=device-width, initial-scale=1.0")
+    meta(
+      http-equiv="X-UA-Compatible", 
+      content="ie=edge")
+    meta(
+      name='description' 
+      content="Против гриппа - сайт препарата Цитовир-3 порошок для детей. Информационный портал о гриппе, ОРВИ и простудных заболеваниях у детей.")
+    title Цитовир-3
+  body.body
+    div.wrapper
+      header.header
+        .burger
+          input#menu-switch.hidden__md(type="checkbox")
+          nav#navigation
+            ul
+              li.active
+                a О препарате 
+              li
+                a Инструкция
+              li
+                a Врачи рекомендуют
+              li.visible__md
+                a.logo 
+                  img(
+                    src="./assets/img/header-logo.svg", alt="img")
+                  p для детей от 1 года
+              li
+                a Вопрос-ответ
+              li
+                a Производитель
+              li.visible__md
+                a.active(href="buy.html") где купить?
+          label.menu-switch(for='menu-switch')
+            span
+        a.logo.hidden__md
+          img(src="./assets/img/header-logo.svg", alt="img")
+          p для детей от 1 года
+        a.buy.active.hidden__md(href="buy.html") где купить?
+      block content
