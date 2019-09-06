@@ -1,115 +1,37 @@
-#footer {
-  color: $gray2;
-  font-size: $fz2;
-  
-  font-weight: $light;
-  padding: 0 20px;
-  margin: 0 auto;
-  display: block;
-  justify-content: space-between;
-  text-align: center;
-  flex-direction: column;
-  width: 100%;
-
+footer.footer {
+  background-color: $darkBlue;
+  padding: 50px 0;
+  color: $white;
+  border-top-left-radius: 100% 30px;
+  border-top-right-radius: 100% 30px;  
+  font-size: 17px; 
   & .container{
-    & .popup{
-      display: none;
-    }
-  }
-
-  & p {
-    margin: 1em 0;
-
-    &.footer__copy a {
-      font-weight: $bold;
-      display: block;
-      margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    & .part{
+      width: 100%;
     }
   }
 }
 
 @media (min-width: 992px) {
 
-  #footer {
-    display: flex;
-    flex-direction: row;
-    text-align: left;
-    background-color: $white;
-    padding: 0;
-    justify-content: flex-end;
+  footer.footer {
 
     & .container{
-      display: flex;
-      justify-content: space-between;
-
-      & .popup {
-        display: none;
-        &.active{
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          display: flex;
-          background-color: rgba(0,0,0,.8);
-          z-index: 11;
-
-          & .map{
-            margin: auto;
-            width: 80%;
-            position: relative;
-            & span.close{
-              background-image: url('/assets/img/icons/cancel.png');
-              background-position: 50%;
-              background-repeat: no-repeat;
-              background-size: contain;
-              width: 20px;
-              height: 20px;
-              position: absolute;
-              left: 101%;
-              top: 0;
-              cursor: pointer;
-            }
-            & iframe{
-              min-height: inherit;
-              padding: 7px;
-              background-color: $white;
-            }
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-start;
+      & .part{
+        width: 250px;
+        &:nth-child(2){
+          align-self: center;
+        }
+        &:last-child{
+          & p{
+            margin-bottom: 15px;
           }
         }
-      }
-    }
-
-    & p {
-      font-size: $fz3;
-      margin: 0;
-      padding: 35px 0;
-      &.footer__address {
-        text-align: left;
-        flex-basis: 55%;
-        padding-left: 40px;
-        position: relative;
-        color: $stage;
-        cursor: pointer;
-
-        &::before{
-          display: block;
-          position: absolute;
-          content: '';
-          left: 0;
-          top: 0;
-          bottom: 0;
-          margin: auto;
-          width: 20px;
-          height: 32px;
-          background-image: url('/assets/img/icons/marker.svg');
-          background-size: contain;
-          background-position: 50%;
-          background-repeat: no-repeat;
-        }
-      }
-      &.footer__copy {
-        flex-basis: 30%;
       }
     }
   }

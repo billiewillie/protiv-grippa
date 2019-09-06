@@ -30,6 +30,7 @@ a {
   display: flex;
   overflow: hidden;
   flex-direction: column;
+  justify-content: space-between;
 
   &.wrapper__page{
     background-color: $white;
@@ -62,11 +63,8 @@ main.main{
 
 h1.title {
   font-size: $fz11;
-  text-transform: uppercase;
   color: $headerColor;
-  max-width: 330px;
-  margin-bottom: 40px;
-  font-weight: $regular;
+  font-weight: $extraBold;
 }
 
 .button {
@@ -107,6 +105,8 @@ h1.title {
 @import "modules/socials.scss";
 
 @import "modules/footer.scss";
+
+@import "modules/warning.scss";
 
 @import "modules/slick.scss";
 

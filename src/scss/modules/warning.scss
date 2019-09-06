@@ -1,0 +1,21 @@
+section.warning{
+  background-color: $blue;
+  text-transform: uppercase;
+  color: $white;
+  text-align: center;
+  line-height: 1;
+  padding: 10px 0;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  font-weight: $light;
+  font-size: $fz2;
+  padding: 10px 30px 10px 10px;
+}
+
+@media (min-width: 992px){
+  section.warning{
+    font-size: $fz10;
+  }
+}

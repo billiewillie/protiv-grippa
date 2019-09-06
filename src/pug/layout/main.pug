@@ -22,31 +22,32 @@ html(lang="en")
   body.body
     div.wrapper
       header.header
-        .burger
-          input#menu-switch.hidden__md(type="checkbox")
-          nav#navigation
-            ul
-              li.active
-                a О препарате 
-              li
-                a Инструкция
-              li
-                a Врачи рекомендуют
-              li.visible__md
-                a.logo 
-                  img(
-                    src="./assets/img/header-logo.svg", alt="img")
-                  p для детей от 1 года
-              li
-                a Вопрос-ответ
-              li
-                a Производитель
-              li.visible__md
-                a.active(href="buy.html") где купить?
-          label.menu-switch(for='menu-switch')
-            span
-        a.logo.hidden__md
-          img(src="./assets/img/header-logo.svg", alt="img")
-          p для детей от 1 года
-        a.buy.active.hidden__md(href="buy.html") где купить?
+        .container
+          .burger
+            input#menu-switch.hidden__md(type="checkbox")
+            nav#navigation
+              ul
+                li
+                  a(href='') О препарате 
+                li
+                  a(href='') Инструкция
+                li
+                  a(href='') Врачи рекомендуют
+                li.visible__md
+                  a.logo(href='') 
+                    img(
+                      src="./assets/img/header-logo.svg", alt="img")
+                    p для детей от 1 года
+                li
+                  a(href='') Вопрос-ответ
+                li
+                  a(href='') Производитель
+                li.visible__md
+                  a.active(href="buy.html") где купить?
+            label.menu-switch(for='menu-switch')
+              span
+          a.logo.hidden__md
+            img(src="./assets/img/header-logo.svg", alt="img")
+            p для детей от 1 года
+          a.buy.active.hidden__md(href="buy.html") где купить?
       block content

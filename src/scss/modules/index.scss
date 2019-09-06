@@ -6,13 +6,83 @@ main.main{
   background-image: url('/assets/img/index-bg-mobile.jpg');
 }
 
+section.products{
+  background-color: $yellow;
+  padding: 40px 0;
+}
+
+section.choose{
+  background-color: $blue;
+}
+
+section.pharmacy{
+  padding: 50px 0;
+  background-image: url('/assets/img/index-details-bg.jpg');
+  & .container{
+    text-align: center;
+
+    & .content{
+      background-color: $white;
+      text-align: center;
+      border-radius: 26px;
+      display: flex;
+      flex-direction: column;
+      & h1.title{
+        color: $blue;
+      }
+    }
+  }
+}
+
+section.index__details{
+  display: flex;
+  flex-direction: column;
+  & .part{
+    width: 100%;
+    & .content{
+      width: 100%;
+      background-color: transparent;
+      text-align: center;
+    }
+    &:first-child{
+      background-color: $yellow;
+      background-image: url('/assets/img/details-yellow-pattern.png');
+    }
+    &:last-child{
+      background-color: $midBlue;
+      background-image: url('/assets/img/details-blue-pattern.png');
+    }
+  }
+}
+
 @media (min-width: 768px) {
-  
+  section.index__details{
+    flex-direction: row;
+    & .part{
+      width: 50%;
+    }
+  }
 }
 
 @media (min-width: 992px) {
   main.main{
     padding: 80px 0;
     background-image: url('/assets/img/index-bg.jpg');
+  }
+
+  section.index__details{
+    flex-direction: row;
+    & .part{
+      width: 50%;
+      & .content{
+        width: 100%;
+        max-width: 600px;
+        text-align: center;
+      }
+      &:first-child{
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
   }
 }
