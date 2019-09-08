@@ -67,6 +67,12 @@ h1.title {
   font-weight: $extraBold;
 }
 
+h2.title {
+  font-size: $fz12;
+  color: $headerColor;
+  font-weight: $extraBold;
+}
+
 .button {
   padding: 14px 34px;
   font-size: $fz1;
@@ -129,5 +135,9 @@ h1.title {
 
   .visible__md {
     display: block;
+  }
+
+  h2.title {
+    font-size: $fz40;
   }
 }
