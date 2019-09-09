@@ -82,27 +82,32 @@ block content
         h2.title сироп
         .picture
           img(src="./assets/img/product-sirop.png", alt="")
-        ul.list
-          li.item
-            p Готов к применению
-          li.item
-            p Открытый флакон можно хранить при комнатной температуре
-          li.item
-            p Приятный вкус
+        .list
+          p.item Готов к применению
+          p.item Открытый флакон можно хранить при комнатной температуре
+          p.item Приятный вкус
+    .list__details.visible__md
+      p.list__item 
+        | 1 флакон
+        br
+        | =
+        br
+        | 1 курс*
+      p.list__item Подходит для детей от 1 года
+      p.list__item Не содержит красителей и консервантов
     .part
       .content
-        h1.title порошок
+        h2.title порошок
         .picture
           img(src="./assets/img/product-powder.png", alt="")
-        ul.list
-          li.item
-            p Сниженный риск развития аллергии 
-              span (нейтральный вкус не содержит красителей и ароматизаторов)
-          li.item
-            p Подходит детям с ограничением в потреблении углеводов
-              span (подсластитель – фруктоза)
-          li.item
-            p 4 вкуса
+        .list
+          p.item 
+            | Сниженный риск развития аллергии 
+            span (нейтральный вкус не содержит красителей и ароматизаторов)
+          p.item 
+            | Подходит детям с ограничением в потреблении углеводов
+            span (подсластитель – фруктоза)
+          p.item 4 вкуса
   section.pharmacy
     .container
       .content

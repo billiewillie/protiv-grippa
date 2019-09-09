@@ -14,7 +14,7 @@ section.products{
 section.choose{
   background-color: $blue;
   background-image: url('/assets/img/choose-pattern.png');
-  background-size: cover;
+  background-size: contain;
   background-position: 0 0;
   background-repeat: repeat;
   padding: 20px 0;
@@ -173,18 +173,101 @@ section.index__details{
   flex-direction: column;
   & .part{
     width: 100%;
+    padding: 80px 10px 10px;
+    background-repeat: repeat;
+    background-size: contain;
+    background-position: 0 0;
+    display: flex;
+    justify-content: center;
     & .content{
       width: 100%;
       background-color: transparent;
       text-align: center;
+      font-weight: $extraBold;
+      & h2.title{
+        position: relative;
+        &::before{
+          display: block;
+          position: absolute;
+          content: '';
+          left: 0;
+          top: -50px;
+          right: 0;
+          margin: auto;
+          width: 45px;
+          height: 45px;
+          background-size: contain;
+          background-position: 50%;
+          background-repeat: no-repeat;
+        }
+      }
+      & .picture{
+        margin-bottom: 25px;
+      }
+      & .list{
+        position: relative;
+        & p.item{
+          font-size: $fz8;
+          position: relative;
+          padding-bottom: 10px;
+          margin-bottom: 10px;
+          border-radius: 0;
+          background-color: transparent;
+          & span{
+            font-weight: $medium;
+          }
+          &::after{
+            display: block;
+            position: absolute;
+            content: '';
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            width: 115px;
+            height: 1px;
+            background-color: $darkBlue;
+          }
+          &:last-child{
+            &::after{
+              display: none;
+            }
+          }
+        }
+      }
     }
     &:first-child{
       background-color: $yellow;
+      color: $darkBlue;
       background-image: url('/assets/img/details-yellow-pattern.png');
+      & .content{
+        & h2.title{
+          color: $darkBlue;
+          &::before{
+            background-image: url('/assets/img/icons/sirop-icon.svg');
+          }
+        }
+      }
     }
     &:last-child{
       background-color: $midBlue;
       background-image: url('/assets/img/details-blue-pattern.png');
+      color: $white;
+      & .content{
+        & h2.title{
+          color: $white;
+          &::before{
+            background-image: url('/assets/img/icons/powder-icon.svg');
+          }
+        }
+        & .list{
+          & p.item{
+            &::after{
+              background-color: $white;
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -307,16 +390,40 @@ section.index__details{
 
   section.index__details{
     flex-direction: row;
+    position: relative;
     & .part{
       width: 50%;
+      padding: 140px 125px 100px;
       & .content{
         width: 100%;
         max-width: 600px;
         text-align: center;
       }
-      &:first-child{
+    }
+    & .list__details{
+      position: absolute;
+      background-color: transparent;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      & p.list__item{
+        border-radius: 50%;
+        background-color: $white;
+        text-align: center;
+        font-size: $fz8;
+        font-weight: $bold;
+        color: $darkBlue;
+        box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.15);
+        margin-bottom: 10px;
+        width: 158px;
+        height: 158px;
         display: flex;
-        justify-content: flex-end;
+        justify-content: center;
+        align-items: center;
+        padding: 0 10px;
+        &:last-child{
+          margin-bottom: 0;
+        }
       }
     }
   }
