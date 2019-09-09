@@ -34,7 +34,7 @@ section.choose{
         flex-direction: column;
         align-items: center;
         text-align: center;
-        margin-bottom: 30px;
+        margin-bottom: 40px;
         color: $white;
         line-height: 1;
 
@@ -44,7 +44,7 @@ section.choose{
           width: 75px;
           height: 75px;
           display: flex;
-          margin-bottom: 10px;
+          margin-bottom: 20px;
           & img{
             margin: auto;
           }
@@ -52,9 +52,9 @@ section.choose{
 
         & h3.title{
           font-weight: 700;
-          font-size: $fz7;
+          font-size: $fz8;
           text-transform: uppercase;
-          margin-bottom: 10px;
+          margin-bottom: 20px;
         }
 
         & p{
@@ -62,6 +62,89 @@ section.choose{
           font-size: $fz7;
         }
       }
+    }
+  }
+}
+
+section.formula{
+  padding: 20px 0 0;
+  color: $darkBlue;
+  & .container{
+    & .content{
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 40px;
+      & .part{
+        & h2.title{
+          text-align: center;
+          margin-bottom: 30px;
+          color: $darkBlue;
+        }
+        & p{
+          font-size: $fz8;
+          margin-bottom: 30px;
+          font-weight: $medium;
+        }
+        & .list{
+          & h3.title{
+            font-weight: 700;
+            font-size: $fz9;
+            margin-bottom: 20px;
+          }
+          & p{
+            font-size: $fz8;
+            padding-left: 10px;
+            margin-bottom: 20px;
+            position: relative;
+            &::before{
+              display: block;
+              position: absolute;
+              content: '';
+              left: 0px;
+              top: 10px;
+              width: 2px;
+              height: 2px;
+              border-radius: 50%;
+              background-color: $darkBlue;
+            }
+          }
+        }
+        &:last-child{
+          text-align: center;
+        }
+      }
+    }
+    & .list{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 40px;
+      & li.item{
+        border-radius: 15px;
+        overflow: hidden;
+        display: flex;
+        max-width: 300px;
+        flex-direction: column;
+        margin-bottom: 30px;
+        & .picture{
+          min-height: 170px;
+        }
+        & p{
+          font-size: $fz8;
+          background-color: $gray;
+          padding: 15px 20px;
+          min-height: 130px;
+          font-weight: 700;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+        }
+      }
+    }
+    h2.title{
+      color: $darkBlue;
+      text-align: center;
     }
   }
 }
@@ -157,6 +240,65 @@ section.index__details{
           & p{
             text-transform: lowercase;
             font-size: $fz7;
+          }
+        }
+      }
+    }
+  }
+
+  section.formula{
+    padding: 80px 0 0;
+    & .container{
+      & .content{
+        flex-direction: row;
+        width: 100%;
+        align-items: center;
+        margin-bottom: 70px;
+        & .part{
+          & h2.title{
+            text-align: left;
+            margin-bottom: 60px;
+          }
+          & p{
+            font-size: $fz8;
+            margin-bottom: 40px;
+          }
+          & .list{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 0px;
+            & h3.title{
+              margin-bottom: 30px;
+            }
+            & p{
+              padding-left: 35px;
+              margin-bottom: 25px;
+              &::before{
+                left: 25px;
+              }
+            }
+          }
+          &:first-child{
+            width: 60%;
+          }
+          &:last-child{
+            text-align: center;
+            flex: auto;
+          }
+        }
+      }
+      & .list{
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 100px;
+        align-items: flex-start;
+        & li.item{
+          width: 23%;
+          margin-bottom: 0;
+           
+          & .picture{
+            min-height: auto;
           }
         }
       }
