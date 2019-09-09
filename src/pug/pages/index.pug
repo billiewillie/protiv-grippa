@@ -3,9 +3,16 @@ extends ../layout/main
 block content
   main.main
     .container
-      ul.list
+      ul.list.visible__md
         li.item
-          .round
+          .round(style="background-image: url('./assets/img/icons/main-list/main-icon-1.svg')")
+          p Защита для детей&#8209;аллергиков
+        li.item
+          .round(style="background-image: url('./assets/img/icons/main-list/main-icon-2.svg')")
+          p Незаменим для часто болеющих детей 
+        li.item
+          .round(style="background-image: url('./assets/img/icons/main-list/main-icon-3.svg')")
+          p Разрешен к применению для малышей от 1 года 
       .picture
         img(src="./assets/img/main-logo.png", alt="img")
   section.products

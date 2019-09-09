@@ -312,6 +312,43 @@ section.index__details{
   main.main{
     padding: 80px 0;
     background-image: url('/assets/img/index-bg.jpg');
+    
+    & .container{
+      display: flex;
+      & ul.list{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 210px;
+        & li.item{
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+          align-items: center;
+          margin-bottom: 40px;
+          &:last-child{
+            margin-bottom: 0;
+          }
+          & .round{
+            background-color: $white;
+            border-radius: 50%;
+            display: flex;
+            width: 60px;
+            height: 60px;
+            background-size: 50%;
+            background-position: 50%;
+            background-repeat: no-repeat;
+            margin-bottom: 10px;
+          }
+          & p{
+            color: $white;
+            text-transform: uppercase;
+            font-size: fz4;
+            font-weight: $bold;
+          }
+        }
+      }
+    }
   }
 
   section.choose{
