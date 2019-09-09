@@ -154,6 +154,8 @@ section.pharmacy{
   background-image: url('/assets/img/index-details-bg.jpg');
   & .container{
     text-align: center;
+    display: flex;
+    justify-content: center;
 
     & .content{
       background-color: $white;
@@ -161,8 +163,33 @@ section.pharmacy{
       border-radius: 26px;
       display: flex;
       flex-direction: column;
-      & h1.title{
+      padding: 40px 10px 0;
+      max-width: 600px;
+      & h2.title{
         color: $blue;
+        margin-bottom: 15px;
+        padding: 0 0 15px;
+      }
+      & .pharmacy__list{
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-bottom: .5px solid $midBlue;
+        & .row{
+          display: flex;
+          text-align: center;
+          justify-content: space-evenly;
+          margin-bottom: 30px;
+        }
+      }
+      & p{
+        font-weight: $medium;
+        color: $darkBlue;
+        margin-bottom: 25px;
+      }
+      & .picture{
+        margin-bottom: 20px;
       }
     }
   }
@@ -423,6 +450,44 @@ section.index__details{
         padding: 0 10px;
         &:last-child{
           margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  section.pharmacy{
+    padding: 150px 0;
+    & .container{
+      & .content{
+        padding: 40px 100px 0;
+        & h2.title{
+          margin-bottom: 25px;
+        }
+        & .pharmacy__list{
+          flex-direction: row;
+          justify-content: space-between;
+          padding: 0 0 20px;
+          & .row{
+            display: flex;
+            text-align: center;
+            justify-content: space-evenly;
+            margin-bottom: 0px;
+            flex-direction: column;
+            & .pharmacy__item{
+              padding: 10px 0;
+              & a{
+                display: block;
+              }
+            }
+          }
+        }
+        & p{
+          font-weight: $medium;
+          color: $darkBlue;
+          margin-bottom: 25px;
+        }
+        & .picture{
+          margin-bottom: 20px;
         }
       }
     }
