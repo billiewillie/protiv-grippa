@@ -1,7 +1,7 @@
 extends ../layout/main
 
 block content
-  main.main
+  main.main.oversize
     .container
       ul.list.visible__md
         li.item
@@ -17,8 +17,34 @@ block content
         img(src="./assets/img/main-logo.png", alt="img")
   section.products
     .container
-      p text text
-  section.choose
+      .content
+        .part
+          .picture
+            img(src="./assets/img/sirop-pack.png", alt="img")
+          span.title 
+            | приятный
+            br
+            | вкус
+          .ellipses__list
+            .part
+              img(src="./assets/img/ellipse/ellipse-sirop.png", alt="ellipse")
+        .part
+          .picture
+            img(src="./assets/img/powder-pack.png", alt="img")
+          span.title 
+            | палитра
+            br
+            | вкусов
+          .ellipses__list
+            .part
+              img(src="./assets/img/ellipse/powder-ellipse-1.png", alt="ellipse")
+            .part
+              img(src="./assets/img/ellipse/powder-ellipse-2.png", alt="ellipse")
+            .part
+              img(src="./assets/img/ellipse/powder-ellipse-3.png", alt="ellipse")
+            .part
+              img(src="./assets/img/ellipse/powder-ellipse-4.png", alt="ellipse")
+  section.choose.oversize
     .container
       h2.title Цитовир-3  — выбор ответственных родителей!
       ul.list
@@ -83,7 +109,7 @@ block content
             img(src="./assets/img/formula-list/formula-pic-4.jpg", alt="img")
           p Множество положительных отзывов от родителей на независимых порталах
       h2.title Выбери свой Цитовир-3
-  section.index__details
+  section.index__details.oversize
     .part
       .content
         h2.title сироп
@@ -110,7 +136,8 @@ block content
         .list
           
           p.item 
-            | Подходит детям с ограничением в потреблении углеводов 
+            | Подходит детям с ограничением в потреблении углеводов
+            br
             span (подсластитель – фруктоза)
           p.item Увеличенный срок хранения, удобство транспортировки
           p.item 4 вкуса
@@ -158,6 +185,6 @@ block content
             target='_blank')
             img(src="./assets/img/pharmacy/farmindex.png", alt="img")
         
-        p *для детей до 6 лет
+        p.warning *для детей до 6 лет
   include ../includes/module/footer
   include ../includes/module/warning
