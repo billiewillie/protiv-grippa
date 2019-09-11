@@ -79,6 +79,11 @@ section.products{
           }
         }
       }
+
+      & .chick{
+        margin-top: -100px;
+        z-index: 2;
+      }
     }
   }
 }
@@ -101,11 +106,13 @@ section.choose{
       color: $white;
       margin-bottom: 30px;
     }
+
     & ul.list{
       width: 100%;
       font-size: 0;
       flex-direction: column;
       display: flex;
+      align-items: center;
       & li.item{
         display: flex;
         flex-direction: column;
@@ -137,6 +144,31 @@ section.choose{
         & p{
           text-transform: lowercase;
           font-size: $fz7;
+        }
+
+        & .cost{
+          background-color: $orange;
+          border-radius: 50%;
+          width: 180px;
+          height: 180px;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          & p{
+            font-size: $fz8;
+            font-weight: $bold;
+            margin-bottom: 20px;
+          }
+          & a{
+            background-color: $white;
+            color: $darkBlue;
+            font-size: $fz6;
+            font-weight: $bold;
+            border-radius: 25px;
+            padding: 10px 40px;
+            align-self: center;
+            cursor: pointer;
+          }
         }
       }
     }
@@ -236,7 +268,7 @@ section.pharmacy{
   background-image: url('/assets/img/index-details-bg-mobile.jpg');
   background-size: cover;
   background-position: 50%;
-  z-index: -1;
+  z-index: 1;
   margin-top: -15px;
   & .container{
     text-align: center;
@@ -289,7 +321,8 @@ section.pharmacy{
 
 section.index__details{
   display: flex;
-  flex-direction: column;  
+  flex-direction: column; 
+  z-index: 2;
   & .part{
     width: 100%;
     padding: 80px 10px 10px;
@@ -410,6 +443,7 @@ section.index__details{
   main.main{
     padding: 80px 0;
     background-image: url('/assets/img/index-bg.jpg');
+    background-position: 50% 100%;
     margin-top: -10px;
     border-bottom-left-radius: 100% 60px;
     border-bottom-right-radius: 100% 60px;
@@ -537,6 +571,11 @@ section.index__details{
             }
           }
         }
+        .chick{
+          position: absolute;
+          right: -100px;
+          z-index: 2;
+        }
       }
     }
   }
@@ -561,6 +600,9 @@ section.index__details{
         & li.item{
           width: 25%;
           padding: 0 35px;
+          &:last-child{
+            align-self: flex-end;
+          }
           & .icon{
             background-color: $white;
             border-radius: 50%;
@@ -582,6 +624,43 @@ section.index__details{
           & p{
             text-transform: lowercase;
             font-size: $fz7;
+          }
+
+          & .cost{
+            width: 180px;
+            height: 180px;
+            position: relative;
+            &::before{
+              display: block;
+              position: absolute;
+              content: '';
+              right: -20px;
+              bottom: 60px;
+              width: 40px;
+              height: 40px;
+              background-image: url('/assets/img/icons/triangle-orange.svg');
+              background-size: contain;
+              background-position: 50%;
+              background-repeat: no-repeat;
+              transform: rotate(-20deg);
+            }
+            &::after{
+              display: block;
+              position: absolute;
+              content: '';
+              right: -210px;
+              bottom: -120px;
+              width: 183px;
+              height: 272px;
+              background-image: url('/assets/img/chick/chick-2.png');
+              background-size: contain;
+              background-position: 50%;
+              background-repeat: no-repeat;
+            }
+            & a{
+              padding: 10px 40px;
+              align-self: center;
+            }
           }
         }
       }
@@ -659,14 +738,14 @@ section.index__details{
         text-align: center;
       }
       &:first-child{
-        border-top-left-radius: 100% 50px;
-        border-bottom-left-radius: 100% 50px;
+        border-top-left-radius: 100% 40px;
+        border-bottom-left-radius: 100% 40px;
         border-top-right-radius: 0 0;
         border-bottom-right-radius: 0 0;
       }
       &:last-child{
-        border-top-right-radius: 100% 50px;
-        border-bottom-right-radius: 100% 50px;
+        border-top-right-radius: 100% 40px;
+        border-bottom-right-radius: 100% 40px;
         border-top-left-radius: 0 0;
         border-bottom-left-radius: 0 0;
       }
@@ -701,11 +780,12 @@ section.index__details{
 
   section.pharmacy{
     background-image: url('/assets/img/index-details-bg.jpg');
-    padding: 150px 0;
+    padding: 150px 0 210px;
     margin-top: -40px;
     & .container{
       & .content{
         padding: 40px 100px 0;
+        position: relative;
         & h2.title{
           margin-bottom: 25px;
         }
@@ -734,6 +814,72 @@ section.index__details{
         }
         & .picture{
           margin-bottom: 20px;
+        }
+        .question{
+          position: absolute;
+          border-radius: 50%;
+          background-color: $green;
+          width: 195px;
+          height: 195px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          bottom: -50px;
+          right: -80px;
+          align-items: center;
+          
+
+          & h3{
+            color: $white;
+            font-size: $fz8;
+            text-align: center;
+            font-weight: $bold;
+          }
+
+          & p{
+            color: $white;
+            font-size: $fz6;
+            text-align: center;
+          }
+
+          & a{
+            color: $darkBlue;
+            background-color: $white;
+            border-radius: 25px;
+            font-size: $fz6;
+            font-weight: $bold;
+            padding: 10px 20px;
+          }
+
+          &::before{
+            display: block;
+            position: absolute;
+            content: '';
+            right: -15px;
+            bottom: 50px;
+            width: 40px;
+            height: 40px;
+            background-image: url('/assets/img/icons/triangle-green.svg');
+            background-size: contain;
+            background-position: 50%;
+            background-repeat: no-repeat;
+            transform: rotate(-10deg);
+            z-index: -1;
+          }
+
+          &::after{
+            display: block;
+            position: absolute;
+            content: '';
+            right: -180px;
+            bottom: -130px;
+            width: 170px;
+            height: 228px;
+            background-image: url('/assets/img/chick/chick-3.png');
+            background-size: contain;
+            background-position: 50%;
+            background-repeat: no-repeat;
+          }
         }
       }
     }

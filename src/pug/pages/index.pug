@@ -18,6 +18,8 @@ block content
   section.products
     .container
       .content
+        .chick
+          img(src="./assets/img/chick/chick-1.png", alt="img")
         .part
           .picture
             img(src="./assets/img/sirop-pack.png", alt="img")
@@ -50,34 +52,38 @@ block content
       ul.list
         li.item
           .icon
-            img(src="./assets/img/icons/choose-list/choose-icon-1.svg", alt="")
+            img(src="./assets/img/icons/choose-list/choose-icon-1.svg", alt="icon")
           h3.title широкий спектр действия
           p защищает от всех типов возбудителей ОРВИ и гриппа (более 200)
         li.item
           .icon
-            img(src="./assets/img/icons/choose-list/choose-icon-2.svg", alt="")
+            img(src="./assets/img/icons/choose-list/choose-icon-2.svg", alt="icon")
           h3.title Эффективная профилактика
           p более 90% детей, принимавших Цитовир-3 в период сезонной вспышки гриппа и ОРВИ, в последующий месяц не заболели
         li.item
           .icon
-            img(src="./assets/img/icons/choose-list/choose-icon-3.svg", alt="")
+            img(src="./assets/img/icons/choose-list/choose-icon-3.svg", alt="icon")
           h3.title защита от осложнений
           p предупреждает бактериальные осложнения гриппа и ОРВИ, что позволяет избежать излишней медикаментозной нагрузки на организм
         li.item
           .icon
-            img(src="./assets/img/icons/choose-list/choose-icon-4.svg", alt="")
+            img(src="./assets/img/icons/choose-list/choose-icon-4.svg", alt="icon")
           h3.title высокий профиль безопасности
           p разработан специально для детей, не кумулируется в организме и при метаболизме не образует токсичных продуктов, минимальная вероятность побочных эффектов
         li.item
           .icon
-            img(src="./assets/img/icons/choose-list/choose-icon-5.svg", alt="")
+            img(src="./assets/img/icons/choose-list/choose-icon-5.svg", alt="icon")
           h3.title полная Совместимость
           p допустимо применение со всеми симптоматическими средствами
         li.item
           .icon
-            img(src="./assets/img/icons/choose-list/choose-icon-6.svg", alt="")
+            img(src="./assets/img/icons/choose-list/choose-icon-6.svg", alt="icon")
           h3.title щадящий состав
           p подходит для детей с ограничением в потреблении углеводов (Цитовир-3 порошок) и склонным к аллергии (нейтральный вкус порошка)
+        li.item
+          .cost
+            p Узнайте стоимость курса
+            a.btn(href="") Здесь
   section.formula  
     .container
       .content
@@ -141,7 +147,7 @@ block content
             span (подсластитель – фруктоза)
           p.item Увеличенный срок хранения, удобство транспортировки
           p.item 4 вкуса
-  section.pharmacy
+  section.pharmacy.visible__md
     .container
       .content
         h2.title 
@@ -184,7 +190,10 @@ block content
             href="https://www.pharmindex.ru/tsitovir_3.html",
             target='_blank')
             img(src="./assets/img/pharmacy/farmindex.png", alt="img")
-        
         p.warning *для детей до 6 лет
+        .question
+          h3 Остались вопросы?
+          p Спросите специалиста!
+          a.btn(href="") Задать вопрос
   include ../includes/module/footer
   include ../includes/module/warning
