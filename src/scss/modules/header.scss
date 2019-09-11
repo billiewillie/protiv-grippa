@@ -8,21 +8,39 @@ header.header {
   font-size: $fz1;
   background-color: $midBlue;
   height: 76px;
+  width: 100%;
   box-shadow: 0px 5px 7px rgba(40, 60, 128, 0.15);
   border-bottom-left-radius: 100% 30px;
   border-bottom-right-radius: 100% 30px;   
+
+  &.visible__md{
+    display: none;
+  }
 
   & .container{
     display: flex;
     align-items: center;
     & li{
-      & ul.list{
-
-      }
       &.active,
-      &:hover{
+      & a:hover{
         background-color: $red;
         border-radius: 20px;
+      }
+      &:first-child{
+        & a{
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          & span.arrow{
+            width: 12px;
+            height: 7px;
+            background-image: url('/assets/img/icons/arrow-down.svg');
+            background-position: 50%;
+            background-repeat: no-repeat;
+            background-size: contain;
+            margin-left: 5px;
+          }
+        }
       }
     }
     a{
@@ -90,8 +108,31 @@ header.header {
   header.header {
     bottom: 0;
     height: 90px;
+    width: 104%;
+    margin-left: -2%;
     border-bottom-left-radius: 100% 60px;
     border-bottom-right-radius: 100% 60px; 
+
+    & .container{
+      padding: 0 30px;
+      position: fixed;
+      width: 104%;
+      z-index: 1;
+      left: 0;
+      right: 0;
+      margin: auto;
+      background-color: $midBlue;
+
+      
+    }
+
+    &.hidden__md{
+      display: none;
+    }
+
+    &.visible__md{
+      display: flex;
+    }
 
     & li{
       & a{
@@ -119,10 +160,43 @@ header.header {
     }
   }
 
-  .wrapper__floor .hotline,
-  .wrapper__page .hotline{
-    background-color: $white;
-    justify-content: space-between;
+  .diploma{
+    position: fixed;
+    width: 104%;
+    margin-left: -2%;
+    z-index: 3;
+    top: 70px;
+    & .container{
+      display: flex;
+      justify-content: flex-end;
+      padding: 0 30px;
+      & .content{
+        border-radius: 0 0 20px 20px;
+        padding: 25px 5px 5px;
+        background-color: $white;
+        width: 102px;
+        text-align: center;
+        transition: .2s;
+        &:hover{
+          margin-top: 10px;
+        }
+        & p.top{
+          color: $darkBlue;
+          font-size: $fz2;
+          text-align: center;
+          font-weight: $bold;
+          margin-bottom: 5px;
+        }
+        & .picture{
+          margin-bottom: 5px;
+        }
+        & p.bottom{
+          color: $dark;
+          font-size: $fz2;
+          text-align: center;
+        }
+      }
+    }
   }
 
 }

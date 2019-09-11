@@ -98,12 +98,24 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      text-align: center;
+      text-align: left;
       flex: auto;
+      padding-left: 20px;
 
       & li{
         transition: .2s;
         margin-bottom: 10px;
+
+        & ul.list{
+          margin-top: 10px;
+          & li.item{
+            margin-bottom: 5px;
+            & a{
+              font-size: $fz5;
+              padding: 0;
+            }
+          }
+        }
         a{
           font-size: $fz8;
           line-height: $lineHeight2;
@@ -179,20 +191,14 @@
 }
 
 @media (min-width: 992px) {
-  .burger {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-left: none;
-    order: 1;
-    position: relative;
   
-    & .menu-switch{
+    .menu-switch{
       display: none;
     }
   
-    & #navigation{
+    #navigation{
       top: 0;
+      width: 100%;
       justify-content: space-around;
       position: relative;
       opacity: 1;
@@ -205,11 +211,57 @@
         align-items: center;
         justify-content: space-between;
 
+        & li:first-child{
+          position: relative;
+          & a:hover ~ ul.list,
+          ul.list:hover{
+            display: block;
+            opacity: 1;
+            width: 121px;
+            position: absolute;
+            background-color: $white;
+            top: 50%;
+            border-radius: 0 0 20px 20px;
+            padding-top: 20px;
+            left: 0;
+            width: 100%;
+            & li{
+              padding: 0 10px;
+              & a{
+                background-color: transparent;
+                color: $midBlue;
+                font-size: $fz5;
+                font-weight: $medium;
+                padding: 10px 0;
+                text-transform: inherit;
+                border-bottom: .5px solid rgba(0,98,217,.5);
+                border-radius: 0;
+                &:hover{
+                  color: $red;
+                }
+              }
+            }
+            
+          }
+          & a:hover{
+            background-color: #fff;
+            color: $midBlue;
+          }
+          & .first__link{
+            background-color: #fff;
+            color: $midBlue;
+            position: relative;
+            z-index: 1;
+          }
+        } 
+
         & li {
           text-align: left;
           margin-bottom: 0;
           & ul.list{
             display: none;
+            opacity: 0;
+            transition: .2s;
           }
           & a{
             font-size: $fz4;
@@ -270,5 +322,4 @@
         }
       }
     }
-  }
 }
