@@ -25,4 +25,28 @@ window.addEventListener('load', function() {
     link.addEventListener('mouseleave', function(e){
         link.classList.remove('first__link');
     });
-})
+
+    if($('.instructions')){
+        $('.tabgroup > div').hide();
+        $('.tabgroup > div:first-of-type').show();
+        $('.tab__list a').click(function(e){
+            e.preventDefault();
+            var $this = $(this),
+                tabgroup = '#'+$this.parents('.tab__list').data('tabgroup'),
+                others = $this.closest('li').siblings().children('a'),
+                target = $this.attr('href');
+            others.removeClass('active');
+            $this.addClass('active');
+            $(tabgroup).children('div').hide();
+            $(target).show();
+
+            if($('.tab__list > li:last-of-type a').hasClass('active')) {
+                $('.instructions').addClass('clicked');
+            } else {
+                $('.instructions').removeClass('clicked');
+            }
+        });
+    }
+
+    
+});

@@ -118,6 +118,8 @@ h2.title {
 
 @import "modules/socials.scss";
 
+@import "modules/instructions.scss";
+
 @import "modules/footer.scss";
 
 @import "modules/warning.scss";
@@ -147,5 +149,9 @@ h2.title {
 
   h2.title {
     font-size: $fz40;
+  }
+
+  .wrapper {
+    padding-top: 60px;
   }
 }

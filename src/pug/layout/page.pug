@@ -1,49 +1,27 @@
 doctype html
-html(lang="en").building-detail
+html(lang="en")
   head
     meta(charset="UTF-8")
-    link(rel="shortcut icon" href="./assets/img/icons/favicon.ico" type="image/x-icon")
-    link(rel="icon" href="./assets/img/icons/favicon.png" type="image/x-icon")
     link(
-      href="https://fonts.googleapis.com/css?family=Alegreya+Sans:300,300i,400,400i,500,500i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,latin-ext",  
+      rel="icon" 
+      href="./assets/img/icons/favicon.png",
+      type="image/x-icon")
+    link(
+      href="https://fonts.googleapis.com/css?family=Alegreya+Sans:300,300i,400,400i,500,500i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,latin-ext", 
       rel="stylesheet")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    meta(http-equiv="X-UA-Compatible", content="ie=edge")
-    meta(name='description' content="Аренда офиса в Адмиралтейском районе – удобная транспортная развязка, развитая инфраструктура и прекрасный вид из окна на Неву — основные достоинства офисного комплекса.")
-    title Бизнес-центр «Английская 70 / Галерная 73»
+    meta(
+      name="viewport", 
+      content="width=device-width, initial-scale=1.0")
+    meta(
+      http-equiv="X-UA-Compatible", 
+      content="ie=edge")
+    meta(
+      name='description' 
+      content="Против гриппа - сайт препарата Цитовир-3 порошок для детей. Информационный портал о гриппе, ОРВИ и простудных заболеваниях у детей.")
+    title Цитовир-3
   body.body
-    .wrapper.wrapper__page
-      header.header
-        a.logo(href='/')
-          span элитный
-          span деловой
-          span особняк
-        a.phone.hidden__md(href="tel:+78123093524")
-        .burger
-          input#menu-switch(type="checkbox")
-          nav#navigation
-            ul
-              each val, key in pages
-                if page === key
-                  li.active
-                    a= key
-                else
-                  li
-                    a(href=val)= key
-            .quick-contact
-              a.logo
-                span элитный
-              address.visible__md
-                | 190121 Санкт-Петербург,
-                br 
-                | Английская наб., 70
-              p.contacts 
-                | Телефон: 
-                a(href="tel:+78123093524") +7 (812) 309-35-24 
-                br 
-                | e-mail: 
-                a(href="office-centre@mail.ru") office-centre@mail.ru
-          label.menu-switch(for='menu-switch')
-            span
+    div.wrapper
+      include ../includes/module/header
       block content
       include ../includes/module/footer
+      include ../includes/module/warning

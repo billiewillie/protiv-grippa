@@ -1,0 +1,136 @@
+.instructions{
+  flex: auto;
+  background-color: $blue;
+  background-image: url('/assets/img/instructions-pattern.png');
+  background-position: 0 0;
+  background-size: contain;
+  background-repeat: repeat;
+  padding: 90px 0;
+
+  &.clicked{
+    background-color: $orange;
+  }
+
+  & .container{
+    & .block__title{
+      padding-left: 5%;
+      margin-bottom: 50px;
+      & h1{
+        color: $white;
+        text-transform: uppercase;
+        font-weight: $extraBold;
+        font-size: $fz40;
+        margin-bottom: 15px;
+      }
+      & p.subtitle{
+        font-weight: $bold;
+        font-size: $fz9;
+      }
+    }
+    & .content{
+      background-color: transparent;
+      & ul.tab__list{
+        display: flex;
+        & li.tab{
+          width: 50%;
+          & a{
+            display: block;
+            text-align: center;
+            font-weight: $extraBold;
+            font-size: $fz10;
+            padding: 15px 0;
+            background-repeat: no-repeat;
+            background-size: auto 30%;
+            background-position: 10% 50%;
+            border-radius: 26px 26px 0 0;
+            color: $white;
+            cursor: pointer;
+          }
+          &:first-child{
+            & a{
+              
+              background-color: $blue;
+              background-image: url('/assets/img/icons/sirop-icon-active.svg');
+              &.active{
+                background-color: $white;
+                color: $darkBlue;
+                background-image: url('/assets/img/icons/sirop-icon.svg');
+              }
+            }
+          }
+          &:last-child{
+            & a{
+              color: $white;
+              position: relative;
+              background-color: $orange;
+              background-image: url('/assets/img/icons/powder-icon.svg');
+              &.active{
+                background-color: $white;
+                color: $darkBlue;
+                background-image: url('/assets/img/icons/powder-icon-active.svg');
+              }
+            }
+          }
+          
+        }
+      }
+      & .inner{
+        background-color: $white;
+        & .text{
+          display: flex;
+          flex-direction: column;
+          padding: 10px;
+          & .top{
+            width: 100%;
+            display: flex;
+            margin-bottom: 20px;
+            & .part{
+              width: 100%;
+            }
+          }
+          & .bottom{
+            & p{
+              margin-bottom: 20px;
+              font-size: $fz5;
+              font-weight: $medium;
+              & span.title{
+                color: $darkBlue;
+                font-weight: $bold;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px){
+  .instructions{
+  
+    & .container{
+      & .block__title{
+        & h1{
+        }
+        & p.subtitle{
+        }
+      }
+      & .content{
+        // &::before{
+        //   right: 15%;
+        //   top: -120px;
+        //   width: 195px;
+        //   height: 219px;
+        // }
+        & ul.tab__list{
+          & li.tab{
+            & a{
+              font-size: $fz40;
+              background-size: auto 50%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
