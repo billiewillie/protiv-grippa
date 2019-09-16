@@ -48,5 +48,21 @@ window.addEventListener('load', function() {
         });
     }
 
-    
+    $('a.scroll').on('click', function(e){
+        e.preventDefault();
+        var $this = $(this);
+        var attr = $this.attr('href');
+        $("html, body").animate({
+          scrollTop: $(attr).offset().top
+        }, 1000);
+    });
+
 });
+
+window.addEventListener('scroll', function(){
+    if(window.pageYOffset > 0) {
+        $('.diploma').addClass('hidden');
+    } else {
+        $('.diploma').removeClass('hidden');
+    }
+})

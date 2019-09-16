@@ -159,7 +159,11 @@ header.header {
     width: 104%;
     margin-left: -2%;
     z-index: 3;
-    top: 70px;
+    top: 60px;
+    transition: .4s;
+    &.hidden{
+      top: -100px;
+    }
     & .container{
       display: flex;
       justify-content: flex-end;
@@ -193,4 +197,10 @@ header.header {
     }
   }
 
+}
+
+@media (min-width: 1200px){
+  .diploma{
+    top: 70px;
+  }
 }
