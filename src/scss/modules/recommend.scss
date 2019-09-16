@@ -1,0 +1,72 @@
+.recommend{
+  padding: 10px 0 0;
+  text-align: center;
+  & .picture{
+    position: relative;
+    & img{
+      display: block;
+      margin: auto;
+      width: 60%;
+    }
+    &::after{
+      display: block;
+      position: absolute;
+      z-index: 1;
+      content: '';
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      width: 100%;
+      height: 100%;
+      background: rgba(255,255,255,1);
+      background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 20%, rgba(255,255,255,0) 50%, rgba(255,255,255,1) 80%, rgba(255,255,255,1) 100%);
+      background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,255,255,1)), color-stop(20%, rgba(255,255,255,0)), color-stop(50%, rgba(255,255,255,1)), color-stop(80%, rgba(255,255,255,1)), color-stop(100%, rgba(255,255,255,1)));
+      background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 20%, rgba(255,255,255,0) 50%, rgba(255,255,255,1) 80%, rgba(255,255,255,1) 100%);
+      background: -o-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 20%, rgba(255,255,255,0) 50%, rgba(255,255,255,1) 80%, rgba(255,255,255,1) 100%);
+      background: -ms-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 20%, rgba(255,255,255,0) 50%, rgba(255,255,255,1) 80%, rgba(255,255,255,1) 100%);
+      background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 20%, rgba(255,255,255,0) 50%, rgba(255,255,255,1) 80%, rgba(255,255,255,1) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=1 );
+    }
+  }
+  & .content{
+    background-image: url('/assets/img/recommend-pattern.png');
+    background-position: 0 0;
+    background-size: cover;
+    padding: 120px 0 20px;
+    position: relative;
+    z-index: 1;
+    & .container{
+      & .chick{
+        position: absolute;
+        width: 50%;
+        max-width: 265px;
+        top: -40px;
+        left: 0;
+      }
+    }
+  }
+  & .aword{
+    background-color: $green;
+    padding: 20px 0;
+  }
+}
+
+@media (min-width: 992px){
+  .recommend{
+    padding: 10px 0 0;
+    & .content{
+      & .container{
+        position: relative;
+        & .chick{
+          top: -100px;
+          left: -50px;
+        }
+      }
+    }
+    & .aword{
+
+    }
+  }
+}
