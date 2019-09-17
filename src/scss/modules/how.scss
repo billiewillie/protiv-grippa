@@ -40,6 +40,90 @@
       & ul.list{
         display: flex;
         flex-direction: column;
+        align-items: center;
+        & li.item{
+          font-size: $fz7;
+          color: $dark;
+          padding: 120px 30px 30px 30px;
+          background-color: $white;
+          box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+          border-radius: 7px;
+          margin-bottom: 40px;
+          max-width: 260px;
+          position: relative;
+          transition: .2s;
+          cursor: default;
+          &::before{
+            display: block;
+            position: absolute;
+            content: '';
+            left: 30px;
+            top: 30px;
+            width: 80px;
+            height: 80px;
+            background-image: url('/assets/img/icons/effect/icon-1.svg');
+            background-size: 50%;
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            background-color: rgba(50, 207, 188, .3);
+            border-radius: 50%;
+            transition: .2s;
+          }
+          &:hover{
+            background: linear-gradient(316.94deg, rgba(50, 207, 188, 0.4) 0%, rgba(50, 207, 188, 0) 100%), #FFFFFF;
+            &::before{
+              background-image: url('/assets/img/icons/effect/icon-1-hover.svg');
+            }
+          }
+          &:nth-child(2){
+            &::before{
+              background-color: rgba(255, 0, 57, .3);
+              background-image: url('/assets/img/icons/effect/icon-2.svg');
+            }
+            &:hover{
+              background: linear-gradient(316.82deg, rgba(255, 0, 57, 0.3) 0%, rgba(255, 0, 57, 0) 100%), #FFFFFF;
+              &::before{
+                background-image: url('/assets/img/icons/effect/icon-2-hover.svg');
+              }
+            }
+          }
+          &:nth-child(3){
+            &::before{
+              background-color: rgba(0, 98, 217, .3);
+              background-image: url('/assets/img/icons/effect/icon-3.svg');
+            }
+            &:hover{
+              background: linear-gradient(316.82deg, rgba(255, 0, 57, 0.3) 0%, rgba(255, 0, 57, 0) 100%), #FFFFFF;
+              &::before{
+                background-image: url('/assets/img/icons/effect/icon-3-hover.svg');
+              }
+            }
+          }
+          &:nth-child(4){
+            &::before{
+              background-color: rgba(0, 194, 255, .3);
+              background-image: url('/assets/img/icons/effect/icon-4.svg');
+            }
+            &:hover{
+              background: linear-gradient(316.82deg, rgba(255, 0, 57, 0.3) 0%, rgba(255, 0, 57, 0) 100%), #FFFFFF;
+              &::before{
+                background-image: url('/assets/img/icons/effect/icon-4-hover.svg');
+              }
+            }
+          }
+          &:nth-child(5){
+            &::before{
+              background-color: rgba(244, 169, 18, .3);
+              background-image: url('/assets/img/icons/effect/icon-5.svg');
+            }
+            &:hover{
+              background: linear-gradient(316.82deg, rgba(255, 0, 57, 0.3) 0%, rgba(255, 0, 57, 0) 100%), #FFFFFF;
+              &::before{
+                background-image: url('/assets/img/icons/effect/icon-5-hover.svg');
+              }
+            }
+          }
+        }
       }
     }
   }
@@ -79,6 +163,17 @@
       border-top-left-radius: 100% 60px;
       border-top-right-radius: 100% 60px; 
       margin-top: -30px;
+      & .container{
+        & ul.list{
+          justify-content: center;
+          flex-direction: row;
+          flex-wrap: wrap;
+          align-items: stretch;
+          & li.item{
+            margin-right: 40px;
+          }
+        }
+      }
     }
   }
 }
