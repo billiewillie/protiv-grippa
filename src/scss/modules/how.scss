@@ -127,9 +127,135 @@
       }
     }
   }
+  & .describe{
+    font-size: $fz4;
+    background-color: $gray;
+    padding: 25px 0;
+    font-weight: $medium;
+    & sup{
+      vertical-align: super;
+    }
+    & p{
+      margin-bottom: 10px;
+    }
+  }
+  & .work{
+    display: flex;
+    flex-direction: column;
+    color: $white;
+    background-color: $midBlue;
+    font-size: 0;
+    & .part{
+      & h2.title{
+        font-weight: $medium;
+        font-size: $fz40;
+        color: $white;
+        position: relative;
+        z-index: 1;
+        margin-bottom: 0;
+        line-height: 1.1;
+      }
+      & h3.title{
+        font-weight: $bold;
+        font-size: $fz9;
+        margin-bottom: 20px;
+      }
+      & p.text{
+        font-size: $fz8;
+        font-weight: $regular;
+        padding-left: 20px;
+        margin-bottom: 10px;
+        position: relative;
+        &::before{
+          display: block;
+          position: absolute;
+          content: '';
+          left: 0;
+          top: 6px;
+          width: 8px;
+          height: 8px;
+          background-color: $blue;
+          border-radius: 50%;
+        }
+      }
+      & p.text:last-of-type{
+        margin-bottom: 0;
+      }
+      &:first-child{
+        position: relative;
+        background-image: url('/assets/img/how-bg-2.jpg');
+        background-size: cover;
+        background-position: 100%;
+        text-align: right;
+        padding: 90px 10px;
+        &::before{
+          display: block;
+          position: absolute;
+          content: '';
+          left: 0;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          margin: auto;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(360deg, #0062D9 0%, rgba(0, 98, 217, 0) 100%);
+        }
+      }
+      &:last-child{
+        padding: 0px 20px 40px;
+      }
+    }
+  }
+  & .components{
+    padding-bottom: 40px;
+    margin-top: -20px;
+    position: relative;
+    z-index: 1;
+    border-bottom-left-radius: 100% 30px;
+    border-bottom-right-radius: 100% 30px;
+    & .container{
+      & ul.list{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        & li.item{
+          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+          border-radius: 7px;
+          margin-bottom: 30px;
+          padding: 20px;
+          background: linear-gradient(0deg, rgba(255, 0, 57, 0.1), rgba(255, 0, 57, 0.1)), #FFFFFF;
+          & .picture{
+            text-align: center;
+            margin-bottom: 30px;
+          }
+          & h3.title{
+            font-size: $fz9;
+            font-weight: $bold;
+            line-height: 1.2;
+            text-align: center;
+            margin-bottom: 30px;
+            color: $darkBlue;
+            & span{
+              font-weight: $regular;
+            }
+          }
+          & p{
+            font-size: $fz6;
+          }
+          &:nth-child(2){
+            background: linear-gradient(0deg, rgba(0, 194, 255, 0.1), rgba(0, 194, 255, 0.1)), #FFFFFF;
+          }
+          &:nth-child(3){
+            background: linear-gradient(0deg, rgba(252, 208, 0, 0.15), rgba(252, 208, 0, 0.15)), #FFFFFF;
+          }
+        }
+      }
+    }
+  }
 }
 
-@media (min-width: 992px){
+@media (min-width: 992px) {
   .how{
     & .page__title{
       padding: 160px 0;
@@ -171,6 +297,57 @@
           align-items: stretch;
           & li.item{
             margin-right: 40px;
+          }
+        }
+      }
+    }
+    & .work{
+      flex-direction: row;
+      align-items: stretch;
+      & .part{
+        width: 50%;
+        & h3.title{
+          margin-bottom: 40px;
+        }
+        & p.text{
+          margin-bottom: 20px;
+          &::before{
+            display: block;
+            position: absolute;
+            content: '';
+            left: 0;
+            top: 6px;
+            width: 8px;
+            height: 8px;
+            background-color: $blue;
+            border-radius: 50%;
+          }
+        }
+        &:first-child{
+          padding: 80px 50px 90px;
+        }
+        &:last-child{
+          padding: 90px 50px;
+          &>*{
+            max-width: 400px;
+          }
+        }
+      }
+    }
+    & .components{
+      padding-bottom: 140px;
+      margin-top: -40px;
+      border-bottom-left-radius: 100% 60px;
+      border-bottom-right-radius: 100% 60px; 
+      & .container{
+        & ul.list{
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: stretch;
+          & li.item{
+            margin-bottom: 0px;
+            padding: 30px;
+            width: 31%;
           }
         }
       }
