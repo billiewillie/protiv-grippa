@@ -106,6 +106,41 @@ h2.title {
   display: none;
 }
 
+.quote{
+  display: flex;
+  justify-content: center;
+  & .cloud{
+    background-color: $green;
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    & p{
+      font-size: $fz8;
+      color: $white;
+      font-weight: $bold;
+      margin-bottom: 10px;
+    }
+    & a.btn{
+      background-color: $white;
+      color: $darkBlue;
+      border-radius: 25px;
+      align-self: center;
+      padding: 10px 40px;
+      font-weight: $bold;
+      transition: .2s;
+      &:hover{
+        background-color: $darkBlue;
+        color: $white;
+      }
+    }
+  }
+}
+
 @import "modules/header.scss";
 
 @import "modules/menu.scss";
@@ -155,5 +190,48 @@ h2.title {
 
   .wrapper {
     padding-top: 60px;
+  }
+
+  .oversize .container {
+    padding: 0 30px;
+  }
+
+  .quote{
+    & .cloud{
+      width: 195px;
+      height: 195px;
+      & p{
+      }
+      & a.btn{
+      }
+      &::after{
+        position: absolute;
+        display: block;
+        content: '';
+        right: -180px;
+        bottom: -90px;
+        width: 170px;
+        height: 228px;
+        background-image: url('/assets/img/chick/chick-6.png');
+        z-index: 1;
+      }
+      &::before{
+        right: -15px;
+        bottom: 50px;
+        width: 40px;
+        height: 40px;
+        background-image: url('/assets/img/icons/triangle-green.svg');
+        -webkit-transform: rotate(-10deg);
+        -ms-transform: rotate(-10deg);
+        transform: rotate(-10deg);
+        z-index: -1;
+        display: block;
+        position: absolute;
+        content: "";
+        background-size: contain;
+        background-position: 50%;
+        background-repeat: no-repeat;
+      }
+    }
   }
 }

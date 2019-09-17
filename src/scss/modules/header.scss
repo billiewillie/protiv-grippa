@@ -11,7 +11,11 @@ header.header {
   width: 100%;
   box-shadow: 0px 5px 7px rgba(40, 60, 128, 0.15);
   border-bottom-left-radius: 100% 30px;
-  border-bottom-right-radius: 100% 30px;   
+  border-bottom-right-radius: 100% 30px; 
+  
+  &.oversize{
+    width: 104%;
+  }
 
   &.visible__md{
     display: none;
