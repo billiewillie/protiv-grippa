@@ -2,6 +2,7 @@
   position: relative;
   z-index: 2;
   background-color: $white;
+
   & .page__title{
     text-align: center;
     background-image: url('/assets/img/how-bg.jpg');
@@ -17,6 +18,7 @@
       }
     }
   }
+
   & .effect{
     padding: 60px 0;
     background-image: url('/assets/img/how-pattern.png');
@@ -127,6 +129,7 @@
       }
     }
   }
+
   & .describe{
     font-size: $fz4;
     background-color: $gray;
@@ -139,12 +142,15 @@
       margin-bottom: 10px;
     }
   }
+
   & .work{
     display: flex;
     flex-direction: column;
     color: $white;
     background-color: $midBlue;
     font-size: 0;
+    position: relative;
+    z-index: 1;
     & .part{
       & h2.title{
         font-weight: $medium;
@@ -207,14 +213,17 @@
       }
     }
   }
+
   & .components{
     padding-bottom: 40px;
-    margin-top: -20px;
-    position: relative;
-    z-index: 1;
     border-bottom-left-radius: 100% 30px;
     border-bottom-right-radius: 100% 30px;
+    background-color: $white;
+    position: relative;
     & .container{
+      margin-top: -20px;
+      position: relative;
+      z-index: 2;
       & ul.list{
         display: flex;
         flex-direction: column;
@@ -248,6 +257,73 @@
           }
           &:nth-child(3){
             background: linear-gradient(0deg, rgba(252, 208, 0, 0.15), rgba(252, 208, 0, 0.15)), #FFFFFF;
+          }
+        }
+      }
+    }
+  }
+
+  & .message{
+    padding: 60px 0;
+    background: linear-gradient(180deg, #F4A912 0%, #FCD000 100%);
+    margin-top: -30px;
+
+    .container{
+      max-width: 580px;
+      text-align: center;
+
+      & h2.title{
+        font-size: $fz40;
+        font-weight: $medium;
+        color: $darkBlue;
+        margin-bottom: 40px;
+      }
+      & p.text{
+        margin-bottom: 30px;
+        text-align: left;
+        color: $white;
+        font-size: $fz9;
+      }
+      & p.note{
+        margin-bottom: 55px;
+        text-align: left;
+        color: $darkBlue;
+        font-size: $fz9;
+      }
+    }
+  }
+
+  & .details{
+    border-top-left-radius: 100% 30px;
+    border-top-right-radius: 100% 30px;
+    margin-top: -40px;
+    position: relative;
+    background-color: $white;
+    padding: 0 0 40px;
+
+    & .container{
+      position: relative;
+      padding-top: 80px;
+      & .button{
+        background-color: transparent;
+        text-align: center;
+        padding: 0;
+        position: absolute;
+        left: 50%;
+        width: 100%;
+        transform: translateX(-50%);
+        top: -30px;
+        & a.btn{
+          background-color: $midBlue;
+          border-radius: 41px;
+          font-size: $fz8;
+          color: $white;
+          text-transform: initial;
+          padding: 20px 50px;
+          display: inline-block;
+          transition: .2s;
+          &:hover{
+            background-color: $red;
           }
         }
       }
@@ -336,10 +412,10 @@
     }
     & .components{
       padding-bottom: 140px;
-      margin-top: -40px;
       border-bottom-left-radius: 100% 60px;
       border-bottom-right-radius: 100% 60px; 
       & .container{
+        margin-top: -40px;
         & ul.list{
           flex-direction: row;
           justify-content: space-between;
