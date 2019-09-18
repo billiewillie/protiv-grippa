@@ -2,7 +2,7 @@
   position: relative;
   z-index: 2;
   background-color: $white;
-  padding-bottom: 100px;
+  padding-bottom: 50px;
 
   & .page__title{
     text-align: center;
@@ -32,6 +32,19 @@
     position: relative;
     z-index: 1;
     margin-top: -30px;
+    &::before{
+      display: block;
+      position: absolute;
+      content: '';
+      left: 0;
+      top: -2px;
+      width: 75%;
+      height: 5%;
+      background-image: url('/assets/img/lines//recommend-line-yellow.svg');
+      background-size: contain;
+      background-position: 0 0;
+      background-repeat: no-repeat;
+    }
     & .container{
       & h2.title{
         font-size: $fz9;
@@ -394,6 +407,7 @@
   }
 
   & .research{
+    margin-bottom: 40px;
     & .container{
       & h2.title{
         text-align: center;
@@ -450,6 +464,7 @@
 
 @media (min-width: 992px) {
   .how{
+    padding-bottom: 110px;
     & .page__title{
       padding: 160px 0;
       & .container{
@@ -483,6 +498,15 @@
       border-top-left-radius: 100% 60px;
       border-top-right-radius: 100% 60px; 
       margin-top: -30px;
+      &::before{
+        display: block;
+        position: absolute;
+        content: '';
+        left: 0;
+        top: -4px;
+        width: 75%;
+        height: 7%;
+      }
       & .container{
         & ul.list{
           justify-content: center;
@@ -616,6 +640,28 @@
             }
           }
         }
+      }
+    }
+
+    & .quote{
+      & .cloud{
+        &::after{
+          width: 183px;
+          height: 272px;
+          right: -200px;
+          bottom: -140px;
+          background-image: url('/assets/img/chick/chick-2.png');
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .how{
+    & .effect{
+      &::before{
+        top: -9px;
       }
     }
   }

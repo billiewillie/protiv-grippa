@@ -109,6 +109,7 @@ h2.title {
 .quote{
   display: flex;
   justify-content: center;
+  text-align: center;
   & .cloud{
     background-color: $green;
     border-radius: 50%;
@@ -136,6 +137,16 @@ h2.title {
       &:hover{
         background-color: $darkBlue;
         color: $white;
+      }
+    }
+  }
+  &.orange{
+    & .cloud{
+      background-color: $orange;
+      & a.btn{
+        &:hover{
+          background-color: $red;
+        }
       }
     }
   }
@@ -233,6 +244,13 @@ h2.title {
         background-size: contain;
         background-position: 50%;
         background-repeat: no-repeat;
+      }
+    }
+    &.orange{
+      & .cloud{
+        &::before{
+          background-image: url('/assets/img/icons/triangle-orange.svg');
+        }
       }
     }
   }
