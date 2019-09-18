@@ -2,6 +2,7 @@
   position: relative;
   z-index: 2;
   background-color: $white;
+  padding-bottom: 100px;
 
   & .page__title{
     text-align: center;
@@ -233,6 +234,7 @@
           border-radius: 7px;
           margin-bottom: 30px;
           padding: 20px;
+          transition: .2s;
           background: linear-gradient(0deg, rgba(255, 0, 57, 0.1), rgba(255, 0, 57, 0.1)), #FFFFFF;
           & .picture{
             text-align: center;
@@ -257,6 +259,16 @@
           }
           &:nth-child(3){
             background: linear-gradient(0deg, rgba(252, 208, 0, 0.15), rgba(252, 208, 0, 0.15)), #FFFFFF;
+          }
+          &:hover{
+            background: $white;
+            box-shadow: 5px 7px 15px rgba(255, 0, 57, 0.25);
+            &:nth-child(2){
+              box-shadow: 5px 7px 15px rgba(0, 98, 217, 0.4);
+            }
+            &:nth-child(3){
+              box-shadow: 5px 7px 15px rgba(252, 208, 0, 0.4);
+            }
           }
         }
       }
@@ -300,6 +312,10 @@
     position: relative;
     background-color: $white;
     padding: 0 0 40px;
+    background-image: url('/assets/img/lines/details-line.svg');
+    background-position: 50% 55%;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
 
     & .container{
       position: relative;
@@ -313,6 +329,8 @@
         width: 100%;
         transform: translateX(-50%);
         top: -30px;
+        cursor: default;
+        margin: auto;
         & a.btn{
           background-color: $midBlue;
           border-radius: 41px;
@@ -324,6 +342,105 @@
           transition: .2s;
           &:hover{
             background-color: $red;
+          }
+        }
+      }
+      & .item{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 50px;
+        width: 100%;
+        & .part{
+          & p.short{
+            font-size: $fz12;
+            line-height: 1.1;
+          }
+          & p.long{
+            font-size: $fz8;
+            line-height: 1.2;
+          }
+          &:first-child{
+            border-bottom: .5px solid $darkBlue;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+          }
+        }
+        &:last-of-type{
+          margin-bottom: 0;          
+        }
+      }
+    }
+  }
+
+  & .button{
+    margin: 40px 0;
+    text-align: center;
+    &:hover{
+      background-color: transparent;
+      cursor: default;
+    }
+    & a.btn{
+      border-radius: 41px;
+      font-size: $fz8;
+      background-color: $orange;
+      color: $white;
+      padding: 20px 50px;
+      text-transform: none;
+      transition: .2s;
+      &:hover{
+        background-color: $red;
+      }
+    }
+  }
+
+  & .research{
+    & .container{
+      & h2.title{
+        text-align: center;
+        color: $darkBlue;
+        font-weight: $medium;
+        margin-bottom: 70px;
+      }
+      & ul.list{
+        font-size: 0;
+        & li.item{
+          display: inline-block;
+          vertical-align: top;
+          width: 100%;
+          margin-bottom: 30px;
+          padding: 0;
+          & .content{
+            padding: 20px 30px;
+            background: linear-gradient(270.33deg, rgba(0, 98, 217, 0.35) 0.09%, rgba(158, 195, 241, 0.52) 42.99%, #FFFFFF 99.93%);
+            & p.authors{
+              font-size: $fz5;
+              font-weight: $regular;
+              color: $darkBlue;
+              margin-bottom: 15px;
+            }
+            & h3.title{
+              font-size: $fz9;
+              font-weight: $medium;
+              color: $dark;
+              & span{
+                font-weight: $regular;
+              }
+            }
+          }
+        }
+      }
+      & p.link{
+        text-align: right;
+        & a{
+          font-size: $fz9;
+          color: $gray3;
+          display: inline-block;
+          border-bottom: 1px solid $gray3;
+          line-height: 1;
+          transition: .2s;
+          &:hover{
+            border-bottom: 1px solid $green;
+            color: $green;
           }
         }
       }
@@ -361,6 +478,7 @@
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=1 );
       }
     }
+
     & .effect{
       border-top-left-radius: 100% 60px;
       border-top-right-radius: 100% 60px; 
@@ -377,6 +495,7 @@
         }
       }
     }
+
     & .work{
       flex-direction: row;
       align-items: stretch;
@@ -410,10 +529,11 @@
         }
       }
     }
+
     & .components{
       padding-bottom: 140px;
       border-bottom-left-radius: 100% 60px;
-      border-bottom-right-radius: 100% 60px; 
+      border-bottom-right-radius: 100% 60px;
       & .container{
         margin-top: -40px;
         & ul.list{
@@ -424,6 +544,76 @@
             margin-bottom: 0px;
             padding: 30px;
             width: 31%;
+          }
+        }
+      }
+    }
+
+    & .details{
+      border-top-left-radius: 100% 60px;
+      border-top-right-radius: 100% 60px;
+      margin-top: -40px;
+      position: relative;
+      background-color: $white;
+      padding: 0 0 40px;
+  
+      & .container{
+        padding-top: 150px;
+        & .item{
+          flex-direction: row;
+          margin-bottom: 220px;
+          & .part{
+            & p.short{
+              font-size: $fz40;
+            }
+            & p.long{
+              font-size: $fz9;
+            }
+            &:first-child{
+              border-bottom: none;
+              border-right: .5px solid $darkBlue;
+              padding-bottom: 0px;
+              padding-right: 50px;
+              margin-bottom: 0px;
+              margin-right: 50px;
+              width: 37%;
+            }
+            &:last-child{
+              width: 63%;
+            }
+          }
+        }
+      }
+    }
+
+    & .research{
+      & .container{
+        & ul.list{
+          & li.item{
+            width: 50%;
+            padding-right: 15px;
+            & .content{
+              padding: 20px 30px;
+              background: linear-gradient(270.33deg, rgba(0, 98, 217, 0.35) 0.09%, rgba(158, 195, 241, 0.52) 42.99%, #FFFFFF 99.93%);
+              & p.authors{
+                font-size: $fz5;
+                font-weight: $regular;
+                color: $darkBlue;
+                margin-bottom: 15px;
+              }
+              & h3.title{
+                font-size: $fz9;
+                font-weight: $medium;
+                color: $dark;
+                & span{
+                  font-weight: $regular;
+                }
+              }
+            }
+            &:nth-child(even){
+              padding-right: 0;
+              padding-left: 15px;
+            }
           }
         }
       }
