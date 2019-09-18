@@ -258,11 +258,8 @@
       border-bottom-right-radius: 100% 60px; 
       padding: 70px 0 90px;
       &::before{
-        display: block;
-        position: absolute;
-        content: '';
         left: 0;
-        top: -4px;
+        top: -9px;
         width: 75%;
         height: 7%;
       }
@@ -314,16 +311,6 @@
       & p.text{
         font-size: $fz8;
         color: $dark;
-      }
-    }
-  }
-}
-
-@media (min-width: 1200px) {
-  .recommend{
-    & .content{
-      &::before{
-        top: -9px;
       }
     }
   }

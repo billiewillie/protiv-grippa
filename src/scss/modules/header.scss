@@ -204,7 +204,27 @@ header.header {
 }
 
 @media (min-width: 1200px){
+  header.header{
+    & .container{
+      .diploma{
+        top: 70px;
+      }
+      & li{
+        & a{
+          padding: 10px 20px;
+          &:hover{
+            background-color: $red;
+          }
+        }
+      }
+    }
+  }
   .diploma{
-    top: 70px;
+    & .container{
+      & .content{
+        padding: 35px 5px 10px;
+        width: 122px;
+      }
+    }
   }
 }

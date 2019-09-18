@@ -193,139 +193,154 @@
 
 @media (min-width: 992px) {
   
-    .menu-switch{
-      display: none;
-    }
-  
-    #navigation{
-      top: 0;
-      width: 100%;
-      justify-content: space-around;
-      position: relative;
-      opacity: 1;
-      background: transparent;
-      transform: translateY(0px);
+  .menu-switch{
+    display: none;
+  }
 
-      & ul {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
+  #navigation{
+    top: 0;
+    width: 100%;
+    justify-content: space-around;
+    position: relative;
+    opacity: 1;
+    background: transparent;
+    transform: translateY(0px);
 
-        & li:first-child{
-          position: relative;
-          & a:hover ~ ul.list,
-          ul.list:hover{
-            display: block;
-            opacity: 1;
-            width: 121px;
-            position: absolute;
-            background-color: $white;
-            top: 50%;
-            border-radius: 0 0 20px 20px;
-            padding-top: 20px;
-            left: 0;
-            width: 100%;
-            & li{
-              padding: 0 5px;
-              & a{
-                background-color: transparent;
-                color: $midBlue;
-                font-size: $fz5;
-                font-weight: $medium;
-                padding: 10px 0;
-                text-transform: inherit;
-                border-bottom: .5px solid rgba(0,98,217,.5);
-                border-radius: 0;
-                &:hover{
-                  color: $red;
-                }
-              }
-              &:last-child{
-                & a{
-                  border-bottom: none;
-                }
-              }
-            }
-            
-          }
-          & a:hover{
-            background-color: #fff;
-            color: $midBlue;
-          }
-          & .first__link{
-            background-color: #fff;
-            color: $midBlue;
-            position: relative;
-            z-index: 1;
-          }
-        } 
+    & ul {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
 
-        & li {
-          text-align: left;
-          margin-bottom: 0;
-          & ul.list{
-            display: none;
-            opacity: 0;
-            transition: .2s;
-          }
-          & a{
-            font-size: $fz4;
-            text-transform: uppercase;
-            &.logo{
-              position: relative;
-              & p{
-                font-size: $fz4;
-              }
-            }
-          }
-        }
-      }
-
-      & .quick-contact{
-        flex-basis: 50%;
-
-        & a.logo{
-          position: relative;
-          transform: rotate(0deg);
-          flex-direction: column;
-          left: auto;
-          align-items: flex-start;
-          font-size: $fz13;
-          color: $headerColor;
+      & li:first-child{
+        position: relative;
+        & a:hover ~ ul.list,
+        ul.list:hover{
           display: block;
-
-          & span{
-            display: block;
-            margin-right: 0;
+          opacity: 1;
+          width: 121px;
+          position: absolute;
+          background-color: $white;
+          top: 50%;
+          border-radius: 0 0 20px 20px;
+          padding-top: 20px;
+          left: 0;
+          width: 100%;
+          & li{
+            padding: 0 5px;
+            & a{
+              background-color: transparent;
+              color: $midBlue;
+              font-size: $fz5;
+              font-weight: $medium;
+              padding: 10px 0;
+              text-transform: inherit;
+              border-bottom: .5px solid rgba(0,98,217,.5);
+              border-radius: 0;
+              &:hover{
+                color: $red;
+              }
+            }
+            &:last-child{
+              & a{
+                border-bottom: none;
+              }
+            }
           }
-
-          &:hover{
-            color: inherit;
-          }
+          
         }
-
-        & address{
-          font-style: normal;
-        
-          margin: 2em 0;
-          color: $gray2;
-          font-size: $fz5;
-          line-height: 160%;
+        & a:hover{
+          background-color: #fff;
+          color: $midBlue;
         }
+        & .first__link{
+          background-color: #fff;
+          color: $midBlue;
+          position: relative;
+          z-index: 1;
+        }
+      } 
 
-        & .contacts{
-          font-style: normal;
-        
-          color: $gray2;
-          font-size: $fz5;
-          line-height: 160%;
-
-          & a{
-            color: $stage;
-            font-weight: $semiBold;
+      & li {
+        text-align: left;
+        margin-bottom: 0;
+        & ul.list{
+          display: none;
+          opacity: 0;
+          transition: .2s;
+        }
+        & a{
+          font-size: $fz4;
+          text-transform: uppercase;
+          &.logo{
+            position: relative;
+            & p{
+              font-size: $fz4;
+            }
           }
         }
       }
     }
+
+    & .quick-contact{
+      flex-basis: 50%;
+
+      & a.logo{
+        position: relative;
+        transform: rotate(0deg);
+        flex-direction: column;
+        left: auto;
+        align-items: flex-start;
+        font-size: $fz13;
+        color: $headerColor;
+        display: block;
+
+        & span{
+          display: block;
+          margin-right: 0;
+        }
+
+        &:hover{
+          color: inherit;
+        }
+      }
+
+      & address{
+        font-style: normal;
+      
+        margin: 2em 0;
+        color: $gray2;
+        font-size: $fz5;
+        line-height: 160%;
+      }
+
+      & .contacts{
+        font-style: normal;
+      
+        color: $gray2;
+        font-size: $fz5;
+        line-height: 160%;
+
+        & a{
+          color: $stage;
+          font-weight: $semiBold;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  #navigation{
+    & ul {
+      & li:first-child{
+        & a:hover ~ ul.list,
+        ul.list:hover{
+          & li{
+            padding: 0 10px;
+          }
+        }
+      }
+    }
+  }
 }
