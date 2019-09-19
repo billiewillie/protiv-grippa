@@ -1,17 +1,22 @@
 form.form
-  .container
-    input(type="hidden" name="project_name" value="Бизнес-центр")
-    input(type="hidden" name="admin_email" value="office-centre@mail.ru")
-    input(type="hidden" name="form_subject" value="Заявка с формы")
-    .part
-      .form__field
-        input.input(type="text" placeholder="Введите ваше имя" name='имя' required)
-      .form__field
-        input.input(type="text" placeholder="Введите номер телефона" name='телефон' required)
-      .form__field
-        input.input(type="text" placeholder="Введите e-mail" name='email' required)
-    .part
-      .form__field
-        textarea.textarea(type="text" placeholder="Введите вопрос" name='вопрос' required)
-      .form__field
-        button.button связаться
+  input(type="hidden" name="project_name" value="Бизнес-центр")
+  input(type="hidden" name="admin_email" value="v.belinovich@uno-agency.ru")
+  input(type="hidden" name="form_subject" value="Вопрос с формы сайта protiv-grippa")
+  h2.title Задать вопрос о&nbsp;препарате
+  p 
+    | Консультация специалиста. 
+    br
+    | Задайте вопрос о препарате
+  .form__field
+    input.input(type="text" name='имя' required)
+    span.bar
+    label Ваше имя
+  .form__field
+    input.input(type="text" name='email' required)
+    span.bar
+    label Ваш e-mail
+  .form__field
+    textarea.textarea(name='вопрос' required)
+    label Ваш вопрос
+  .form__field
+    button.button Отправить

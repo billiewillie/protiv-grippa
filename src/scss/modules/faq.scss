@@ -15,7 +15,7 @@
     background-image: url('/assets/img/faq-pattern.png');
     background-color: $gray;
     background-position: 0 0;
-    background-size: content;
+    background-size: contain;
     border-top-left-radius: 100% 30px;
     border-top-right-radius: 100% 30px; 
     position: relative;
@@ -36,9 +36,14 @@
       background-repeat: no-repeat;
     }
     & .container{
+      display: flex;
+      flex-direction: column;
       & .part{
         &:first-child{
           margin-bottom: 50px;
+        }
+        &:last-child{
+          position: relative;
         }
         & h1.title{
           color: $darkBlue;
@@ -55,38 +60,37 @@
             background: $white;
             box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.15);
             border-radius: 8px;
-            padding: 15px 30px 0px 15px;
+            padding: 15px 40px 0px 15px;
             margin-bottom: 10px;
             color: $darkBlue;
             font-weight: $light;
             font-size: $fz8;
             cursor: pointer;
-            & h2.question{
+            transition: .2s;
+            & a.question{
               font-weight: $medium;
               margin-bottom: 15px;
               position: relative;
+              display: block;
               &::after{
                 display: block;
                 position: absolute;
-                content: "";
-                right: -20px;
-                top: 5px;
-                width: 16px;
-                height: 23px;
-                background-image: url('/assets/img/icons/faq-arrow.png');
-                background-size: cover;
-                background-position: 50% 100%;
+                content: '';
+                top: 2px;
+                right: -30px;
+                width: 23px;
+                height: 15px;
+                background-image: url('/assets/img/icons/faq-arrow.svg');
+                background-size: contain;
+                background-position: 50%;
                 background-repeat: no-repeat;
-                transition: .5s;
               }
             }
-            & p.answer{
-              display: none;
-            }
-            &.open{
-              & h2.question{
+            &:hover{
+              & a.question{
+                color: $red;
                 &::after{
-                  background-position: 50% 0%;
+                  background-image: url('/assets/img/icons/faq-arrow-red.svg');
                 }
               }
             }
@@ -138,15 +142,46 @@
         top: -3px;
       }
       & .container{
+        flex-direction: row;
+        align-items: flex-start;
         & .part{
           &:first-child{
-            margin-bottom: 50px;
+            margin-bottom: 0px;
+            width: 63%;
+            margin-right: 30px;
+          }
+          &:last-child{
+            margin-bottom: 0px;
+            width: 35%;
+            margin-top: -130px;
+          }
+          & h1.title{
+            font-size: $fz40;
+          }
+          & ul.list{
+            & li.item{
+              padding: 40px 70px 0px 40px;
+              & a.question{
+                margin-bottom: 40px;
+              }
+            }
           }
         }
       }
       & h1.title{
         color: $darkBlue;
         font-size: $fz40;
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px){
+  .faq{
+    & .content{
+      &:before {
+        top: -7px;
+        height: 10%;
       }
     }
   }

@@ -1,70 +1,140 @@
 form.form {
   display: flex;
   flex-direction: column;
-  background-color: $borderColor;
-  padding: 20px 0;
-  margin-bottom: 10px;
+  background: linear-gradient(180deg, #32CFBC 0%, #00C2FF 100%);
+  border-radius: 8px;
+  padding: 20px 20px 0 20px;
+  margin-bottom: 40px;
+
+  & h2.title{
+    color: $white;
+    font-size: $fz12;
+    margin-bottom: 20px;
+    padding-left: 70px;
+    position: relative;
+    line-height: 1.1;
+    &::before{
+      display: block;
+      position: absolute;
+      content: '';
+      left: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      width: 51px;
+      height: 51px;
+      background-image: url('/assets/img/icons/form-icon.svg');
+      background-size: contain;
+      background-position: 50%;
+      background-repeat: no-repeat;
+    }
+  }
+
+  & p{
+    font-size: $fz8;
+    font-weight: $regular;
+    margin-bottom: 30px;
+  }
 
   & .form__field {
     margin-bottom: 25px;
+    position: relative;
 
     input.input {
-      padding: 15px;
+      padding: 0px 0 5px;
       font-size: $fz3;
       width: 100%;
-      line-height: $lineHeight3;
-      
+      line-height: 1;
       color: $headerColor;
+      background-color: transparent;
+      border-bottom: .5px solid $white;
+      cursor: pointer;
 
-      &::placeholder {
+      &:focus{
+        outline: none;
+      }
+
+      &:focus ~ label,
+      &:valid ~ label{
+        top: -15px;
         font-size: $fz3;
-        
-        color: $borderColor;
+      }
+
+      &:focus ~ .bar::before,
+      &:focus ~ .bar::after{
+        width: 50%;
       }
     }
 
-    textarea.textarea{
+    & textarea.textarea{
       padding: 15px;
       font-size: $fz3;
       width: 100%;
       line-height: $lineHeight3;
-      
       color: $headerColor;
       min-height: 129px;
-      &::placeholder {
-        font-size: $fz3;
-        
-        color: $borderColor;
+      border-radius: 8px;
+
+      & ~ label{
+        top: -20px;
       }
     }
-  }
 
-  & button.button {
-    font-size: $fz2;
-    padding: 15px;
-    min-height: 52px;
-    width: 100%;
-    margin-bottom: 0;
-  }
+    & label{
+      font-size: $fz5;
+      font-weight:normal;
+      position:absolute;
+      pointer-events:none;
+      left: 0;
+      top: 0;
+      transition: 0.2s ease all; 
+      color: rgba(255,255,255,.6);
+    }
 
-  & .part{
-    &:last-child{
-      & .form__field{
-        &:last-child{
-          text-align: right;
-          margin-bottom: 0;
-        }
+    & .bar{
+      position:relative; 
+      display:block; 
+      width:100%;
+      &::before,
+      &::after {
+        content:'';
+        height: 2px; 
+        width: 0;
+        bottom: 1px; 
+        position:absolute;
+        background:$white; 
+        transition:0.2s ease all; 
+      }
+      &::before{
+        left: 50%;
+      }
+      &::after{
+        right: 50%;
       }
     }
-  }
-}
 
-@media (min-width: 768px) {
-  form.form {
-    & .part{
-      &:last-child{
-        & button.button {
-          max-width: 217px;
+    &:nth-of-type(2){
+      margin-bottom: 40px;
+    }
+
+    &:last-of-type{
+      margin-bottom: 0;
+      text-align: center;
+      margin-bottom: -20px;
+      & button.button {
+        display: inline-block;
+        font-size: $fz6;
+        padding: 12px 40px;
+        font-weight: $bold;
+        font-family: $mainFont;
+        margin-bottom: 0;
+        color: $white;
+        background-color: $darkBlue;
+        border-radius: 25px;
+        text-transform: capitalize;
+        transition: .2s;
+        &:hover{
+          background-color: $red;
         }
       }
     }
@@ -73,62 +143,6 @@ form.form {
 
 @media (min-width: 992px) {
   form.form {
-    padding: 84px 0;
-    background-color: $white;
-    overflow: hidden;
-    margin-bottom: 0;
-
-    & .container{
-      display: flex;
-      justify-content: space-between;
-      padding: 0;
-      width: 60%;
-      max-width: 800px;
-      position: relative;
-      z-index: 1;
-
-      &::before{
-        display: block;
-        position: absolute;
-        content: '';
-        top: 0;
-        right: -30%;
-        bottom: 0;
-        margin: auto;
-        width: 175%;
-        height: 200%;
-        background-color: $borderColor;
-        z-index: -1;
-      }
-    }
-    
-    & .part{
-      &:first-of-type{
-        width: 40%;
-      }
-      &:last-of-type{
-        width: 55%;
-      }
-    }
-
-    & .form__field {
-      margin-bottom: 25px;
-  
-      input.input {
-        font-size: $fz4;
-  
-        &::placeholder {
-          font-size: $fz4;
-        }
-      }
-  
-      textarea.textarea{
-        padding: 15px;
-        font-size: $fz4;
-        &::placeholder {
-          font-size: $fz4;
-        }
-      }
-    }
+    padding: 40px 40px 0 40px;
   }
 }
