@@ -1,3 +1,5 @@
+import accordion from "./component/accordion";
+
 window.addEventListener('load', function() {
     const warning = document.querySelector('section.warning');
     const warningCheck = warning.querySelector('.check input');

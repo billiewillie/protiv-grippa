@@ -5,11 +5,102 @@
   & .picture{
     height: 270px;
     overflow: hidden;
-    background-image: url('/assets/img/index-details-bg.jpg');
-    background-position: 0% 70%;
+    background-image: url('/assets/img/faq-bg.jpg');
+    background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+  }
+  & .content{
+    background-image: url('/assets/img/faq-pattern.png');
+    background-color: $gray;
+    background-position: 0 0;
+    background-size: content;
+    border-top-left-radius: 100% 30px;
+    border-top-right-radius: 100% 30px; 
+    position: relative;
+    z-index: 1;
+    padding: 40px 0;
+    margin-top: -20px;
+    &::before{
+      display: block;
+      position: absolute;
+      content: '';
+      left: 0px;
+      top: 0px;
+      width: 75%;
+      height: 5%;
+      background-image: url('/assets/img/lines/top-line-green.svg');
+      background-size: contain;
+      background-position: 0 0;
+      background-repeat: no-repeat;
+    }
+    & .container{
+      & .part{
+        &:first-child{
+          margin-bottom: 50px;
+        }
+        & h1.title{
+          color: $darkBlue;
+          font-size: $fz12;
+          line-height: 1;
+          font-weight: $extraBold;
+          margin-bottom: 30px;
+        }
+        & ul.list{
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 20px;
+          & li.item{
+            background: $white;
+            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.15);
+            border-radius: 8px;
+            padding: 15px 30px 0px 15px;
+            margin-bottom: 10px;
+            color: $darkBlue;
+            font-weight: $light;
+            font-size: $fz8;
+            cursor: pointer;
+            & h2.question{
+              font-weight: $medium;
+              margin-bottom: 15px;
+              position: relative;
+              &::after{
+                display: block;
+                position: absolute;
+                content: "";
+                right: -20px;
+                top: 5px;
+                width: 16px;
+                height: 23px;
+                background-image: url('/assets/img/icons/faq-arrow.png');
+                background-size: cover;
+                background-position: 50% 100%;
+                background-repeat: no-repeat;
+                transition: .5s;
+              }
+            }
+            & p.answer{
+              display: none;
+            }
+            &.open{
+              & h2.question{
+                &::after{
+                  background-position: 50% 0%;
+                }
+              }
+            }
+          }
+        }
+        & .block{
+          text-align: center;
+          & a{
+            text-decoration: underline;
+            color: $gray3;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -38,4 +129,25 @@
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=1 );
       }
     }
+    & .content{
+      border-top-left-radius: 100% 60px;
+      border-top-right-radius: 100% 60px;
+      margin-top: -40px;
+      padding: 80px 0 50px;
+      &::before{
+        top: -3px;
+      }
+      & .container{
+        & .part{
+          &:first-child{
+            margin-bottom: 50px;
+          }
+        }
+      }
+      & h1.title{
+        color: $darkBlue;
+        font-size: $fz40;
+      }
+    }
+  }
 }
