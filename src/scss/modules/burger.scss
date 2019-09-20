@@ -114,6 +114,12 @@
             & a{
               font-size: $fz5;
               padding: 0;
+              display: inline-block;
+              &:hover,
+              &:active{
+                background-color: transparent;
+              }
+              
             }
           }
         }

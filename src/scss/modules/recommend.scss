@@ -287,9 +287,10 @@
       padding: 80px 0;
       & .block{
         display: flex;
+        justify-content: center;
         & .round{
-          width: 55%;
-          padding-top: 55%;
+          width: 40%;
+          padding-top: 40%;
           & .text{
             padding: 80px;
             font-size: $fz9;
