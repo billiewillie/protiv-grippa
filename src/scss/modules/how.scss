@@ -445,7 +445,8 @@
           padding: 0;
           & .content{
             padding: 20px 30px;
-            background: linear-gradient(270.33deg, rgba(0, 98, 217, 0.35) 0.09%, rgba(158, 195, 241, 0.52) 42.99%, #FFFFFF 99.93%);
+            transition: .5s;
+            background: linear-gradient(270deg, rgba(0, 98, 217, 0.35) 0.1%, rgba(158, 195, 241, 0.52) 43%, #FFFFFF 100%);
             & p.authors{
               font-size: $fz5;
               font-weight: $regular;
@@ -459,6 +460,9 @@
               & span{
                 font-weight: $regular;
               }
+            }
+            &:hover{
+              background: linear-gradient(90deg, rgba(0, 98, 217, 0.35) 0.1%, rgba(158, 195, 241, 0.52) 43%, #FFFFFF 100%);
             }
           }
         }
