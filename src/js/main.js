@@ -1,4 +1,5 @@
-import accordion from "./component/accordion";
+import showList from "./component/showlist";
+import fixedform from "./component/fixedform";
 
 window.addEventListener('load', function() {
     const warning = document.querySelector('section.warning');
@@ -67,4 +68,22 @@ window.addEventListener('scroll', function(){
     } else {
         $('.diploma').removeClass('hidden');
     }
-})
+});
+
+// mail
+$(document).ready(function() {
+	$("form.form").submit(function() { //Change
+		var th = $(this);
+		$.ajax({
+			type: "POST",
+			url: "./assets/php/mail.php", //Change
+			data: th.serialize()
+		}).done(function() {
+			alert("Спасибо! Мы с вами скоро свяжемся.");
+			setTimeout(function() {
+                th.trigger("reset");
+			}, 1000);
+		});
+		return false;
+    });
+});

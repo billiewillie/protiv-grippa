@@ -61,6 +61,13 @@ header.header {
       &:hover{
         background-color: $red;
       }
+
+      &.active{
+        &:hover{
+          background-color: $white;
+          color: $red;
+        }
+      }
     }
   
     a.logo {
@@ -120,8 +127,6 @@ header.header {
     & .container{
       padding: 0 30px;
       margin: auto;
-
-      
     }
 
     &.hidden__md{

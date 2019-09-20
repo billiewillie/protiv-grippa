@@ -5,6 +5,13 @@ form.form {
   border-radius: 8px;
   padding: 20px 20px 0 20px;
   margin-bottom: 40px;
+  position: relative;
+
+  &.fixed{
+    position: fixed;
+    top: 60px;
+    max-width: 397px;
+  }
 
   & h2.title{
     color: $white;
@@ -98,7 +105,7 @@ form.form {
       &::before,
       &::after {
         content:'';
-        height: 2px; 
+        height: 1px; 
         width: 0;
         bottom: 1px; 
         position:absolute;
