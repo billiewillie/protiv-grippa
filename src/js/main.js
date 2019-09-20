@@ -62,14 +62,6 @@ window.addEventListener('load', function() {
 
 });
 
-window.addEventListener('scroll', function(){
-    if(window.pageYOffset > 0) {
-        $('.diploma').addClass('hidden');
-    } else {
-        $('.diploma').removeClass('hidden');
-    }
-});
-
 // mail
 $(document).ready(function() {
 	$("form.form").submit(function() { //Change
@@ -87,3 +79,23 @@ $(document).ready(function() {
 		return false;
     });
 });
+
+function fixedFlag() {
+    if (window.innerWidth > 991 && $('.diploma').length){
+        const left = $('li.buy')[0].getBoundingClientRect().left;
+        const width = $('li.buy')[0].getBoundingClientRect().width;
+        console.log($('a.buy'));
+        $('.diploma').css('width', width+'px');
+        $('.diploma').css('left', left+'px');
+        window.addEventListener('scroll', function(){
+            if(window.pageYOffset > 0) {
+                $('.diploma').addClass('hidden');
+            } else {
+                $('.diploma').removeClass('hidden');
+            }
+        });
+    }
+    
+}
+  
+fixedFlag();

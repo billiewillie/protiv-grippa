@@ -443,7 +443,7 @@ section.index__details{
   main.main{
     padding: 80px 0;
     background-image: url('/assets/img/index-bg.jpg');
-    background-position: 50% 100%;
+    background-position: 50% 80%;
     margin-top: -10px;
     border-bottom-left-radius: 100% 60px;
     border-bottom-right-radius: 100% 60px;
@@ -454,32 +454,59 @@ section.index__details{
         display: flex;
         flex-direction: column;
         justify-content: center;
-        max-width: 210px;
+        max-width: 140px;
+        margin-right: 50px;
         & li.item{
           display: flex;
           flex-direction: column;
           text-align: center;
           align-items: center;
           margin-bottom: 40px;
+          position: relative;
           &:last-child{
             margin-bottom: 0;
           }
           & .round{
             background-color: $white;
+            background-image: url('/assets/img/icons/main-list/main-icon-1.svg');
             border-radius: 50%;
             display: flex;
             width: 60px;
             height: 60px;
-            background-size: 50%;
+            top: 10px;
+            background-size: 50% 50%;
             background-position: 50%;
             background-repeat: no-repeat;
             margin-bottom: 10px;
+            transition: .1s;
+            box-shadow: 0px 5.7574px 8.22485px rgba(0, 0, 0, 0.2);
+            &:hover{
+              background-color: $yellow;
+              box-shadow: 0px 0px 0px 3px rgba(252,208,0,1);
+              background-size: 53% 53%;
+            }
+          }
+          &:nth-child(2){
+            & .round{
+              background-image: url('/assets/img/icons/main-list/main-icon-2.svg');
+            }
+          }
+          &:nth-child(3){
+            & .round{
+              background-image: url('/assets/img/icons/main-list/main-icon-3.svg');
+            }
           }
           & p{
             color: $white;
             text-transform: uppercase;
-            font-size: fz4;
+            font-size: $fz2;
             font-weight: $bold;
+            line-height: 1.3;
+            & span.number{
+              font-size: $fz4;
+              vertical-align: baseline;
+              line-height: 1;
+            }
           }
         }
       }
@@ -551,6 +578,7 @@ section.index__details{
                   top: 60px;
                   &:hover{
                     top: 70px;
+                    left: 44px;
                   }
                 }
                 &:nth-child(3){
@@ -558,6 +586,7 @@ section.index__details{
                   top: 60px;
                   &:hover{
                     top: 70px;
+                    left: 172px;
                   }
                 }
                 &:nth-child(4){
@@ -600,16 +629,20 @@ section.index__details{
         & li.item{
           width: 25%;
           padding: 0 35px;
-          &:last-child{
-            align-self: flex-end;
-          }
+          
           & .icon{
             background-color: $white;
+            background-size: 50%;
+            background-repeat: no-repeat;
+            background-position: 50%;
+            background-image: url('/assets/img/icons/choose-list/choose-icon-1.svg');
             border-radius: 50%;
             width: 75px;
             height: 75px;
             display: flex;
             margin-bottom: 20px;
+            transition: .2s;
+            position: relative;
             & img{
               margin: auto;
             }
@@ -660,6 +693,94 @@ section.index__details{
             & a{
               padding: 10px 40px;
               align-self: center;
+            }
+          }
+
+          &:nth-of-type(2){
+            & .icon{
+              background-image: url('/assets/img/icons/choose-list/choose-icon-2.svg');
+            }
+          }
+
+          &:nth-of-type(3){
+            & .icon{
+              background-image: url('/assets/img/icons/choose-list/choose-icon-3.svg');
+            }
+          }
+
+          &:nth-of-type(4){
+            & .icon{
+              background-image: url('/assets/img/icons/choose-list/choose-icon-4.svg');
+            }
+          }
+
+          &:nth-of-type(5){
+            & .icon{
+              background-image: url('/assets/img/icons/choose-list/choose-icon-5.svg');
+            }
+          }
+
+          &:nth-of-type(6){
+            align-self: flex-end;
+            & .icon{
+              background-image: url('/assets/img/icons/choose-list/choose-icon-6.svg');
+            }
+          }
+
+          &:hover{
+            & .icon{
+              background-color: $yellow;
+              background-image: url('/assets/img/icons/choose-list/choose-icon-1-hover.svg');
+              &::after{
+                display: block;
+                position: absolute;
+                content: '';
+                left: 50%;
+                top: 50%;
+                transform: translate(-53%, -53%);
+                width: 200%;
+                height: 200%;
+                background-size: contain;
+                background-position: 50%;
+                background-repeat: no-repeat;
+                background-image: url('/assets/img/icons/choose-list/choose-icon-hover.svg');
+              }
+            }
+            & h3.title{
+              color: $darkBlue;
+            }
+            & p{
+              color: $darkBlue;
+            }
+            &:nth-of-type(2){
+              & .icon{
+                background-image: url('/assets/img/icons/choose-list/choose-icon-2-hover.svg');
+              }
+            }
+  
+            &:nth-of-type(3){
+              & .icon{
+                background-image: url('/assets/img/icons/choose-list/choose-icon-3-hover.svg');
+              }
+            }
+  
+            &:nth-of-type(4){
+              & .icon{
+                background-image: url('/assets/img/icons/choose-list/choose-icon-4-hover.svg');
+              }
+            }
+  
+            &:nth-of-type(5){
+              & .icon{
+                background-image: url('/assets/img/icons/choose-list/choose-icon-5-hover.svg');
+              }
+            }
+  
+            &:nth-of-type(6){
+              align-self: flex-end;
+              & .icon{
+                background-image: url('/assets/img/icons/choose-list/choose-icon-6-hover.svg');
+              }
             }
           }
         }

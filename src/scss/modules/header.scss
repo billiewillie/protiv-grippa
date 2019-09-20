@@ -46,6 +46,9 @@ header.header {
           }
         }
       }
+      &.buy{
+        background-color: transparent;
+      }
     }
     a{
       text-transform: uppercase;
@@ -115,7 +118,6 @@ header.header {
 }
 
 @media (min-width: 992px) {
-
   header.header {
     bottom: 0;
     height: 90px;
@@ -165,43 +167,36 @@ header.header {
 
   .diploma{
     position: fixed;
-    width: 104%;
-    margin-left: -2%;
     z-index: 3;
     top: 60px;
-    transition: .4s;
+    transition: .2s;
+    right: 10px;
     &.hidden{
-      top: -100px;
+      top: -110px;
     }
-    & .container{
-      display: flex;
-      justify-content: flex-end;
-      padding: 0 30px;
-      & .content{
-        border-radius: 0 0 20px 20px;
-        padding: 25px 5px 5px;
-        background-color: $white;
-        width: 102px;
+    & .content{
+      border-radius: 0 0 20px 20px;
+      padding: 30px 5px 10px;
+      background-color: $white;
+      text-align: center;
+      transition: .2s;
+      &:hover{
+        margin-top: 10px;
+      }
+      & p.top{
+        color: $darkBlue;
+        font-size: $fz2;
         text-align: center;
-        transition: .2s;
-        &:hover{
-          margin-top: 10px;
-        }
-        & p.top{
-          color: $darkBlue;
-          font-size: $fz2;
-          text-align: center;
-          font-weight: $bold;
-          margin-bottom: 5px;
-        }
-        & .picture{
-          margin-bottom: 5px;
-        }
-        & p.bottom{
-          color: $dark;
-          font-size: $fz2;
-          text-align: center;
-        }
+        font-weight: $bold;
+        margin-bottom: 5px;
+      }
+      & .picture{
+        margin-bottom: 5px;
+      }
+      & p.bottom{
+        color: $dark;
+        font-size: $fz2;
+        text-align: center;
       }
     }
   }

@@ -5,16 +5,19 @@ block content
     .container
       ul.list.visible__md
         li.item
-          .round(style="background-image: url('./assets/img/icons/main-list/main-icon-1.svg')")
+          .round
           p Защита для детей&#8209;аллергиков
         li.item
-          .round(style="background-image: url('./assets/img/icons/main-list/main-icon-2.svg')")
+          .round
           p Незаменим для часто болеющих детей 
         li.item
-          .round(style="background-image: url('./assets/img/icons/main-list/main-icon-3.svg')")
-          p Разрешен к применению для малышей от 1 года 
+          .round
+          p 
+            | Разрешен к применению для малышей от 
+            span.number 1 
+            | года 
       .picture
-        img(src="./assets/img/main-logo.png", alt="img")
+        img(src="./assets/img/main-logo.png", alt="img", loading='lazy')
   section.products
     .container
       .content
@@ -52,32 +55,26 @@ block content
       ul.list
         li.item
           .icon
-            img(src="./assets/img/icons/choose-list/choose-icon-1.svg", alt="icon")
           h3.title широкий спектр действия
           p защищает от всех типов возбудителей ОРВИ и гриппа (более 200)
         li.item
           .icon
-            img(src="./assets/img/icons/choose-list/choose-icon-2.svg", alt="icon")
           h3.title Эффективная профилактика
           p более 90% детей, принимавших Цитовир-3 в период сезонной вспышки гриппа и ОРВИ, в последующий месяц не заболели
         li.item
           .icon
-            img(src="./assets/img/icons/choose-list/choose-icon-3.svg", alt="icon")
           h3.title защита от осложнений
           p предупреждает бактериальные осложнения гриппа и ОРВИ, что позволяет избежать излишней медикаментозной нагрузки на организм
         li.item
           .icon
-            img(src="./assets/img/icons/choose-list/choose-icon-4.svg", alt="icon")
           h3.title высокий профиль безопасности
           p разработан специально для детей, не кумулируется в организме и при метаболизме не образует токсичных продуктов, минимальная вероятность побочных эффектов
         li.item
           .icon
-            img(src="./assets/img/icons/choose-list/choose-icon-5.svg", alt="icon")
           h3.title полная Совместимость
           p допустимо применение со всеми симптоматическими средствами
         li.item
           .icon
-            img(src="./assets/img/icons/choose-list/choose-icon-6.svg", alt="icon")
           h3.title щадящий состав
           p подходит для детей с ограничением в потреблении углеводов (Цитовир-3 порошок) и склонным к аллергии (нейтральный вкус порошка)
         li.item
@@ -96,23 +93,23 @@ block content
             p.item помогает организму в короткие сроки нейтрализовать негативное воздействие вируса гриппа или ОРВИ, а также токсичных продуктов их жизнедеятельности
             p.item повышает устойчивость организма не только к вирусам, но и к бактериальным инфекциям, предупреждая развитие возможных осложнений гриппа и ОРВИ
         .part
-          img(src="./assets/img/formula.png", alt="img")
+          img(src="./assets/img/formula.png", alt="img", loading='lazy')
       ul.list
         li.item
           .picture
-            img(src="./assets/img/formula-list/formula-pic-1.jpeg", alt="img")
+            img(src="./assets/img/formula-list/formula-pic-1.jpeg", alt="img", loading='lazy')
           p Многочисленные клинические исследования и более 10 лет опыта применения детских форм
         li.item
           .picture
-            img(src="./assets/img/formula-list/formula-pic-2.jpg", alt="img")
+            img(src="./assets/img/formula-list/formula-pic-2.jpg", alt="img", loading='lazy')
           p Рекомендуют врачи НИИ Гриппа РАМН
         li.item
           .picture
-            img(src="./assets/img/formula-list/formula-pic-3.jpg", alt="img")
+            img(src="./assets/img/formula-list/formula-pic-3.jpg", alt="img", loading='lazy')
           p Выбор педиатров России
         li.item
           .picture
-            img(src="./assets/img/formula-list/formula-pic-4.jpg", alt="img")
+            img(src="./assets/img/formula-list/formula-pic-4.jpg", alt="img", loading='lazy')
           p Множество положительных отзывов от родителей на независимых порталах
       h2.title Выбери свой Цитовир-3
   section.index__details.oversize
@@ -120,7 +117,7 @@ block content
       .content
         h2.title сироп
         .picture
-          img(src="./assets/img/product-sirop.png", alt="")
+          img(src="./assets/img/product-sirop.png", alt="img", loading='lazy')
         .list
           p.item Готов к применению
           p.item Открытый флакон можно хранить при комнатной температуре
@@ -138,7 +135,7 @@ block content
       .content
         h2.title порошок
         .picture
-          img(src="./assets/img/product-powder.png", alt="")
+          img(src="./assets/img/product-powder.png", alt="img", loading='lazy')
         .list
           
           p.item 
@@ -189,11 +186,11 @@ block content
           a(
             href="https://www.pharmindex.ru/tsitovir_3.html",
             target='_blank')
-            img(src="./assets/img/pharmacy/farmindex.png", alt="img")
+            img(src="./assets/img/pharmacy/farmindex.png", alt="img", loading='lazy')
         p.warning *для детей до 6 лет
         .question
           h3 Остались вопросы?
           p Спросите специалиста!
-          a.btn(href="") Задать вопрос
+          a.btn(href="/faq.html") Задать вопрос
   include ../includes/module/footer
   include ../includes/module/warning
