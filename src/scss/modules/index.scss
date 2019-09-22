@@ -639,7 +639,7 @@ section.index__details{
             text-align: center;
             font-size: $fz2;
             color: $darkBlue;
-            font-weight: $bold;
+            font-weight: $extraBold;
             text-transform: uppercase;
           }
           & .ellipses__list{
@@ -918,7 +918,7 @@ section.index__details{
       padding: 140px 125px 100px;
       & .content{
         width: 100%;
-        max-width: 600px;
+        max-width: 400px;
         text-align: center;
       }
       &:first-child{
@@ -926,12 +926,14 @@ section.index__details{
         border-bottom-left-radius: 100% 40px;
         border-top-right-radius: 0 0;
         border-bottom-right-radius: 0 0;
+        justify-content: flex-end;
       }
       &:last-child{
         border-top-right-radius: 100% 40px;
         border-bottom-right-radius: 100% 40px;
         border-top-left-radius: 0 0;
         border-bottom-left-radius: 0 0;
+        justify-content: flex-start;
       }
     }
     & .list__details{
@@ -958,6 +960,12 @@ section.index__details{
         &:last-child{
           margin-bottom: 0;
         }
+      }
+      & span.limit{
+        color: $white;
+        font-weight: $extraBold;
+        display: block;
+        margin-top: 25px;
       }
     }
   }
@@ -992,9 +1000,9 @@ section.index__details{
           }
         }
         & p{
-          font-weight: $medium;
+          font-weight: $regular;
           color: $darkBlue;
-          margin-bottom: 25px;
+          margin-bottom: 10px;
         }
         & .picture{
           margin-bottom: 20px;
@@ -1009,7 +1017,7 @@ section.index__details{
           flex-direction: column;
           justify-content: center;
           bottom: -50px;
-          right: -80px;
+          right: -100px;
           align-items: center;
           
 
