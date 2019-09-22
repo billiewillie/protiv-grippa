@@ -18,7 +18,7 @@
   & .content{
     background-image: url('/assets/img/recommend-pattern.png');
     background-position: 0 0;
-    background-size: cover;
+    background-size: contain;
     padding: 150px 0 80px;
     position: relative;
     z-index: 1;
@@ -75,6 +75,8 @@
           display: flex;
           flex-direction: column;
           justify-content: space-between;
+          padding-bottom: 30px;
+          border-bottom: 1px solid transparent;
           & h3.title{
             font-size: $fz9;
             font-weight: $bold;
@@ -101,7 +103,19 @@
             font-size: $fz9;
             color: $darkBlue;
             font-weight: $regular;
+            margin-bottom: 5px;
+          }
+          & p.read{
             margin-bottom: 25px;
+            text-align: right;
+            opacity: 0;
+            transition: .2s;
+            & a{
+              display: inline-block;
+              font-size: $fz2;
+              color: $dark;
+            }
+            
           }
           & .doctor{
             display: flex;
@@ -153,6 +167,16 @@
               }
             }
           }
+          &:hover{
+            border-bottom: 1px solid $green;
+            & p.text{
+              color: $green;
+              text-decoration: underline;
+            }
+            & p.read{
+              opacity: 1;
+            }
+          }
         }
       }
     }
@@ -191,6 +215,8 @@
           font-size: $fz5;
           & .picture{
             margin-bottom: 30px;
+            background-image: none;
+            height: auto;
             & img{
               width: auto;
             }
