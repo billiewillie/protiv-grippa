@@ -2,6 +2,9 @@
   position: relative;
   z-index: 2;
   background-color: $white;
+  flex: auto;
+  display: flex;
+  flex-direction: column;
   & .picture{
     height: 270px;
     overflow: hidden;
@@ -12,6 +15,7 @@
     position: relative;
   }
   & .content{
+    flex: auto;
     background-image: url('/assets/img/faq-pattern.png');
     background-color: $gray;
     background-position: 0 0;
@@ -38,6 +42,36 @@
     & .container{
       display: flex;
       flex-direction: column;
+      & .text{
+        box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.15);
+        border-radius: 8px;
+        background-color: $white;
+        padding: 20px 10px;
+        margin-bottom: 55px;
+        & h1.question{
+          color: $red;
+          margin-bottom: 45px;
+          font-size: $fz10;
+          font-weight: $medium;
+        }
+        & p{
+          font-size: $fz8;
+          font-weight: $light;
+        }
+      }
+      & p.back{
+        text-align: center;
+        & a{
+          display: inline-block;
+          color: $gray3;
+          border-bottom: 1px solid $gray3;
+          color: $fz9;
+          transition: .2s;
+          &:hover{
+            border-bottom: 1px solid transparent;
+          }
+        }
+      }
     }
   }
 }
@@ -76,36 +110,9 @@
         top: -3px;
       }
       & .container{
-        flex-direction: row;
-        align-items: flex-start;
-        & .part{
-          &:first-child{
-            margin-bottom: 0px;
-            width: 63%;
-            margin-right: 30px;
-          }
-          &:last-child{
-            margin-bottom: 0px;
-            width: 35%;
-            margin-top: -130px;
-            padding-top: 0;
-          }
-          & h1.title{
-            font-size: $fz40;
-          }
-          & ul.list{
-            & li.item{
-              padding: 40px 70px 0px 40px;
-              & a.question{
-                margin-bottom: 40px;
-              }
-            }
-          }
+        & .text{
+          padding: 75px 90px;
         }
-      }
-      & h1.title{
-        color: $darkBlue;
-        font-size: $fz40;
       }
     }
   }
