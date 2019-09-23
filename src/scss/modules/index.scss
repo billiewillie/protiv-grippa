@@ -1,6 +1,6 @@
 main.main{
   background-size: cover;
-  background-position: 80% 100%;
+  background-position: 50% 100%;
   background-repeat: no-repeat;
   padding: 50px 0 500px;
   background-image: url('/assets/img/index-bg-mobile.jpg');
@@ -879,6 +879,7 @@ section.index__details{
             & p{
               padding-left: 35px;
               margin-bottom: 25px;
+              max-width: 100%;
               &::before{
                 left: 25px;
               }

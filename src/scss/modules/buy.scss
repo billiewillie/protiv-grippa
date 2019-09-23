@@ -15,7 +15,7 @@
   & .content{
     background-image: url('/assets/img/recommend-pattern.png');
     background-position: 0 0;
-    background-size: cover;
+    background-size: contain;
     border-top-left-radius: 100% 30px;
     border-top-right-radius: 100% 30px; 
     position: relative;
@@ -37,7 +37,7 @@
       background-repeat: no-repeat;
     }
     & .container{
-      max-width: 578px;
+      max-width: 730px;
       & h1.title{
         color: $darkBlue;
         font-size: $fz12;
@@ -77,7 +77,19 @@
 @media (min-width: 992px){
   .buy{
     & .picture{
+      height: 270px;
+      overflow: hidden;
+      background-image: url('/assets/img/index-details-bg.jpg');
+      background-position: 0% 70%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+      
+    }
+    & .picture{
       height: 400px;
+      background-position: 50% 65%;
+      background-size: 70% auto;
       &::before{
         display: block;
         position: absolute;
@@ -90,12 +102,12 @@
         width: 100%;
         height: 100%;
         background: rgba(255,255,255,1);
-        background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 5%, rgba(255,255,255,0) 50%, rgba(255,255,255,1) 95%, rgba(255,255,255,1) 100%);
-        background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,255,255,1)), color-stop(5%, rgba(255,255,255,0)), color-stop(50%, rgba(255,255,255,1)), color-stop(95%, rgba(255,255,255,1)), color-stop(100%, rgba(255,255,255,1)));
-        background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 5%, rgba(255,255,255,0) 50%, rgba(255,255,255,1) 95%, rgba(255,255,255,1) 100%);
-        background: -o-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 5%, rgba(255,255,255,0) 50%, rgba(255,255,255,1) 95%, rgba(255,255,255,1) 100%);
-        background: -ms-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 5%, rgba(255,255,255,0) 50%, rgba(255,255,255,1) 95%, rgba(255,255,255,1) 100%);
-        background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 5%, rgba(255,255,255,0) 50%, rgba(255,255,255,1) 95%, rgba(255,255,255,1) 100%);
+        background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 15%, rgba(255,255,255,0) 50%, rgba(255,255,255,1) 85%, rgba(255,255,255,1) 100%);
+        background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,255,255,1)), color-stop(15%, rgba(255,255,255,0)), color-stop(50%, rgba(255,255,255,1)), color-stop(85%, rgba(255,255,255,1)), color-stop(100%, rgba(255,255,255,1)));
+        background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 15%, rgba(255,255,255,0) 50%, rgba(255,255,255,1) 85%, rgba(255,255,255,1) 100%);
+        background: -o-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 15%, rgba(255,255,255,0) 50%, rgba(255,255,255,1) 85%, rgba(255,255,255,1) 100%);
+        background: -ms-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 15%, rgba(255,255,255,0) 50%, rgba(255,255,255,1) 85%, rgba(255,255,255,1) 100%);
+        background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 15%, rgba(255,255,255,0) 50%, rgba(255,255,255,1) 85%, rgba(255,255,255,1) 100%);
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=1 );
       }
     }
@@ -128,10 +140,10 @@
 
       & .quote{
         & .cloud{
-          & a.btn{
-            &:hover{
-              background-color: $darkBlue;
-            }
+          width: 300px;
+          height: 280px;
+          & a{
+            background-color: transparent;
           }
           &:after{
             width: 213px;
@@ -139,6 +151,10 @@
             bottom: -140px;
             right: -200px;
             background-image: url('/assets/img/chick/chick-7.png');
+          }
+          &:before{
+            transform: rotate(5deg);
+            right: -5px;
           }
         }
       }

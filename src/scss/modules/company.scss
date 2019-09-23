@@ -49,8 +49,13 @@
       max-width: 1010px;
       & .text{
         text-align: left;
+        & h1.title{
+          font-size: $fz12;
+          text-align: center;
+          color: $darkBlue;
+        }
         & p{
-          font-size: $fz8;
+          font-size: $fz9;
           margin-bottom: 30px;
           color: $dark;
           &.important{
@@ -72,12 +77,14 @@
       }
       & .details{
         margin-bottom: 40px;
-        h1.title{
+        h2.title{
           font-weight: $bold;
-          font-size: $fz8;
+          font-size: $fz9;
           text-transform: uppercase;
           text-align: center;
           margin-bottom: 40px;
+          color: $darkBlue;
+          font-weight: $bold;
         }
         & ul.list{
           display: flex;
@@ -92,7 +99,8 @@
               border-bottom: 1px solid $dark;
               font-weight: $regular;
               line-height: 1;
-              font-size: $fz8;
+              font-size: $fz7;
+              color: $dark;
             }
           }
         }
@@ -163,6 +171,10 @@
       & .container{
         & .text{
           margin-bottom: 60px;
+          & h1.title{
+            font-size: $fz40;
+            margin-bottom: 40px;
+          }
           & p{
             padding: 0 90px;
             &.important{
@@ -189,6 +201,13 @@
             & li.item {
               margin-bottom: 0px;
               width: 32%;
+              & h2{
+                text-align: left;
+              }
+              
+              & p{
+                margin-bottom: 0;
+              }
             }
           }
         }
