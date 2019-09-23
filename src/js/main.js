@@ -1,5 +1,6 @@
 import showList from "./component/showlist";
 import fixedform from "./component/fixedform";
+import slider from "./component/slider";
 
 window.addEventListener('load', function() {
     const warning = document.querySelector('section.warning');
