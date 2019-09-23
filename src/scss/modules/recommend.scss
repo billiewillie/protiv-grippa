@@ -53,6 +53,7 @@
       background-repeat: no-repeat;
     }
     & .container{
+      max-width: 800px;
       & .chick{
         position: absolute;
         width: 50%;
@@ -84,6 +85,7 @@
             position: relative;
             color: $darkBlue;
             margin-bottom: 40px;
+            min-height: 48px;
             &::after{
               display: block;
               position: absolute;
@@ -104,6 +106,7 @@
             color: $darkBlue;
             font-weight: $regular;
             margin-bottom: 5px;
+            min-height: 216px;
           }
           & p.read{
             margin-bottom: 25px;

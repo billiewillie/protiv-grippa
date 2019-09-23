@@ -4,6 +4,10 @@
   background-color: $white;
   padding-bottom: 50px;
 
+  & .container{
+    max-width: 1070px;;
+  }
+
   & .page__title{
     text-align: center;
     background-image: url('/assets/img/how-bg.jpg');
@@ -43,7 +47,7 @@
   & .effect{
     padding: 60px 0;
     background-image: url('/assets/img/how-pattern.png');
-    background-size: cover;
+    background-size: contain;
     background-color: $white;
     background-repeat: repeat;
     background-position: 0 0;
@@ -89,6 +93,7 @@
           position: relative;
           transition: .2s;
           cursor: default;
+          font-weight: $medium;
           &::before{
             display: block;
             position: absolute;
@@ -286,6 +291,21 @@
           }
           & p{
             font-size: $fz6;
+            & span.tooltip{
+              text-decoration: none;
+              position: relative;
+              & span.child{
+                position: absolute;
+                font-size: $fz5;
+                padding: 20px;
+                background-color: $gray;
+                width: 300px;
+                top: -20px;
+                opacity: 0;
+                visibility: hidden;
+                display: none;
+              }
+            }
           }
           &:nth-child(2){
             background: linear-gradient(0deg, rgba(0, 194, 255, 0.1), rgba(0, 194, 255, 0.1)), #FFFFFF;
@@ -328,12 +348,14 @@
         text-align: left;
         color: $white;
         font-size: $fz9;
+        font-weight: $medium;
       }
       & p.note{
         margin-bottom: 55px;
         text-align: left;
         color: $darkBlue;
         font-size: $fz9;
+        font-weight: $medium;
       }
     }
   }
@@ -383,6 +405,7 @@
         flex-direction: column;
         margin-bottom: 50px;
         width: 100%;
+        color: $darkBlue;
         & .part{
           & p.short{
             font-size: $fz12;
@@ -444,6 +467,7 @@
           margin-bottom: 30px;
           padding: 0;
           & .content{
+            display: block;
             padding: 20px 30px;
             transition: .5s;
             background: linear-gradient(270deg, rgba(0, 98, 217, 0.35) 0.1%, rgba(158, 195, 241, 0.52) 43%, #FFFFFF 100%);
@@ -459,6 +483,16 @@
               color: $dark;
               & span{
                 font-weight: $regular;
+                &.arrow{
+                  display: inline-block;
+                  background-image: url('/assets/img/icons/arrow-right.svg');
+                  background-position: 50%;
+                  background-size: contain;
+                  background-repeat: no-repeat;
+                  width: 45px;
+                  height: 8px;
+                  vertical-align: baseline;
+                }
               }
             }
             &:hover{
@@ -572,6 +606,28 @@
             margin-bottom: 0px;
             padding: 30px;
             width: 31%;
+            & p.text{
+              & span.tooltip{
+                border-bottom: 1px solid $textColor;
+                & span.child{
+                  position: absolute;
+                  font-size: $fz5;
+                  padding: 20px;
+                  background-color: $gray;
+                  width: 300px;
+                  top: -20px;
+                  opacity: 0;
+                  visibility: hidden;
+                  display: inline;
+                }
+                &:hover{
+                  & span.child{
+                    visibility: visible;
+                    opacity: 1;
+                  }
+                }
+              }
+            }
           }
         }
       }
