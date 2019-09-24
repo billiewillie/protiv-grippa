@@ -43,6 +43,8 @@ header.header {
             background-repeat: no-repeat;
             background-size: contain;
             margin-left: 5px;
+            position: absolute;
+            right: 0;
           }
         }
       }
@@ -57,7 +59,7 @@ header.header {
       font-weight: $extraBold;
       color: $white;
       line-height: 1;
-      padding: 10px;
+      padding: 10px 12px;
       border-radius: 20px;
   
       &.active,
@@ -176,7 +178,7 @@ header.header {
     }
     & .content{
       border-radius: 0 0 20px 20px;
-      padding: 30px 5px 10px;
+      padding: 35px 5px 10px;
       background-color: $white;
       text-align: center;
       transition: .2s;
@@ -185,17 +187,20 @@ header.header {
       }
       & p.top{
         color: $darkBlue;
-        font-size: $fz2;
+        font-size: $fz3;
         text-align: center;
         font-weight: $bold;
         margin-bottom: 5px;
       }
       & .picture{
         margin-bottom: 5px;
+        & img{
+          width: 55%;
+        }
       }
       & p.bottom{
         color: $dark;
-        font-size: $fz2;
+        font-size: $fz3;
         text-align: center;
       }
     }

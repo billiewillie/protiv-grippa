@@ -61,11 +61,10 @@
         color: $darkBlue;
         margin-bottom: 80px;
       }
-      & ul.list{
+      & .list{
         display: flex;
         flex-direction: column;
-        
-        & li.item{
+        & a.item{
           text-align: left;
           margin-bottom: 80px;
           display: flex;
@@ -101,14 +100,13 @@
             color: $darkBlue;
             font-weight: $regular;
             margin-bottom: 5px;
-            min-height: 216px;
           }
           & p.read{
             margin-bottom: 5px;
             text-align: right;
             opacity: 0;
             transition: .2s;
-            & a{
+            & span{
               display: inline-block;
               font-size: $fz4;
               color: $dark;
@@ -308,17 +306,20 @@
           top: -250px;
           left: -40px;
         }
-        & ul.list{
+        & .list{
           flex-direction: row;
           flex-wrap: wrap;
           justify-content: space-between;
           margin-bottom: 60px;
-          & li.item{
+          & a.item{
             width: 48%;
             margin-bottom: 100px;
             &:nth-child(3),
             &:nth-child(4){
               margin-bottom: 0;
+            }
+            & p.text{
+              min-height: 216px;
             }
           }
         }
