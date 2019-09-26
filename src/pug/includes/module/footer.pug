@@ -5,10 +5,8 @@ footer.footer.oversize
         | © АО МБНПК «Цитомед» 
         br 
         | Все права защищены 
-        br
-        | Правовое соглашение 
-        br
-        | Политика конфиденциальности
+        a(href="/agreement.html") Правовое соглашение 
+        a(href="/confidentiality.html") Политика конфиденциальности
     .part
       include ./socials
     .part
@@ -16,9 +14,8 @@ footer.footer.oversize
       .picture
         a(href="http://cytomed.ru/", target='_blank')
           img(src="./assets/img/cytomed-logo.svg", alt="img")
-    //- p.footer__copy
-    //-   | © 
-    //-   span.year 
-    //-   |  Все права защищены 
-    //-   br 
-    //-   a(href="https://uno-agency.ru/") UNO Advertising
+  p.warning Имеются противопоказания. Необходимо проконсультироваться со специалистом.
+  //- .container
+  //-   p.madein
+  //-     | Сделано в
+  //-     a(href="https://uno-agency.ru/", target='_blank')  UNO-agency

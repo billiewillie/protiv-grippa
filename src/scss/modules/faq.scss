@@ -44,6 +44,9 @@
         }
         &:last-child{
           position: relative;
+          & p{
+            font-size: $fz3;
+          }
         }
         & h1.title{
           color: $darkBlue;
@@ -100,7 +103,7 @@
         }
         & .block{
           text-align: center;
-          & a{
+          & a {
             text-decoration: underline;
             color: $gray3;
             cursor: pointer;
@@ -154,10 +157,16 @@
             margin-right: 30px;
           }
           &:last-child{
-            margin-bottom: 0px;
             width: 35%;
-            margin-top: -130px;
-            padding-top: 0;
+            & .warning{
+              margin-bottom: 0px;
+              margin-top: -130px;
+              padding-top: 0;
+              &.fixed{
+                position: fixed;
+                top: 190px;
+              }
+            }
           }
           & h1.title{
             font-size: $fz40;
@@ -186,6 +195,9 @@
       &:before {
         top: -7px;
         height: 10%;
+      }
+      & .container{
+
       }
     }
   }

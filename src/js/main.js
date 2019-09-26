@@ -57,7 +57,7 @@ window.addEventListener('load', function() {
         var $this = $(this);
         var attr = $this.attr('href');
         $("html, body").animate({
-          scrollTop: $(attr).offset().top
+          scrollTop: $(attr).offset().top-100
         }, 1000);
     });
 
@@ -85,7 +85,6 @@ function fixedFlag() {
     if (window.innerWidth > 991 && $('.diploma').length){
         const left = $('li.buy')[0].getBoundingClientRect().left;
         const width = $('li.buy')[0].getBoundingClientRect().width;
-        console.log($('a.buy'));
         $('.diploma').css('width', width+'px');
         $('.diploma').css('left', left+'px');
         window.addEventListener('scroll', function(){

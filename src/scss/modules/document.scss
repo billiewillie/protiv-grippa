@@ -1,0 +1,46 @@
+.document{
+  padding: 60px 0;
+  background-color: $gray;
+  background-image: url('/assets/img/faq-pattern.png');
+  background-color: $gray;
+  background-position: 0 0;
+  background-size: contain;
+  border-radius: 10px;
+  flex: auto;
+  & .container{
+    background-color: $white;
+    padding: 20px;
+    & h1.title{
+      font-size: $fz12;
+      color: $darkBlue;
+      margin-bottom: 20px;
+      line-height: 1;
+    }
+    & p.text{
+      margin-bottom: 10px;
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+    & a{
+      color: $darkBlue;
+      font-weight: $medium;
+      display: inline-block;
+      border-bottom: 1px solid transparent;
+      line-height: 1;
+      &:hover{
+        border-bottom: 1px solid $darkBlue;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .document{
+    & .container{
+      & h1.title{
+        font-size: $fz40;
+      }
+    }
+  }
+}

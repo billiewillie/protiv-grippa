@@ -36,7 +36,7 @@ header.header {
           align-items: center;
           justify-content: space-between;
           & span.arrow{
-            width: 12px;
+            width: 9px;
             height: 7px;
             background-image: url('/assets/img/icons/arrow-down.svg');
             background-position: 50%;
@@ -44,7 +44,10 @@ header.header {
             background-size: contain;
             margin-left: 5px;
             position: absolute;
-            right: 0;
+            right: 0px;
+            top: 0;
+            bottom: 0;
+            margin: auto;
           }
         }
       }
