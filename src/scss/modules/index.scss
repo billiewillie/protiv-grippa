@@ -1032,11 +1032,11 @@ section.index__details{
       }
       & .list{
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-around;
         margin-bottom: 100px;
         align-items: flex-start;
         & a.item{
-          width: 23%;
+          width: 30%;
           margin-bottom: 0;
            
           & .picture{

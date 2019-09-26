@@ -12,10 +12,10 @@ window.addEventListener('load', function() {
         localStorage.setItem('display', 'none');
     });
 
-    if(localStorage.getItem('display') !== null) {
-        const display = localStorage.getItem('display')
-        warning.style.display = display;
-    }
+    // if(localStorage.getItem('display') !== null) {
+    //     const display = localStorage.getItem('display')
+    //     warning.style.display = display;
+    // }
 
     link.addEventListener('mouseover', function(e){
         link.classList.add('first__link');
@@ -60,7 +60,6 @@ window.addEventListener('load', function() {
           scrollTop: $(attr).offset().top-100
         }, 1000);
     });
-
 });
 
 // mail

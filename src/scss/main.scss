@@ -201,19 +201,19 @@ h2.title {
 }
 
 @media (min-width: 992px) {
-  .hidden__md {
+  .hidden__md{
     display: none;
   }
 
-  .visible__md {
+  .visible__md{
     display: block;
   }
 
-  h2.title {
+  h2.title{
     font-size: $fz40;
   }
 
-  .wrapper {
+  .wrapper{
     padding-top: 60px;
   }
 
