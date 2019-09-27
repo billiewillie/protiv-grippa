@@ -7,6 +7,8 @@
   background-size: contain;
   border-radius: 10px;
   flex: auto;
+  justify-content: center;
+  text-align: center;
   & .container{
     background-color: $white;
     padding: 20px;
@@ -32,6 +34,12 @@
         border-bottom: 1px solid $darkBlue;
       }
     }
+  }
+  & h1.title{
+    font-size: $fz12;
+    color: $darkBlue;
+    margin-bottom: 20px;
+    line-height: 1;
   }
 }
 
