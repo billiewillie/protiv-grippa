@@ -104,6 +104,16 @@
                 margin: 15px 0;
               }
             }
+            & table.table{
+              border: 1px solid $dark;
+              border-collapse: collapse;
+              & td,
+              & th{
+                border: 1px solid $dark;
+                padding: 5px;
+                text-align: center;
+              }
+            }
           }
         }
       }
@@ -152,12 +162,6 @@
   .instructions{
   
     & .container{
-      & .block__title{
-        & h1{
-        }
-        & p.subtitle{
-        }
-      }
       & .content{
         & ul.tab__list{
           & li.tab{
