@@ -12,11 +12,6 @@ window.addEventListener('load', function() {
         localStorage.setItem('display', 'none');
     });
 
-    // if(localStorage.getItem('display') !== null) {
-    //     const display = localStorage.getItem('display')
-    //     warning.style.display = display;
-    // }
-
     link.addEventListener('mouseover', function(e){
         link.classList.add('first__link');
     });
@@ -64,13 +59,13 @@ window.addEventListener('load', function() {
 
 // mail
 $(document).ready(function() {
-	$("form.form").submit(function() { //Change
+	$("form.form").submit(function() {
 		var th = $(this);
 		$.ajax({
 			type: "POST",
-			url: "./assets/php/mail.php", //Change
+			url: "../php/mail.php",
 			data: th.serialize()
-		}).done(function() {
+		}).done(function(){
 			alert("Спасибо! Мы с вами скоро свяжемся.");
 			setTimeout(function() {
                 th.trigger("reset");
@@ -94,7 +89,6 @@ function fixedFlag() {
             }
         });
     }
-    
 }
   
 fixedFlag();
