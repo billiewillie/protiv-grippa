@@ -21,9 +21,33 @@ main.main{
     background-position: 100%;
     background-repeat: no-repeat;
   }
+
+  &::before{
+    display: block;
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #518B12 0%, rgba(81, 139, 18, 0) 50%);
+  }
   & .container{
     display: flex;
     justify-content: flex-start;
+    & .picture{
+      width: 100%;
+      text-align: center;
+      position: relative;
+      & img{
+        &:nth-child(2) {
+          display: inline-block;
+        }
+      }
+    }
   }
 }
 
@@ -427,6 +451,17 @@ section.pharmacy{
           text-align: center;
           justify-content: space-around;
           margin-bottom: 30px;
+          align-items: center;
+          & .pharmacy__item{
+            width: 50%;
+            & a{
+              padding: 10px;
+              display: block;
+              & img{
+                margin: auto;
+              }
+            }
+          }
         }
       }
       & p{
@@ -608,6 +643,12 @@ section.index__details{
 }
 
 @media (min-width: 768px) {
+  main.main{
+    background-position: 50% 50%;
+    &::after{
+      height: 7%;
+    }
+  }
   section.index__details{
     flex-direction: row;
     & .part{
@@ -627,6 +668,10 @@ section.index__details{
 
     &::after{
       bottom: -6px;
+    }
+
+    &::before{
+      display: none;
     }
     
     & .container{
@@ -688,6 +733,13 @@ section.index__details{
               vertical-align: baseline;
               line-height: 1;
             }
+          }
+        }
+      }
+      & .picture{
+        & img{
+          &:nth-child(2) {
+            display: block;
           }
         }
       }
@@ -1130,6 +1182,7 @@ section.index__details{
             flex-direction: column;
             & .pharmacy__item{
               padding: 10px 0;
+              width: 100%;
               & a{
                 display: block;
                 & img{
