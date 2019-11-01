@@ -1,18 +1,32 @@
 form.form
-  input(type="hidden" name="project_name" value="Бизнес-центр")
-  input(type="hidden" name="admin_email" value="v.belinovich@uno-agency.ru")
-  input(type="hidden" name="form_subject" value="Вопрос с формы сайта protiv-grippa")
+  div(style="display: none;")
+    input(type="hidden" name="_wpcf7" value="309")
+    input(type="hidden" name="_wpcf7_version" value="5.1.4")
+    input(type="hidden" name="_wpcf7_locale" value="ru_RU")
+    input(type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f309-o1")
+    input(type="hidden" name="_wpcf7_container_post" value="0")
   h2.title Задать вопрос о&nbsp;препарате
-  .form__field
-    input.input(type="text" name='имя' required)
-    span.bar
-    label Ваше имя
-  .form__field
-    input.input(type="text" name='email' required)
-    span.bar
-    label Ваш e-mail
-  .form__field
-    textarea.textarea(name='вопрос' required)
-    label Ваш вопрос
-  .form__field
-    button.button Отправить
+  .fields
+    .form__field
+      span.wpcf7-form-control-wrap.your-name
+        input.input(type="text" name='имя' required)
+      span.bar
+      label Ваше имя
+    .form__field
+      span.wpcf7-form-control-wrap.your-email
+        input.input(type="text" name='email' required)
+      span.bar
+      label Ваш e-mail
+    .form__field
+      span.wpcf7-form-control-wrap.your-message
+        textarea.textarea(name='вопрос' required)
+      label Ваш вопрос
+    p
+      input(type="hidden" name="_wpcf7_captcha_challenge_captcha-170" value="15455616")
+      img(class="wpcf7-form-control wpcf7-captchac wpcf7-captcha-captcha-170" width="72" height="24" alt="captcha" src="https://protiv-grippa.com/wp-content/uploads/wpcf7_captcha/15455616.png")
+      br
+      span(class="wpcf7-form-control-wrap captcha-170")
+        input(type="text")
+    .form__field
+      input(type="submit" value="Отправить" class="wpcf7-form-control wpcf7-submit")
+  .wpcf7-response-output.wpcf7-display-none

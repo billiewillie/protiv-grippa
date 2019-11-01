@@ -1,0 +1,254 @@
+.articles{
+  background-image: url('/assets/img/faq-pattern.png');
+  background-color: $gray;
+  background-position: 50% 50%;
+  background-size: contain;
+  flex: auto;
+  padding: 90px 0;
+  & .container{
+    max-width: 876px;
+    & .block__title{
+      margin-bottom: 50px;
+      & h1.title{
+        text-align: center;
+        color: $darkBlue;
+        font-size: $fz12;
+      }
+    }
+    & .content{
+      background-color: transparent;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      & ul.tab__list{
+        display: flex;
+        margin-bottom: 50px;
+        justify-content: center;
+        flex-wrap: wrap;
+        max-width: 500px;
+
+        & li.tab{
+          padding: 8px;
+          margin-bottom: 5px;
+          & a{
+            font-size: $fz3;
+            font-weight: $regular;
+            text-align: center;
+            background-color: $white;
+            border-radius: 12px;
+            padding: 7px 10px;
+            position: relative;
+            &.active,
+            &:hover{
+              font-weight: $medium;
+              color: $darkBlue;
+            }
+          }
+        }
+      }
+      .inner{
+        width: 100%;
+        & .text{
+          & ul.list{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 55px;
+            & li.item{
+              max-width: 264px;
+              margin-bottom: 30px;
+              transition: .2s;
+              display: none;
+              &.open{
+                display: block;
+              }
+              & .pic{
+                max-height: 173px;
+                overflow: hidden;
+                border-radius: 15px 15px 0 0;
+                box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.15);
+                transition: .2s;
+              }
+              & .text{
+                padding: 15px 15px 30px;
+                height: 193px;
+                max-height: 193px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+                border-radius: 0 0 15px 15px;
+                transition: .2s;
+                & h2.title{
+                  color: $darkBlue;
+                  margin-bottom: 0px;
+                  font-size: $fz9;
+                }
+                & p{
+                  font-size: $fz6;
+                  max-height: 58px;
+                  overflow: hidden;
+                }
+              }
+              &:hover{
+                & .pic,
+                & .text{
+                  box-shadow: none;
+                }
+                
+              }
+              &:nth-child(1) .text,
+              &:nth-child(10n+1) .text{
+                background: 
+                linear-gradient(326.5deg, 
+                rgba(244, 169, 18, 0.4) -1.35%, 
+                rgba(244, 169, 18, 0) 81%), 
+                #FFFFFF;
+              }
+              &:nth-child(2) .text,
+              &:nth-child(10n+2) .text{
+                background: 
+                linear-gradient(327.23deg, 
+                rgba(255, 0, 57, 0.3) 0%, 
+                rgba(255, 0, 57, 0) 82.9%), 
+                #FFFFFF;
+              }
+              &:nth-child(3) .text,
+              &:nth-child(10n+3) .text{
+                background: 
+                linear-gradient(327.62deg, 
+                rgba(0, 98, 217, 0.4) -2.77%, 
+                rgba(0, 98, 217, 0) 82.15%), 
+                #FFFFFF;
+              }
+              &:nth-child(4) .text,
+              &:nth-child(10n+4) .text{
+                background: 
+                linear-gradient(327.45deg, 
+                rgba(50, 207, 188, 0.4) 0%, 
+                rgba(50, 207, 188, 0) 81.66%), 
+                #FFFFFF;
+              }
+              &:nth-child(5) .text,
+              &:nth-child(10n+5) .text{
+                background: 
+                linear-gradient(326.76deg, 
+                rgba(0, 194, 255, 0.4) -2.54%, 
+                rgba(0, 194, 255, 0) 82.99%), 
+                #FFFFFF;
+              }
+              &:nth-child(6) .text,
+              &:nth-child(10n+6) .text{
+                background: 
+                linear-gradient(146deg, 
+                rgba(244, 169, 18, 0) 17.12%, 
+                rgba(244, 169, 18, 0.4) 100%),
+                #FFFFFF;
+              }
+              &:nth-child(7),
+              &:nth-child(8),
+              &:nth-child(9),
+              &:nth-child(10n),
+              &:nth-child(10n+7),
+              &:nth-child(10n+8),
+              &:nth-child(10n+9){
+                background-color: $white;
+                max-width: 264px;
+                border-radius: 8px;
+                box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.15);
+                & .pic{
+                  display: none;
+                }
+                & .text{
+                  padding: 20px;
+                }
+              }
+            }
+          }
+          & .show{
+            text-align: center;
+            & a{
+              display: inline-block;
+              border-bottom: 1px solid $textColor;
+              transition: .2s;
+              cursor: pointer;
+              &:hover{
+                border-bottom: 1px solid transparent;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px){
+  .articles{
+    & .container{
+      & .block__title{
+        & h1.title{
+          font-size: $fz40;
+        }
+      }
+      & .content{
+        & ul.tab__list{
+          & li.tab{
+            & a{
+              font-size: $fz4;
+            }
+          }
+        }
+        .inner{
+          & .text{
+            & ul.list{
+              flex-direction: row;
+              align-items: flex-start;
+              & li.item{
+                margin-right: 32px;
+                & .text{
+                  padding: 25px 25px 40px;
+                  & p{
+                    font-size: $fz8;
+                    max-height: 60px;
+                  }
+                }
+                &:nth-child(3n) {
+                  margin-right: 0;
+                }
+                &:nth-child(7),
+                &:nth-child(9),
+                &:nth-child(10n+7),
+                &:nth-child(10n+9) {
+                  margin-right: 30px;
+                  max-width: 413px;
+                  & .text{
+                    height: 157px;
+                    max-height: 157px;
+                  } 
+                  & p{
+                    max-height: 42px;
+                  }
+                }
+                &:nth-child(8),
+                &:nth-child(10n){
+                  margin-right: 0;
+                  max-width: 413px;
+                  & .text{
+                    height: 157px;
+                    max-height: 157px;
+                  }
+                  & p{
+                    max-height: 42px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

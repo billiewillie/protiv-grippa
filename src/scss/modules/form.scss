@@ -37,109 +37,129 @@ form.form {
     margin-bottom: 30px;
   }
 
-  & .form__field {
-    margin-bottom: 25px;
-    position: relative;
+  & .fields{
+    & .form__field {
+      margin-bottom: 25px;
+      position: relative;
+  
+      & span.wpcf7-form-control-wrap{
+        & input.input {
+          padding: 0px 0 5px;
+          font-size: $fz3;
+          width: 100%;
+          line-height: 1;
+          color: $headerColor;
+          background-color: transparent;
+          border-bottom: .5px solid $white;
+          cursor: pointer;
+    
+          &:focus{
+            outline: none;
+          }
+    
+          &:focus ~ label,
+          &:valid ~ label{
+            top: -15px;
+            font-size: $fz3;
+          }
+    
+          &:focus ~ .bar::before,
+          &:focus ~ .bar::after{
+            width: 50%;
+          }
+        }
 
-    input.input {
-      padding: 0px 0 5px;
-      font-size: $fz3;
-      width: 100%;
-      line-height: 1;
-      color: $headerColor;
-      background-color: transparent;
-      border-bottom: .5px solid $white;
-      cursor: pointer;
-
-      &:focus{
-        outline: none;
+        & label{
+          font-size: $fz5;
+          font-weight:normal;
+          position:absolute;
+          pointer-events:none;
+          left: 0;
+          top: 0;
+          transition: 0.2s ease all; 
+          color: rgba(255,255,255,.6);
+        }
+  
+        & textarea.textarea{
+          padding: 15px;
+          font-size: $fz3;
+          width: 100%;
+          line-height: $lineHeight3;
+          color: $headerColor;
+          min-height: 129px;
+          border-radius: 8px;
+    
+          & ~ label{
+            top: -20px;
+          }
+        }
+    
+        & .bar{
+          position:relative; 
+          display:block; 
+          width:100%;
+          &::before,
+          &::after {
+            content:'';
+            height: 1px; 
+            width: 0;
+            bottom: 1px; 
+            position:absolute;
+            background:$white; 
+            transition:0.2s ease all; 
+          }
+          &::before{
+            left: 50%;
+          }
+          &::after{
+            right: 50%;
+          }
+        }
       }
-
-      &:focus ~ label,
-      &:valid ~ label{
-        top: -15px;
-        font-size: $fz3;
+  
+      &:nth-of-type(2){
+        margin-bottom: 40px;
       }
-
-      &:focus ~ .bar::before,
-      &:focus ~ .bar::after{
-        width: 50%;
-      }
-    }
-
-    & textarea.textarea{
-      padding: 15px;
-      font-size: $fz3;
-      width: 100%;
-      line-height: $lineHeight3;
-      color: $headerColor;
-      min-height: 129px;
-      border-radius: 8px;
-
-      & ~ label{
-        top: -20px;
-      }
-    }
-
-    & label{
-      font-size: $fz5;
-      font-weight:normal;
-      position:absolute;
-      pointer-events:none;
-      left: 0;
-      top: 0;
-      transition: 0.2s ease all; 
-      color: rgba(255,255,255,.6);
-    }
-
-    & .bar{
-      position:relative; 
-      display:block; 
-      width:100%;
-      &::before,
-      &::after {
-        content:'';
-        height: 1px; 
-        width: 0;
-        bottom: 1px; 
-        position:absolute;
-        background:$white; 
-        transition:0.2s ease all; 
-      }
-      &::before{
-        left: 50%;
-      }
-      &::after{
-        right: 50%;
-      }
-    }
-
-    &:nth-of-type(2){
-      margin-bottom: 40px;
-    }
-
-    &:last-of-type{
-      margin-bottom: 0;
-      text-align: center;
-      margin-bottom: -20px;
-      & button.button {
-        display: inline-block;
-        font-size: $fz6;
-        padding: 12px 40px;
-        font-weight: $bold;
-        font-family: $mainFont;
+  
+      &:last-of-type{
         margin-bottom: 0;
-        color: $white;
-        background-color: $darkBlue;
-        border-radius: 25px;
-        text-transform: capitalize;
-        transition: .2s;
-        &:hover{
-          background-color: $red;
+        text-align: center;
+        margin-bottom: -20px;
+        & input {
+          display: inline-block;
+          font-size: $fz6;
+          padding: 12px 40px;
+          font-weight: $bold;
+          font-family: $mainFont;
+          margin-bottom: 0;
+          color: $white;
+          background-color: $darkBlue;
+          border-radius: 25px;
+          text-transform: capitalize;
+          transition: .2s;
+          &:hover{
+            background-color: $red;
+          }
         }
       }
     }
+
+    & p{
+      display: flex;
+      align-items: stretch;
+      justify-content: flex-start;
+      & input{
+        width: 100%;
+        min-height: 24px;
+        padding: 5px;
+      }
+      & img{
+        display: inline-block;
+        margin-right: 10px;
+      }
+    }
   }
+
 }
 
 @media (min-width: 992px) {

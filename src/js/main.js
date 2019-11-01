@@ -1,6 +1,7 @@
 import showList from "./component/showlist";
 import fixedform from "./component/fixedform";
 import slider from "./component/slider";
+import showArticle from "./component/articles";
 
 window.addEventListener('load', function() {
     const warning = document.querySelector('section.warning');
@@ -47,6 +48,22 @@ window.addEventListener('load', function() {
         });
     }
 
+    if($('.articles')){
+        $('.tabgroup > div').hide();
+        $('.tabgroup > div:first-of-type').show();
+        $('.tab__list a').click(function(e){
+            e.preventDefault();
+            var $this = $(this),
+                tabgroup = '#'+$this.parents('.tab__list').data('tabgroup'),
+                others = $this.closest('li').siblings().children('a'),
+                target = $this.attr('href');
+            others.removeClass('active');
+            $this.addClass('active');
+            $(tabgroup).children('div').hide();
+            $(target).show();
+        });
+    }
+
     $('a.scroll').on('click', function(e){
         e.preventDefault();
         var $this = $(this);
@@ -54,24 +71,6 @@ window.addEventListener('load', function() {
         $("html, body").animate({
           scrollTop: $(attr).offset().top-100
         }, 1000);
-    });
-});
-
-// mail
-$(document).ready(function() {
-	$("form.form").submit(function() {
-		var th = $(this);
-		$.ajax({
-			type: "POST",
-			url: "../php/mail.php",
-			data: th.serialize()
-		}).done(function(){
-			alert("Спасибо! Мы с вами скоро свяжемся.");
-			setTimeout(function() {
-                th.trigger("reset");
-			}, 1000);
-		});
-		return false;
     });
 });
 
@@ -92,3 +91,16 @@ function fixedFlag() {
 }
   
 fixedFlag();
+
+var getSpan1 = $(".wpcf7-form-control-wrap.your-name").next("span.bar").detach();
+$(".wpcf7-form-control-wrap.your-name").append(getSpan1);
+var getLabel1 = $(".wpcf7-form-control-wrap.your-name").next("label").detach();
+$(".wpcf7-form-control-wrap.your-name").append(getLabel1);
+
+var getSpan2 = $(".wpcf7-form-control-wrap.your-email").next("span.bar").detach();
+$(".wpcf7-form-control-wrap.your-email").append(getSpan2);
+var getLabel2 = $(".wpcf7-form-control-wrap.your-email").next("label").detach();
+$(".wpcf7-form-control-wrap.your-email").append(getLabel2);
+
+var getLabel3 = $(".wpcf7-form-control-wrap.your-message").next("label").detach();
+$(".wpcf7-form-control-wrap.your-message").append(getLabel3);
