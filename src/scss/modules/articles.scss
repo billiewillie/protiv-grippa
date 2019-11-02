@@ -65,11 +65,17 @@
                 display: block;
               }
               & .pic{
+                height: 173px;
                 max-height: 173px;
                 overflow: hidden;
                 border-radius: 15px 15px 0 0;
                 box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.15);
                 transition: .2s;
+                & img{
+                  object-fit: cover;
+                  height: 100%;
+                  width: 100%;
+                }
               }
               & .text{
                 padding: 15px 15px 30px;
@@ -215,7 +221,8 @@
                     max-height: 60px;
                   }
                 }
-                &:nth-child(3n) {
+                &:nth-child(10n+3),
+                &:nth-child(10n+6) {
                   margin-right: 0;
                 }
                 &:nth-child(7),
@@ -233,6 +240,7 @@
                   }
                 }
                 &:nth-child(8),
+                &:nth-child(10n+8),
                 &:nth-child(10n){
                   margin-right: 0;
                   max-width: 413px;

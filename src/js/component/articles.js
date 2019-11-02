@@ -1,6 +1,6 @@
 function showArticle() {
   if(document.querySelector('.articles')) {
-    const btn = `<div class="show"><a>Больше полезных статей</a></div>`;
+    let btn = `<div class="show"><a>Больше полезных статей</a></div>`;
     const listArr = Array.from(document.querySelectorAll('ul.list'));
     const AMOUNT = 10;
     
@@ -25,16 +25,14 @@ function showArticle() {
       
       btnsArr[i].addEventListener('click', () => {
         let notOpen = Array.from(btnsArr[i].parentElement.parentElement.children[0].children).filter(item => !item.classList.contains('open'));
-        console.log(notOpen);
         if(notOpen.length > AMOUNT) {
           for(let j = 0; j < AMOUNT; j++) {
-            btnsArr[i].parentElement.parentElement.children[0].children[j].classList.add('open');
-            console.log(notOpen);
+            notOpen[j].classList.add('open');
           }
         } else {
           for(let k = 0; k < notOpen.length; k++) {
-            // notOpen.children[k].classList.add('open');
-            console.log(notOpen);
+            notOpen[k].classList.add('open');
+            btnsArr[i].style.display = 'none';
           }
         }
         
