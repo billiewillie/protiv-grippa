@@ -153,11 +153,11 @@
         & .part{
           &:first-child{
             margin-bottom: 0px;
-            width: 63%;
+            width: 58%;
             margin-right: 30px;
           }
           &:last-child{
-            width: 35%;
+            width: 40%;
             & .warning{
               margin-bottom: 0px;
               margin-top: -130px;
@@ -165,6 +165,10 @@
               &.fixed{
                 position: fixed;
                 top: 190px;
+                & p.inform{
+                  font-size: 0;
+                  transition: .2s;
+                }
               }
             }
           }
@@ -195,9 +199,6 @@
       &:before {
         top: -7px;
         height: 10%;
-      }
-      & .container{
-
       }
     }
   }
