@@ -41,11 +41,11 @@
       align-items: center;
       &>*{
         max-width: 700px;
+        width: 100%;
       }
       & ul.list{
         display: flex;
         flex-direction: column;
-        margin-bottom: 50px;
         align-items: center;
         position: relative;
         & li.item{
@@ -107,14 +107,119 @@
               font-size: $fz3;
             }
           }
+          &.hidden{
+            display: none;
+          }
+        }
+      }
+
+      & .open{
+        text-align: center;
+        margin-bottom: 50px;
+        & a{
+          color: $gray3;
+          border-bottom: 1px solid $gray3;
+          display: inline-block;
+          cursor: pointer;
+          transition: .2s;
+          &:hover{
+            border-bottom: 1px solid transparent;
+          }
         }
       }
 
       & .feedback__form{
         & .form__block.wpcf7{
           & form.form.wpcf7-form{
+            background: linear-gradient(336.7deg, rgba(0, 98, 217, 0.4) -2.77%, rgba(0, 98, 217, 0) 100%), #FFFFFF;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 7px;
+            margin-bottom: 90px;
             & h2.title{
               font-size: $fz11;
+              color: $darkBlue;
+              margin-bottom: 40px;
+              &:before{
+                background-image: url('/assets/img/feedback/icon-form-title.svg');
+              }
+            }
+            & .fields{
+              display: flex;
+              flex-direction: column;
+              & .form__field{
+                & span{
+                  & input{
+                    padding: 0 0 5px;
+                    font-size: $fz5;
+                    font-weight: $regular;
+                    width: 100%;
+                    line-height: 1;
+                    color: $gray3;
+                    background-color: rgba(0,0,0,0);
+                    border-bottom: .5px solid $gray3;
+                    cursor: pointer;
+                    font-family: $mainFont;
+                    &:focus~span.bar::before,
+                    &:focus~span.bar::after{
+                      width: 50%;
+                    }
+                    &::placeholder{
+                      color: rgba(83,83,83,.6);
+                    }
+                  }
+                  & span.bar{
+                    position: relative;
+                    display: block;
+                    width: 100%;
+                    &::before,
+                    &::after{
+                      content: "";
+                      height: 1px;
+                      width: 0;
+                      bottom: 1px;
+                      position: absolute;
+                      background: $gray3;
+                      -webkit-transition: all .2s ease;
+                      -o-transition: .2s ease all;
+                      transition: all .2s ease;
+                    }
+                    &::after{
+                      right: 50%;
+                    }
+                    &::before{
+                      left: 50%;
+                    }
+                  }
+                  & textarea{
+                    width: 100%;
+                    border-radius: 8px;
+                    font-size: $fz5;
+                    padding: 10px;
+                    min-height: 158px;
+                  }
+                }
+                &:last-of-type{
+                  margin-bottom: 25px;
+                  & input{
+                    border-radius: 0;
+                    font-family: $mainFont;
+                    font-weight: $regular;
+                  }
+                }
+              }
+            }
+            & input[type=submit]{
+              background-color: $midBlue;
+              color: $white;
+              border-radius: 25px;
+              height: 38px;
+              line-height: 38px;
+              font-size: $fz6;
+              font-weight: $bold;
+              width: 157px;
+              display: block;
+              margin: auto;
+              margin-bottom: -19px;
             }
           }
         }
@@ -165,7 +270,32 @@
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: $tablet) {
+  .feedback{
+    & .content{
+      & .container{
+        & .feedback__form{
+          & .form__block.wpcf7{
+            & form.form.wpcf7-form{
+              & h2.title{
+                font-size: $fz12;
+              }
+              & .fields{
+                flex-direction: row;
+                justify-content: space-between;
+                & .part{
+                  width: 48%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $smDesktopWidth) {
   .feedback{
     & .page__title{
       padding: 160px 0;

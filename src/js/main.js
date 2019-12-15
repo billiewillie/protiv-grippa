@@ -104,3 +104,12 @@ $(".wpcf7-form-control-wrap.your-email").append(getLabel2);
 
 var getLabel3 = $(".wpcf7-form-control-wrap.your-message").next("label").detach();
 $(".wpcf7-form-control-wrap.your-message").append(getLabel3);
+
+
+if($('.feedback .open a')){
+    $('.feedback .open a').on('click', function(e) {
+        $('li.item.hidden').each(function (i, el) {
+            $(el).removeClass('hidden');
+        })
+    })
+}
