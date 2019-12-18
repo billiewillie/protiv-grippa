@@ -1,9 +1,9 @@
 main.main{
   background-size: cover;
-  background-position: 50% 100%;
+  background-position: 50% 20%;
   background-repeat: no-repeat;
-  padding: 50px 0 500px;
-  background-image: url('/assets/img/index-bg-mobile.jpg');
+  padding: 280px 0 120px;
+  background-image: url('/assets/img/index-bg-mobile-winter.jpg');
   border-bottom-left-radius: 100% 30px;
   border-bottom-right-radius: 100% 30px;
   z-index: 1;
@@ -21,20 +21,6 @@ main.main{
     background-position: 100%;
     background-repeat: no-repeat;
   }
-
-  &::before{
-    display: block;
-    position: absolute;
-    content: '';
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(180deg, #518B12 0%, rgba(81, 139, 18, 0) 50%);
-  }
   & .container{
     display: flex;
     justify-content: flex-start;
@@ -42,6 +28,9 @@ main.main{
       width: 100%;
       text-align: center;
       position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       & img{
         &:nth-child(2) {
           display: inline-block;
@@ -417,7 +406,7 @@ section.formula{
 
 section.pharmacy{
   padding: 50px 0 80px;
-  background-image: url('/assets/img/index-details-bg-mobile.jpg');
+  background-image: url('/assets/img/index-details-bg-mobile-winter.jpg');
   background-size: cover;
   background-position: 50%;
   z-index: 1;
@@ -644,7 +633,7 @@ section.index__details{
 
 @media (min-width: 768px) {
   main.main{
-    background-position: 50% 50%;
+    background-position: 50% 10%;
     &::after{
       height: 7%;
     }
@@ -660,7 +649,7 @@ section.index__details{
 @media (min-width: 992px) {
   main.main{
     padding: 80px 0 160px;
-    background-image: url('/assets/img/index-bg.jpg');
+    background-image: url('/assets/img/index-bg-winter.jpg');
     background-position: 50% 80%;
     margin-top: -10px;
     border-bottom-left-radius: 100% 60px;
@@ -693,7 +682,7 @@ section.index__details{
             margin-bottom: 0;
           }
           & .round{
-            background-color: $white;
+            background-color: $yellow;
             background-image: url('/assets/img/icons/main-list/main-icon-1.svg');
             border-radius: 50%;
             display: flex;
@@ -707,8 +696,8 @@ section.index__details{
             transition: .1s;
             box-shadow: 0px 5.7574px 8.22485px rgba(0, 0, 0, 0.2);
             &:hover{
-              background-color: $yellow;
-              box-shadow: 0px 0px 0px 3px rgba(252,208,0,1);
+              background-color: $red;
+              box-shadow: 0px 0px 0px 3px rgba(255,0,57,1);
               background-size: 53% 53%;
             }
           }
@@ -723,7 +712,7 @@ section.index__details{
             }
           }
           & p{
-            color: $white;
+            color: $midBlue;
             text-transform: uppercase;
             font-size: $fz2;
             font-weight: $bold;
@@ -737,6 +726,7 @@ section.index__details{
         }
       }
       & .picture{
+        width: 35%;
         & img{
           &:nth-child(2) {
             display: block;
@@ -1160,7 +1150,7 @@ section.index__details{
   }
 
   section.pharmacy{
-    background-image: url('/assets/img/index-details-bg.jpg');
+    background-image: url('/assets/img/index-details-bg-winter.jpg');
     padding: 150px 0 210px;
     margin-top: -40px;
     & .container{

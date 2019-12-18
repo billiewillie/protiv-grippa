@@ -303,8 +303,7 @@ block content
         .open  
           a Больше отзывов
         .feedback__form
-          .form__block.wpcf7
-            
+          .wpcf7
             form.form.wpcf7-form
               h2.title 
                 | Вы можете оставить отзыв о Цитовир-3 
@@ -331,7 +330,13 @@ block content
                   .form__field
                     span.wpcf7-form-control-wrap
                       textarea(placeholder="Текст отзыва")
-              input(type="submit" value='Отправить')
+              p
+                input(type="hidden" name="_wpcf7_captcha_challenge_captcha-170" value="3154675385")
+                img.wpcf7-form-control.wpcf7-captchac.wpcf7-captcha-captcha-170(width="72" height="24" alt="captcha" src="http://protiv-grippa.com/wp-content/uploads/wpcf7_captcha/3154675385.png")
+                span.wpcf7-form-control-wrap.captcha-170
+                  input.wpcf7-form-control.wpcf7-captchar(type="text" name="captcha-170" value="" size="4" maxlength="4" autocomplete="off" aria-invalid="false")
+                input(type="submit" value='Отправить')
+                span.ajax-loader
         .bottom
           .part
             p.text 

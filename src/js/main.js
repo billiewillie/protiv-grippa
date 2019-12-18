@@ -110,6 +110,7 @@ if($('.feedback .open a')){
     $('.feedback .open a').on('click', function(e) {
         $('li.item.hidden').each(function (i, el) {
             $(el).removeClass('hidden');
+            $('.feedback .open a').css('display', 'none')
         })
     })
 }
