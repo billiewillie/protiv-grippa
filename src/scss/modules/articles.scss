@@ -201,6 +201,9 @@
                 border-bottom: 1px solid transparent;
               }
             }
+            &:nth-of-type(2){
+              display: none;
+            }
           }
         }
       }
