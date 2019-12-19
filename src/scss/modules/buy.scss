@@ -1,7 +1,6 @@
 .buy{
   position: relative;
   z-index: 2;
-  background-color: $white;
   & .picture{
     height: 270px;
     overflow: hidden;
@@ -169,8 +168,8 @@
           }
           &:after{
             width: 213px;
-            height: 255px;
-            bottom: -140px;
+            height: 260px;
+            bottom: -150px;
             right: -200px;
             background-image: url('/assets/img/chick/chick-7.png');
           }
