@@ -152,6 +152,43 @@ h2.title {
   }
 }
 
+.scrolltop {
+	display:none;
+	width:100%;
+	margin:0 auto;
+	position:fixed;
+	bottom:30px;
+  right:10px;	
+  z-index: 2;
+}
+.scrollIcon {
+	position:absolute;
+	right:20px;
+	bottom:30px;
+  background-color:rgba(99, 111, 218,0.6);
+  background-image: url('/assets/img/icons/up-arrow.svg');
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: 50% 40%;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+	text-align: center;
+	margin: 0 0 0 0;
+	cursor:pointer;
+	transition: 0.5s;
+	-moz-transition: 0.5s;
+	-webkit-transition: 0.5s;
+	-o-transition: 0.5s; 		
+}
+.scrollIcon:hover {
+	background-color:rgba(99, 111, 218, 1);
+	transition: 0.5s;
+	-moz-transition: 0.5s;
+	-webkit-transition: 0.5s;
+	-o-transition: 0.5s; 		
+}
+
 @import "modules/feedback.scss";
 
 @import "modules/header.scss";

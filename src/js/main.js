@@ -114,3 +114,19 @@ if($('.feedback .open a')){
         })
     })
 }
+
+$(window).scroll(function() {
+    if ($(this).scrollTop() > 50 ) {
+      $('.scrolltop:hidden').stop(true, true).fadeIn();
+    } else {
+      $('.scrolltop').stop(true, true).fadeOut();
+    }
+  });
+  $(function(){
+    $(".scrollIcon").click(function(){
+    $("html,body").animate(
+      {
+        scrollTop:$("body").offset().top},
+      "1000");return false
+    })
+  })

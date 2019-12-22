@@ -106,7 +106,6 @@
       & li{
         transition: .2s;
         margin-bottom: 10px;
-
         & ul.list{
           margin-top: 10px;
           & li.item{
@@ -119,7 +118,6 @@
               &:active{
                 background-color: transparent;
               }
-              
             }
           }
         }
@@ -127,6 +125,7 @@
           font-size: $fz8;
           line-height: $lineHeight2;
           text-transform: initial;
+          display: inline;
         }
       }
     }
