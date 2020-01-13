@@ -357,7 +357,7 @@ section.formula{
           }
         }
         & p{
-          font-size: $fz8;
+          font-size: $fz6;
           background-color: $gray;
           padding: 15px 20px;
           min-height: 130px;
@@ -634,14 +634,24 @@ section.index__details{
 @media (min-width: 768px) {
   main.main{
     background-position: 50% 10%;
+    background-image: url('/assets/img/index-bg-winter-tab.jpg');
     &::after{
       height: 7%;
+      width: 70%;
     }
   }
   section.index__details{
     flex-direction: row;
     & .part{
       width: 50%;
+      &:first-child{
+        border-top-left-radius: 100% 0px;
+        border-top-right-radius: 100% 0px;
+      }
+      &:last-child{
+        border-bottom-left-radius: 100% 0px;
+        border-bottom-right-radius: 100% 0px;
+      }
     }
   }
 }
@@ -656,7 +666,7 @@ section.index__details{
     border-bottom-right-radius: 100% 60px;
 
     &::after{
-      bottom: -6px;
+      bottom: -10px;
     }
 
     &::before{

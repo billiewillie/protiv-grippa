@@ -6,20 +6,14 @@
     max-width: 1070px;
   }
 
-  & .page__title{
-    text-align: center;
+  & .picture{
+    overflow: hidden;
     background-image: url('/assets/img/feedback/feedback-bg-mobile.jpg');
-    background-position: 50%;
+    background-position: 50% 99%;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 100px 0;
     position: relative;
-    & .container{
-      & h1.title{
-        color: $white;
-        font-size: $fz12;
-      }
-    }
+    height: 270px;
   }
 
   & .content{
@@ -39,6 +33,12 @@
       justify-content: center;
       flex-direction: column;
       align-items: center;
+      & h1.title{
+        font-size: $fz12;
+        text-align: center;
+        color: $darkBlue;
+        margin-bottom: 40px;
+      }
       &>*{
         max-width: 700px;
         width: 100%;
@@ -57,6 +57,10 @@
           padding: 10px;
           margin-bottom: 40px;
           width: 100%;
+          & .picture{
+            height: auto;
+            background-image: none;
+          }
           & .header{
             display: flex;
             justify-content: space-between;
@@ -294,8 +298,16 @@
 
 @media (min-width: $tablet) {
   .feedback{
+    & .picture{
+      height: 400px;
+      background-size: cover;
+      background-position: 50% 30%;
+    }
     & .content{
       & .container{
+        & h1.title{
+          font-size: $fz40;
+        }
         & .feedback__form{
           & .wpcf7{
             & form.form.wpcf7-form{

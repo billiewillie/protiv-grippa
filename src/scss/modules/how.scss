@@ -8,20 +8,14 @@
     max-width: 1070px;;
   }
 
-  & .page__title{
-    text-align: center;
+  & .picture{
+    overflow: hidden;
     background-image: url('/assets/img/how-bg.jpg');
-    background-position: 50%;
+    background-position: 50% 99%;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 100px 0;
     position: relative;
-    & .container{
-      & h1.title{
-        color: $white;
-        font-size: $fz12;
-      }
-    }
+    height: 270px;
   }
 
   & .effect{
@@ -50,6 +44,12 @@
       background-repeat: no-repeat;
     }
     & .container{
+      & h1.title{
+        font-size: $fz12;
+        text-align: center;
+        color: $darkBlue;
+        margin-bottom: 40px;
+      }
       & h2.title{
         font-size: $fz9;
         text-align: center;
@@ -257,6 +257,8 @@
           & .picture{
             text-align: center;
             margin-bottom: 30px;
+            background-image: none;
+            height: auto;
           }
           & h3.title{
             font-size: $fz9;
@@ -509,13 +511,9 @@
 @media (min-width: 992px) {
   .how{
     padding-bottom: 110px;
-    & .page__title{
-      padding: 160px 0;
-      & .container{
-        & h1.title{
-          font-size: $fz40;
-        }
-      }
+    & .picture{
+      height: 400px;
+      background-size: cover;
     }
 
     & .effect{
@@ -540,6 +538,9 @@
           & li.item{
             margin-right: 40px;
           }
+        }
+        & h1.title{
+          font-size: $fz40;
         }
       }
     }
