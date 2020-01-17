@@ -25,6 +25,44 @@ footer.footer {
       }
       &:nth-child(2) {
         order: 1;
+        & form{
+          margin-top: 20px;
+          position: relative;
+          text-align: center;
+          & input{
+            background-color: transparent;
+            border-bottom: 1px solid $white;
+            outline: none;
+            width: 80%;
+            padding: 5px 10px;
+            &::placeholder {
+              color: rgba(255,255,255,.6);
+              transition: color .4s ease;
+            }
+            &:focus::placeholder {
+              color: transparent;
+            }
+            &:focus {
+              border-bottom: 1px solid transparent;
+            }
+            &:focus ~ .bg {
+              height: 100%;
+            }
+          }
+          & .bg {
+            height: 0%;
+            width: 80%;
+            background: #fff;
+            position: absolute;
+            border-radius: 5px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            z-index: -2;
+            transition: height 0.7s cubic-bezier(0.76, -0.76, 0.25, 1.26);
+          }
+        }
       }
       &:last-child{
         & p{
@@ -62,12 +100,16 @@ footer.footer {
         width: 250px;
         margin-bottom: 0;
         &:nth-child(2){
-          align-self: center;
+          align-self: flex-start;
           order: 2;
+          & form{
+            margin-top: 25px;
+          }
         }
         &:nth-child(1){
           order: 1;
         }
+
         &:last-child{
           & p{
             margin-bottom: 15px;

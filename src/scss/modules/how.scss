@@ -10,8 +10,8 @@
 
   & .picture{
     overflow: hidden;
-    background-image: url('/assets/img/how-bg.jpg');
-    background-position: 50% 99%;
+    background-image: url('/assets/img/how-bg-mobile.jpg');
+    background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -439,6 +439,7 @@
 
   & .research{
     margin-bottom: 40px;
+    padding-top: 100px;
     & .container{
       & h2.title{
         text-align: center;
@@ -514,6 +515,7 @@
     & .picture{
       height: 400px;
       background-size: cover;
+      background-image: url('/assets/img/how-bg.jpg');
     }
 
     & .effect{

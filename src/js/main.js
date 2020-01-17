@@ -130,3 +130,14 @@ $(window).scroll(function() {
       "1000");return false
     })
   })
+
+    if ($('a.logo.index--logo')) {
+        $("a.logo.index--logo").click(function() {
+            $("html,body").animate({
+                scrollTop:$("body").offset().top
+            },
+            "1000");
+            return false
+        })
+        $('.scrollIcon').css({'width':'0px', 'height':'0px'})
+    }

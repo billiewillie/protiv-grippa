@@ -179,12 +179,13 @@ header.header {
     &.hidden{
       top: -110px;
     }
-    & .content{
+    & a.content{
       border-radius: 0 0 20px 20px;
       padding: 35px 5px 10px;
       background-color: $white;
       text-align: center;
       transition: .2s;
+      display: inline-block;
       &:hover{
         margin-top: 10px;
       }
