@@ -23,10 +23,10 @@ a {
   }
 }
 
-.oversize{
+.oversize {
   width: 104%;
   margin-left: -2%;
-  & .container{
+  & .container {
     padding: 0 20px;
   }
 }
@@ -40,7 +40,7 @@ a {
   flex-direction: column;
   justify-content: space-between;
 
-  &.wrapper__page{
+  &.wrapper__page {
     background-color: $white;
     padding-top: 140px;
     justify-content: space-between;
@@ -58,12 +58,12 @@ a {
   margin: 0 auto;
 }
 
-.content{
+.content {
   background-color: $white;
 }
 
-main.main{
-  & P{
+main.main {
+  & p {
     color: $textColor;
   }
 }
@@ -87,12 +87,12 @@ h2.title {
   font-weight: $semiBold;
   text-transform: uppercase;
   margin-bottom: 10px;
-  transition: .2s;
+  transition: 0.2s;
   background-color: $white;
   cursor: pointer;
   color: $stage;
 
-  &:hover{
+  &:hover {
     color: $white;
     background-color: $stage;
   }
@@ -106,11 +106,11 @@ h2.title {
   display: none;
 }
 
-.quote{
+.quote {
   display: flex;
   justify-content: center;
   text-align: center;
-  & .cloud{
+  & .cloud {
     background-color: $green;
     border-radius: 50%;
     width: 180px;
@@ -120,31 +120,31 @@ h2.title {
     justify-content: center;
     flex-direction: column;
     position: relative;
-    & p{
+    & p {
       font-size: $fz6;
       color: $white;
       font-weight: $bold;
       margin-bottom: 10px;
     }
-    & a.btn{
+    & a.btn {
       background-color: $white;
       color: $darkBlue;
       border-radius: 25px;
       align-self: center;
       padding: 10px 40px;
       font-weight: $bold;
-      transition: .2s;
-      &:hover{
+      transition: 0.2s;
+      &:hover {
         background-color: $darkBlue;
         color: $white;
       }
     }
   }
-  &.orange{
-    & .cloud{
+  &.orange {
+    & .cloud {
       background-color: $orange;
-      & a.btn{
-        &:hover{
+      & a.btn {
+        &:hover {
           background-color: $red;
         }
       }
@@ -153,40 +153,40 @@ h2.title {
 }
 
 .scrolltop {
-	display:none;
-	width:100%;
-	margin:0 auto;
-	position:fixed;
-	bottom:30px;
-  right:10px;	
+  display: none;
+  width: 100%;
+  margin: 0 auto;
+  position: fixed;
+  bottom: 30px;
+  right: 10px;
   z-index: 2;
 }
 .scrollIcon {
-	position:absolute;
-	right:20px;
-	bottom:30px;
-  background-color:rgba(99, 111, 218,0.6);
-  background-image: url('/assets/img/icons/up-arrow.svg');
+  position: absolute;
+  right: 20px;
+  bottom: 30px;
+  background-color: rgba(99, 111, 218, 0.6);
+  background-image: url("/assets/img/icons/up-arrow.svg");
   background-size: 50%;
   background-repeat: no-repeat;
   background-position: 50% 40%;
   width: 60px;
   height: 60px;
   border-radius: 50%;
-	text-align: center;
-	margin: 0 0 0 0;
-	cursor:pointer;
-	transition: 0.5s;
-	-moz-transition: 0.5s;
-	-webkit-transition: 0.5s;
-	-o-transition: 0.5s; 		
+  text-align: center;
+  margin: 0 0 0 0;
+  cursor: pointer;
+  transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
 }
 .scrollIcon:hover {
-	background-color:rgba(99, 111, 218, 1);
-	transition: 0.5s;
-	-moz-transition: 0.5s;
-	-webkit-transition: 0.5s;
-	-o-transition: 0.5s; 		
+  background-color: rgba(99, 111, 218, 1);
+  transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
 }
 
 @import "modules/feedback.scss";
@@ -198,6 +198,8 @@ h2.title {
 @import "modules/burger.scss";
 
 @import "modules/form.scss";
+
+@import "modules/how-use.scss";
 
 @import "modules/index.scss";
 
@@ -242,19 +244,19 @@ h2.title {
 }
 
 @media (min-width: 992px) {
-  .hidden__md{
+  .hidden__md {
     display: none;
   }
 
-  .visible__md{
+  .visible__md {
     display: block;
   }
 
-  h2.title{
+  h2.title {
     font-size: $fz40;
   }
 
-  .wrapper{
+  .wrapper {
     padding-top: 60px;
   }
 
@@ -262,32 +264,32 @@ h2.title {
     padding: 0 30px;
   }
 
-  .quote{
-    & .cloud{
+  .quote {
+    & .cloud {
       width: 195px;
       height: 195px;
-      & p{
+      & p {
       }
-      & a.btn{
+      & a.btn {
       }
-      &::after{
+      &::after {
         position: absolute;
         display: block;
-        content: '';
+        content: "";
         right: -180px;
         bottom: -90px;
         width: 170px;
         height: 228px;
-        background-image: url('/assets/img/chick/chick-6.png');
+        background-image: url("/assets/img/chick/chick-6.png");
         background-repeat: no-repeat;
         z-index: 1;
       }
-      &::before{
+      &::before {
         right: -15px;
         bottom: 50px;
         width: 40px;
         height: 40px;
-        background-image: url('/assets/img/icons/triangle-green.svg');
+        background-image: url("/assets/img/icons/triangle-green.svg");
         -webkit-transform: rotate(-10deg);
         -ms-transform: rotate(-10deg);
         transform: rotate(-10deg);
@@ -300,10 +302,10 @@ h2.title {
         background-repeat: no-repeat;
       }
     }
-    &.orange{
-      & .cloud{
-        &::before{
-          background-image: url('/assets/img/icons/triangle-orange.svg');
+    &.orange {
+      & .cloud {
+        &::before {
+          background-image: url("/assets/img/icons/triangle-orange.svg");
         }
       }
     }

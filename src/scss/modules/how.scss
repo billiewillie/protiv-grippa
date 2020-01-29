@@ -1,16 +1,16 @@
-.how{
+.how {
   position: relative;
   z-index: 2;
   background-color: $white;
   padding-bottom: 50px;
 
-  & .container{
-    max-width: 1070px;;
+  & .container {
+    max-width: 1070px;
   }
 
-  & .picture{
+  & .picture {
     overflow: hidden;
-    background-image: url('/assets/img/how-bg-mobile.jpg');
+    background-image: url("/assets/img/how-bg-mobile.jpg");
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -18,50 +18,50 @@
     height: 270px;
   }
 
-  & .effect{
+  & .effect {
     padding: 60px 0;
-    background-image: url('/assets/img/how-pattern.png');
+    background-image: url("/assets/img/how-pattern.png");
     background-size: contain;
     background-color: $white;
     background-repeat: repeat;
     background-position: 0 0;
     border-top-left-radius: 100% 30px;
-    border-top-right-radius: 100% 30px; 
+    border-top-right-radius: 100% 30px;
     position: relative;
     z-index: 1;
     margin-top: -30px;
-    &::before{
+    &::before {
       display: block;
       position: absolute;
-      content: '';
+      content: "";
       left: 0;
       top: 0px;
       width: 75%;
       height: 5%;
-      background-image: url('/assets/img/lines//recommend-line-yellow.svg');
+      background-image: url("/assets/img/lines/recommend-line-yellow.svg");
       background-size: contain;
       background-position: 0 0;
       background-repeat: no-repeat;
     }
-    & .container{
-      & h1.title{
+    & .container {
+      & h1.title {
         font-size: $fz12;
         text-align: center;
         color: $darkBlue;
         margin-bottom: 40px;
       }
-      & h2.title{
+      & h2.title {
         font-size: $fz9;
         text-align: center;
         color: $darkBlue;
         font-weight: $bold;
         margin-bottom: 70px;
       }
-      & ul.list{
+      & ul.list {
         display: flex;
         flex-direction: column;
         align-items: center;
-        & li.item{
+        & li.item {
           font-size: $fz7;
           color: $dark;
           padding: 130px 30px 30px 30px;
@@ -71,76 +71,101 @@
           margin-bottom: 40px;
           max-width: 260px;
           position: relative;
-          transition: .2s;
+          transition: 0.2s;
           cursor: default;
           font-weight: $medium;
-          &::before{
+          &::before {
             display: block;
             position: absolute;
-            content: '';
+            content: "";
             left: 30px;
             top: 30px;
             width: 80px;
             height: 80px;
-            background-image: url('/assets/img/icons/effect/icon-1.svg');
+            background-image: url("/assets/img/icons/effect/icon-1.svg");
             background-size: 50%;
             background-position: 50% 50%;
             background-repeat: no-repeat;
-            background-color: rgba(50, 207, 188, .3);
+            background-color: rgba(50, 207, 188, 0.3);
             border-radius: 50%;
-            transition: .2s;
+            transition: 0.2s;
           }
-          &:hover{
-            background: linear-gradient(316.94deg, rgba(50, 207, 188, 0.4) 0%, rgba(50, 207, 188, 0) 100%), #FFFFFF;
-            &::before{
-              background-image: url('/assets/img/icons/effect/icon-1-hover.svg');
+          &:hover {
+            background: linear-gradient(
+                316.94deg,
+                rgba(50, 207, 188, 0.4) 0%,
+                rgba(50, 207, 188, 0) 100%
+              ),
+              #ffffff;
+            &::before {
+              background-image: url("/assets/img/icons/effect/icon-1-hover.svg");
             }
           }
-          &:nth-child(2){
-            &::before{
-              background-color: rgba(255, 0, 57, .3);
-              background-image: url('/assets/img/icons/effect/icon-2.svg');
+          &:nth-child(2) {
+            &::before {
+              background-color: rgba(255, 0, 57, 0.3);
+              background-image: url("/assets/img/icons/effect/icon-2.svg");
             }
-            &:hover{
-              background: linear-gradient(316.82deg, rgba(255, 0, 57, 0.3) 0%, rgba(255, 0, 57, 0) 100%), #FFFFFF;
-              &::before{
-                background-image: url('/assets/img/icons/effect/icon-2-hover.svg');
+            &:hover {
+              background: linear-gradient(
+                  316.82deg,
+                  rgba(255, 0, 57, 0.3) 0%,
+                  rgba(255, 0, 57, 0) 100%
+                ),
+                #ffffff;
+              &::before {
+                background-image: url("/assets/img/icons/effect/icon-2-hover.svg");
               }
             }
           }
-          &:nth-child(3){
-            &::before{
-              background-color: rgba(0, 98, 217, .3);
-              background-image: url('/assets/img/icons/effect/icon-3.svg');
+          &:nth-child(3) {
+            &::before {
+              background-color: rgba(0, 98, 217, 0.3);
+              background-image: url("/assets/img/icons/effect/icon-3.svg");
             }
-            &:hover{
-              background: linear-gradient(316.82deg, rgba(0, 98, 217, .3) 0%, rgba(0, 98, 217, 0) 100%), #FFFFFF;
-              &::before{
-                background-image: url('/assets/img/icons/effect/icon-3-hover.svg');
+            &:hover {
+              background: linear-gradient(
+                  316.82deg,
+                  rgba(0, 98, 217, 0.3) 0%,
+                  rgba(0, 98, 217, 0) 100%
+                ),
+                #ffffff;
+              &::before {
+                background-image: url("/assets/img/icons/effect/icon-3-hover.svg");
               }
             }
           }
-          &:nth-child(4){
-            &::before{
-              background-color: rgba(0, 194, 255, .3);
-              background-image: url('/assets/img/icons/effect/icon-4.svg');
+          &:nth-child(4) {
+            &::before {
+              background-color: rgba(0, 194, 255, 0.3);
+              background-image: url("/assets/img/icons/effect/icon-4.svg");
             }
-            &:hover{
-              background: linear-gradient(316.82deg, rgba(0, 194, 255, .3) 0%, rgba(0, 194, 255, 0) 100%), #FFFFFF;
-              &::before{
-                background-image: url('/assets/img/icons/effect/icon-4-hover.svg');
+            &:hover {
+              background: linear-gradient(
+                  316.82deg,
+                  rgba(0, 194, 255, 0.3) 0%,
+                  rgba(0, 194, 255, 0) 100%
+                ),
+                #ffffff;
+              &::before {
+                background-image: url("/assets/img/icons/effect/icon-4-hover.svg");
               }
             }
           }
-          &:nth-child(5){
-            &::before{
-              background-color: rgba(244, 169, 18, .3);
-              background-image: url('/assets/img/icons/effect/icon-5.svg');
+          &:nth-child(5) {
+            &::before {
+              background-color: rgba(244, 169, 18, 0.3);
+              background-image: url("/assets/img/icons/effect/icon-5.svg");
             }
-            &:hover{
-              background: linear-gradient(316.82deg, rgba(244, 169, 18, .3) 0%, rgba(244, 169, 18, 0) 100%), #FFFFFF;
-              &::before{
-                background-image: url('/assets/img/icons/effect/icon-5-hover.svg');
+            &:hover {
+              background: linear-gradient(
+                  316.82deg,
+                  rgba(244, 169, 18, 0.3) 0%,
+                  rgba(244, 169, 18, 0) 100%
+                ),
+                #ffffff;
+              &::before {
+                background-image: url("/assets/img/icons/effect/icon-5-hover.svg");
               }
             }
           }
@@ -149,20 +174,20 @@
     }
   }
 
-  & .describe{
+  & .describe {
     font-size: $fz4;
     background-color: $gray;
     padding: 25px 0;
     font-weight: $medium;
-    & sup{
+    & sup {
       vertical-align: super;
     }
-    & p{
+    & p {
       margin-bottom: 10px;
     }
   }
 
-  & .work{
+  & .work {
     display: flex;
     flex-direction: column;
     color: $white;
@@ -170,8 +195,8 @@
     font-size: 0;
     position: relative;
     z-index: 1;
-    & .part{
-      & h2.title{
+    & .part {
+      & h2.title {
         font-weight: $medium;
         font-size: $fz40;
         color: $white;
@@ -180,21 +205,21 @@
         margin-bottom: 0;
         line-height: 1.1;
       }
-      & h3.title{
+      & h3.title {
         font-weight: $bold;
         font-size: $fz9;
         margin-bottom: 20px;
       }
-      & p.text{
+      & p.text {
         font-size: $fz8;
         font-weight: $regular;
         padding-left: 20px;
         margin-bottom: 10px;
         position: relative;
-        &::before{
+        &::before {
           display: block;
           position: absolute;
-          content: '';
+          content: "";
           left: 0;
           top: 6px;
           width: 8px;
@@ -203,20 +228,20 @@
           border-radius: 50%;
         }
       }
-      & p.text:last-of-type{
+      & p.text:last-of-type {
         margin-bottom: 0;
       }
-      &:first-child{
+      &:first-child {
         position: relative;
-        background-image: url('/assets/img/how-bg-2.jpg');
+        background-image: url("/assets/img/how-bg-2.jpg");
         background-size: cover;
         background-position: 100%;
         text-align: right;
         padding: 90px 10px;
-        &::before{
+        &::before {
           display: block;
           position: absolute;
-          content: '';
+          content: "";
           left: 0;
           top: 0;
           right: 0;
@@ -224,59 +249,68 @@
           margin: auto;
           width: 100%;
           height: 100%;
-          background: linear-gradient(360deg, #0062D9 0%, rgba(0, 98, 217, 0) 100%);
+          background: linear-gradient(
+            360deg,
+            #0062d9 0%,
+            rgba(0, 98, 217, 0) 100%
+          );
         }
       }
-      &:last-child{
+      &:last-child {
         padding: 0px 20px 40px;
       }
     }
   }
 
-  & .components{
+  & .components {
     padding-bottom: 40px;
     border-bottom-left-radius: 100% 30px;
     border-bottom-right-radius: 100% 30px;
     background-color: $white;
     position: relative;
-    & .container{
+    & .container {
       margin-top: -20px;
       position: relative;
       z-index: 2;
-      & ul.list{
+      & ul.list {
         display: flex;
         flex-direction: column;
         align-items: center;
-        & li.item{
+        & li.item {
           box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
           border-radius: 7px;
           margin-bottom: 30px;
           padding: 20px;
-          transition: .2s;
-          background: linear-gradient(0deg, rgba(255, 0, 57, 0.1), rgba(255, 0, 57, 0.1)), #FFFFFF;
-          & .picture{
+          transition: 0.2s;
+          background: linear-gradient(
+              0deg,
+              rgba(255, 0, 57, 0.1),
+              rgba(255, 0, 57, 0.1)
+            ),
+            #ffffff;
+          & .picture {
             text-align: center;
             margin-bottom: 30px;
             background-image: none;
             height: auto;
           }
-          & h3.title{
+          & h3.title {
             font-size: $fz9;
             font-weight: $bold;
             line-height: 1.2;
             text-align: center;
             margin-bottom: 30px;
             color: $darkBlue;
-            & span{
+            & span {
               font-weight: $regular;
             }
           }
-          & p{
+          & p {
             font-size: $fz6;
-            & span.tooltip{
+            & span.tooltip {
               text-decoration: none;
               position: relative;
-              & span.child{
+              & span.child {
                 position: absolute;
                 font-size: $fz5;
                 padding: 20px;
@@ -288,25 +322,35 @@
                 display: none;
               }
             }
-            & span.hidden__md{
+            & span.hidden__md {
               display: block;
               margin-top: 20px;
               font-size: $fz3;
             }
           }
-          &:nth-child(2){
-            background: linear-gradient(0deg, rgba(0, 194, 255, 0.1), rgba(0, 194, 255, 0.1)), #FFFFFF;
+          &:nth-child(2) {
+            background: linear-gradient(
+                0deg,
+                rgba(0, 194, 255, 0.1),
+                rgba(0, 194, 255, 0.1)
+              ),
+              #ffffff;
           }
-          &:nth-child(3){
-            background: linear-gradient(0deg, rgba(252, 208, 0, 0.15), rgba(252, 208, 0, 0.15)), #FFFFFF;
+          &:nth-child(3) {
+            background: linear-gradient(
+                0deg,
+                rgba(252, 208, 0, 0.15),
+                rgba(252, 208, 0, 0.15)
+              ),
+              #ffffff;
           }
-          &:hover{
+          &:hover {
             background: $white;
             box-shadow: 5px 7px 15px rgba(255, 0, 57, 0.25);
-            &:nth-child(2){
+            &:nth-child(2) {
               box-shadow: 5px 7px 15px rgba(0, 98, 217, 0.4);
             }
-            &:nth-child(3){
+            &:nth-child(3) {
               box-shadow: 5px 7px 15px rgba(252, 208, 0, 0.4);
             }
           }
@@ -315,29 +359,29 @@
     }
   }
 
-  & .message{
+  & .message {
     padding: 60px 0;
-    background: linear-gradient(180deg, #F4A912 0%, #FCD000 100%);
+    background: linear-gradient(180deg, #f4a912 0%, #fcd000 100%);
     margin-top: -30px;
 
-    .container{
+    .container {
       max-width: 580px;
       text-align: center;
 
-      & h2.title{
+      & h2.title {
         font-size: $fz40;
         font-weight: $medium;
         color: $darkBlue;
         margin-bottom: 40px;
       }
-      & p.text{
+      & p.text {
         margin-bottom: 30px;
         text-align: left;
         color: $white;
         font-size: $fz9;
         font-weight: $medium;
       }
-      & p.note{
+      & p.note {
         margin-bottom: 55px;
         text-align: left;
         color: $darkBlue;
@@ -347,22 +391,22 @@
     }
   }
 
-  & .details{
+  & .details {
     border-top-left-radius: 100% 30px;
     border-top-right-radius: 100% 30px;
     margin-top: -40px;
     position: relative;
     background-color: $white;
     padding: 0 0 40px;
-    background-image: url('/assets/img/lines/details-line.svg');
+    background-image: url("/assets/img/lines/details-line.svg");
     background-position: 50% 55%;
     background-size: 100% auto;
     background-repeat: no-repeat;
 
-    & .container{
+    & .container {
       position: relative;
       padding-top: 80px;
-      & .button{
+      & .button {
         background-color: transparent;
         text-align: center;
         padding: 0;
@@ -373,7 +417,7 @@
         top: -30px;
         cursor: default;
         margin: auto;
-        & a.btn{
+        & a.btn {
           background-color: $midBlue;
           border-radius: 41px;
           font-size: $fz8;
@@ -381,100 +425,105 @@
           text-transform: initial;
           padding: 20px 50px;
           display: inline-block;
-          transition: .2s;
-          &:hover{
+          transition: 0.2s;
+          &:hover {
             background-color: $red;
           }
         }
       }
-      & .item{
+      & .item {
         display: flex;
         flex-direction: column;
         margin-bottom: 50px;
         width: 100%;
         color: $darkBlue;
-        & .part{
-          & p.short{
+        & .part {
+          & p.short {
             font-size: $fz12;
             line-height: 1.1;
           }
-          & p.long{
+          & p.long {
             font-size: $fz8;
             line-height: 1.2;
           }
-          &:first-child{
-            border-bottom: .5px solid $darkBlue;
+          &:first-child {
+            border-bottom: 0.5px solid $darkBlue;
             padding-bottom: 20px;
             margin-bottom: 20px;
           }
         }
-        &:last-of-type{
-          margin-bottom: 0;          
+        &:last-of-type {
+          margin-bottom: 0;
         }
       }
     }
   }
 
-  & .button{
+  & .button {
     margin: 40px 0;
     text-align: center;
     display: none;
-    &:hover{
+    &:hover {
       background-color: transparent;
       cursor: default;
     }
-    & a.btn{
+    & a.btn {
       border-radius: 41px;
       font-size: $fz8;
       background-color: $orange;
       color: $white;
       padding: 20px 50px;
       text-transform: none;
-      transition: .2s;
-      &:hover{
+      transition: 0.2s;
+      &:hover {
         background-color: $red;
       }
     }
   }
 
-  & .research{
+  & .research {
     margin-bottom: 40px;
     padding-top: 100px;
-    & .container{
-      & h2.title{
+    & .container {
+      & h2.title {
         text-align: center;
         color: $darkBlue;
         font-weight: $medium;
         margin-bottom: 70px;
       }
-      & ul.list{
+      & ul.list {
         font-size: 0;
-        & li.item{
+        & li.item {
           display: inline-block;
           vertical-align: top;
           width: 100%;
           margin-bottom: 30px;
           padding: 0;
-          & .content{
+          & .content {
             display: block;
             padding: 20px 30px;
-            transition: .5s;
-            background: linear-gradient(270deg, rgba(0, 98, 217, 0.35) 0.1%, rgba(158, 195, 241, 0.52) 43%, #FFFFFF 100%);
-            & p.authors{
+            transition: 0.5s;
+            background: linear-gradient(
+              270deg,
+              rgba(0, 98, 217, 0.35) 0.1%,
+              rgba(158, 195, 241, 0.52) 43%,
+              #ffffff 100%
+            );
+            & p.authors {
               font-size: $fz5;
               font-weight: $regular;
               color: $darkBlue;
               margin-bottom: 15px;
             }
-            & h3.title{
+            & h3.title {
               font-size: $fz9;
               font-weight: $medium;
               color: $dark;
-              & span{
+              & span {
                 font-weight: $regular;
-                &.arrow{
+                &.arrow {
                   display: inline-block;
-                  background-image: url('/assets/img/icons/arrow-right.svg');
+                  background-image: url("/assets/img/icons/arrow-right.svg");
                   background-position: 50%;
                   background-size: contain;
                   background-repeat: no-repeat;
@@ -484,22 +533,27 @@
                 }
               }
             }
-            &:hover{
-              background: linear-gradient(90deg, rgba(0, 98, 217, 0.35) 0.1%, rgba(158, 195, 241, 0.52) 43%, #FFFFFF 100%);
+            &:hover {
+              background: linear-gradient(
+                90deg,
+                rgba(0, 98, 217, 0.35) 0.1%,
+                rgba(158, 195, 241, 0.52) 43%,
+                #ffffff 100%
+              );
             }
           }
         }
       }
-      & p.link{
+      & p.link {
         text-align: right;
-        & a{
+        & a {
           font-size: $fz9;
           color: $gray3;
           display: inline-block;
           border-bottom: 1px solid $gray3;
           line-height: 1;
-          transition: .2s;
-          &:hover{
+          transition: 0.2s;
+          &:hover {
             border-bottom: 1px solid $green;
             color: $green;
           }
@@ -510,57 +564,57 @@
 }
 
 @media (min-width: 992px) {
-  .how{
+  .how {
     padding-bottom: 110px;
-    & .picture{
+    & .picture {
       height: 400px;
       background-size: cover;
-      background-image: url('/assets/img/how-bg.jpg');
+      background-image: url("/assets/img/how-bg.jpg");
     }
 
-    & .effect{
+    & .effect {
       border-top-left-radius: 100% 60px;
-      border-top-right-radius: 100% 60px; 
+      border-top-right-radius: 100% 60px;
       margin-top: -30px;
-      &::before{
+      &::before {
         display: block;
         position: absolute;
-        content: '';
+        content: "";
         left: 0;
         top: -4px;
         width: 75%;
         height: 7%;
       }
-      & .container{
-        & ul.list{
+      & .container {
+        & ul.list {
           justify-content: center;
           flex-direction: row;
           flex-wrap: wrap;
           align-items: stretch;
-          & li.item{
+          & li.item {
             margin-right: 40px;
           }
         }
-        & h1.title{
+        & h1.title {
           font-size: $fz40;
         }
       }
     }
 
-    & .work{
+    & .work {
       flex-direction: row;
       align-items: stretch;
-      & .part{
+      & .part {
         width: 50%;
-        & h3.title{
+        & h3.title {
           margin-bottom: 40px;
         }
-        & p.text{
+        & p.text {
           margin-bottom: 20px;
-          &::before{
+          &::before {
             display: block;
             position: absolute;
-            content: '';
+            content: "";
             left: 0;
             top: 6px;
             width: 8px;
@@ -569,36 +623,36 @@
             border-radius: 50%;
           }
         }
-        &:first-child{
+        &:first-child {
           padding: 80px 50px 90px;
         }
-        &:last-child{
+        &:last-child {
           padding: 90px 50px;
-          &>*{
+          & > * {
             max-width: 400px;
           }
         }
       }
     }
 
-    & .components{
+    & .components {
       padding-bottom: 140px;
       border-bottom-left-radius: 100% 60px;
       border-bottom-right-radius: 100% 60px;
-      & .container{
+      & .container {
         margin-top: -40px;
-        & ul.list{
+        & ul.list {
           flex-direction: row;
           justify-content: space-between;
           align-items: stretch;
-          & li.item{
+          & li.item {
             margin-bottom: 0px;
             padding: 30px;
             width: 31%;
-            & p.text{
-              & span.tooltip{
+            & p.text {
+              & span.tooltip {
                 border-bottom: 1px solid $textColor;
-                & span.child{
+                & span.child {
                   position: absolute;
                   font-size: $fz5;
                   padding: 20px;
@@ -609,8 +663,8 @@
                   visibility: hidden;
                   display: inline;
                 }
-                &:hover{
-                  & span.child{
+                &:hover {
+                  & span.child {
                     visibility: visible;
                     opacity: 1;
                   }
@@ -622,36 +676,36 @@
       }
     }
 
-    & .details{
+    & .details {
       border-top-left-radius: 100% 60px;
       border-top-right-radius: 100% 60px;
       margin-top: -40px;
       position: relative;
       background-color: $white;
       padding: 0 0 40px;
-  
-      & .container{
+
+      & .container {
         padding-top: 150px;
-        & .item{
+        & .item {
           flex-direction: row;
           margin-bottom: 220px;
-          & .part{
-            & p.short{
+          & .part {
+            & p.short {
               font-size: $fz40;
             }
-            & p.long{
+            & p.long {
               font-size: $fz9;
             }
-            &:first-child{
+            &:first-child {
               border-bottom: none;
-              border-right: .5px solid $darkBlue;
+              border-right: 0.5px solid $darkBlue;
               padding-bottom: 0px;
               padding-right: 50px;
               margin-bottom: 0px;
               margin-right: 50px;
               width: 37%;
             }
-            &:last-child{
+            &:last-child {
               width: 63%;
             }
           }
@@ -659,31 +713,36 @@
       }
     }
 
-    & .research{
-      & .container{
-        & ul.list{
-          & li.item{
+    & .research {
+      & .container {
+        & ul.list {
+          & li.item {
             width: 50%;
             padding-right: 15px;
-            & .content{
+            & .content {
               padding: 20px 30px;
-              background: linear-gradient(270.33deg, rgba(0, 98, 217, 0.35) 0.09%, rgba(158, 195, 241, 0.52) 42.99%, #FFFFFF 99.93%);
-              & p.authors{
+              background: linear-gradient(
+                270.33deg,
+                rgba(0, 98, 217, 0.35) 0.09%,
+                rgba(158, 195, 241, 0.52) 42.99%,
+                #ffffff 99.93%
+              );
+              & p.authors {
                 font-size: $fz5;
                 font-weight: $regular;
                 color: $darkBlue;
                 margin-bottom: 15px;
               }
-              & h3.title{
+              & h3.title {
                 font-size: $fz9;
                 font-weight: $medium;
                 color: $dark;
-                & span{
+                & span {
                   font-weight: $regular;
                 }
               }
             }
-            &:nth-child(even){
+            &:nth-child(even) {
               padding-right: 0;
               padding-left: 15px;
             }
@@ -692,14 +751,14 @@
       }
     }
 
-    & .quote{
-      & .cloud{
-        &::after{
+    & .quote {
+      & .cloud {
+        &::after {
           width: 183px;
           height: 272px;
           right: -200px;
           bottom: -140px;
-          background-image: url('/assets/img/chick/chick-2.png');
+          background-image: url("/assets/img/chick/chick-2.png");
         }
       }
     }
